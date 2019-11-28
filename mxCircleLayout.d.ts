@@ -7,4 +7,6 @@ declare class mxCircleLayout {
 
   execute(parent: mxCell): void;
 
+  getRadius(count: number, max: number): number;
+
 }

@@ -31,6 +31,8 @@ declare class mxGraph {
 
   multiplicities: mxMultiplicity;
 
+  panningHandler: mxPanningHandler;
+
   renderHint: any;
 
   dialect: mxDialectConstants;

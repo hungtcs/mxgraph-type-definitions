@@ -1,5 +1,5 @@
 declare class mxEvent {
-
+  static DONE: 'done';
 
   /**
    * Disables the context menu for the given element.

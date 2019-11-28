@@ -1,6 +1,6 @@
 declare class mxCell {
 
-  constructor(value: Element, geometry, style);
+  constructor(value?: any, geometry?: mxGeometry, style?: string);
 
   /**
    * Variable: id
@@ -14,7 +14,7 @@ declare class mxCell {
    *
    * Holds the user object. Default is null.
    */
-  value: Element;
+  value: any;
 
   /**
    * Variable: geometry
