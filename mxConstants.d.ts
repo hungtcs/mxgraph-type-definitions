@@ -25,84 +25,84 @@ declare class mxConstants {
    * Defines the maximum size in pixels of the portion of the cell which is
    * to be used as a connectable region. Use 0 for no maximum. Default is 0.
    */
-  MAX_HOTSPOT_SIZE: 0;
+  static MAX_HOTSPOT_SIZE: 0;
 
   /**
    * Variable: RENDERING_HINT_EXACT
    *
    * Defines the exact rendering hint.
    */
-  RENDERING_HINT_EXACT: 'exact';
+  static RENDERING_HINT_EXACT: 'exact';
 
   /**
    * Variable: RENDERING_HINT_FASTER
    *
    * Defines the faster rendering hint.
    */
-  RENDERING_HINT_FASTER: 'faster';
+  static RENDERING_HINT_FASTER: 'faster';
 
   /**
    * Variable: RENDERING_HINT_FASTEST
    *
    * Defines the fastest rendering hint.
    */
-  RENDERING_HINT_FASTEST: 'fastest';
+  static RENDERING_HINT_FASTEST: 'fastest';
 
   /**
    * Variable: DIALECT_SVG
    *
    * Defines the SVG display dialect name.
    */
-  DIALECT_SVG: 'svg';
+  static DIALECT_SVG: 'svg';
 
   /**
    * Variable: DIALECT_VML
    *
    * Defines the VML display dialect name.
    */
-  DIALECT_VML: 'vml';
+  static DIALECT_VML: 'vml';
 
   /**
    * Variable: DIALECT_MIXEDHTML
    *
    * Defines the mixed HTML display dialect name.
    */
-  DIALECT_MIXEDHTML: 'mixedHtml';
+  static DIALECT_MIXEDHTML: 'mixedHtml';
 
   /**
    * Variable: DIALECT_PREFERHTML
    *
    * Defines the preferred HTML display dialect name.
    */
-  DIALECT_PREFERHTML: 'preferHtml';
+  static DIALECT_PREFERHTML: 'preferHtml';
 
   /**
    * Variable: DIALECT_STRICTHTML
    *
    * Defines the strict HTML display dialect.
    */
-  DIALECT_STRICTHTML: 'strictHtml';
+  static DIALECT_STRICTHTML: 'strictHtml';
 
   /**
    * Variable: NS_SVG
    *
    * Defines the SVG namespace.
    */
-  NS_SVG: 'http://www.w3.org/2000/svg';
+  static NS_SVG: 'http://www.w3.org/2000/svg';
 
   /**
    * Variable: NS_XHTML
    *
    * Defines the XHTML namespace.
    */
-  NS_XHTML: 'http://www.w3.org/1999/xhtml';
+  static NS_XHTML: 'http://www.w3.org/1999/xhtml';
 
   /**
    * Variable: NS_XLINK
    *
    * Defines the XLink namespace.
    */
-  NS_XLINK: 'http://www.w3.org/1999/xlink';
+  static NS_XLINK: 'http://www.w3.org/1999/xlink';
 
   /**
    * Variable: SHADOWCOLOR
@@ -110,7 +110,7 @@ declare class mxConstants {
    * Defines the color to be used to draw shadows in shapes and windows.
    * Default is gray.
    */
-  SHADOWCOLOR: 'gray';
+  static SHADOWCOLOR: 'gray';
 
   /**
    * Variable: VML_SHADOWCOLOR
@@ -118,112 +118,112 @@ declare class mxConstants {
    * Used for shadow color in filters where transparency is not supported
    * (Microsoft Internet Explorer). Default is gray.
    */
-  VML_SHADOWCOLOR: 'gray';
+  static VML_SHADOWCOLOR: 'gray';
 
   /**
    * Variable: SHADOW_OFFSET_X
    *
    * Specifies the x-offset of the shadow. Default is 2.
    */
-  SHADOW_OFFSET_X: 2;
+  static SHADOW_OFFSET_X: 2;
 
   /**
    * Variable: SHADOW_OFFSET_Y
    *
    * Specifies the y-offset of the shadow. Default is 3.
    */
-  SHADOW_OFFSET_Y: 3;
+  static SHADOW_OFFSET_Y: 3;
 
   /**
    * Variable: SHADOW_OPACITY
    *
    * Defines the opacity for shadows. Default is 1.
    */
-  SHADOW_OPACITY: 1;
+  static SHADOW_OPACITY: 1;
 
   /**
    * Variable: NODETYPE_ELEMENT
    *
    * DOM node of type ELEMENT.
    */
-  NODETYPE_ELEMENT: 1;
+  static NODETYPE_ELEMENT: 1;
 
   /**
    * Variable: NODETYPE_ATTRIBUTE
    *
    * DOM node of type ATTRIBUTE.
    */
-  NODETYPE_ATTRIBUTE: 2;
+  static NODETYPE_ATTRIBUTE: 2;
 
   /**
    * Variable: NODETYPE_TEXT
    *
    * DOM node of type TEXT.
    */
-  NODETYPE_TEXT: 3;
+  static NODETYPE_TEXT: 3;
 
   /**
    * Variable: NODETYPE_CDATA
    *
    * DOM node of type CDATA.
    */
-  NODETYPE_CDATA: 4;
+  static NODETYPE_CDATA: 4;
 
   /**
    * Variable: NODETYPE_ENTITY_REFERENCE
    *
    * DOM node of type ENTITY_REFERENCE.
    */
-  NODETYPE_ENTITY_REFERENCE: 5;
+  static NODETYPE_ENTITY_REFERENCE: 5;
 
   /**
    * Variable: NODETYPE_ENTITY
    *
    * DOM node of type ENTITY.
    */
-  NODETYPE_ENTITY: 6;
+  static NODETYPE_ENTITY: 6;
 
   /**
    * Variable: NODETYPE_PROCESSING_INSTRUCTION
    *
    * DOM node of type PROCESSING_INSTRUCTION.
    */
-  NODETYPE_PROCESSING_INSTRUCTION: 7;
+  static NODETYPE_PROCESSING_INSTRUCTION: 7;
 
   /**
    * Variable: NODETYPE_COMMENT
    *
    * DOM node of type COMMENT.
    */
-  NODETYPE_COMMENT: 8;
+  static NODETYPE_COMMENT: 8;
 
   /**
    * Variable: NODETYPE_DOCUMENT
    *
    * DOM node of type DOCUMENT.
    */
-  NODETYPE_DOCUMENT: 9;
+  static NODETYPE_DOCUMENT: 9;
 
   /**
    * Variable: NODETYPE_DOCUMENTTYPE
    *
    * DOM node of type DOCUMENTTYPE.
    */
-  NODETYPE_DOCUMENTTYPE: 10;
+  static NODETYPE_DOCUMENTTYPE: 10;
 
   /**
    * Variable: NODETYPE_DOCUMENT_FRAGMENT
    *
    * DOM node of type DOCUMENT_FRAGMENT.
    */
-  NODETYPE_DOCUMENT_FRAGMENT: 11;
+  static NODETYPE_DOCUMENT_FRAGMENT: 11;
 
   /**
    * Variable: NODETYPE_NOTATION
    *
    * DOM node of type NOTATION.
    */
-  NODETYPE_NOTATION: 12;
+  static NODETYPE_NOTATION: 12;
 
   /**
    * Variable: TOOLTIP_VERTICAL_OFFSET
@@ -231,21 +231,21 @@ declare class mxConstants {
    * Defines the vertical offset for the tooltip.
    * Default is 16.
    */
-  TOOLTIP_VERTICAL_OFFSET: 16;
+  static TOOLTIP_VERTICAL_OFFSET: 16;
 
   /**
    * Variable: DEFAULT_VALID_COLOR
    *
    * Specifies the default valid color. Default is #0000FF.
    */
-  DEFAULT_VALID_COLOR: '#00FF00';
+  static DEFAULT_VALID_COLOR: '#00FF00';
 
   /**
    * Variable: DEFAULT_INVALID_COLOR
    *
    * Specifies the default invalid color. Default is #FF0000.
    */
-  DEFAULT_INVALID_COLOR: '#FF0000';
+  static DEFAULT_INVALID_COLOR: '#FF0000';
 
   /**
    * Variable: OUTLINE_HIGHLIGHT_COLOR
@@ -253,7 +253,7 @@ declare class mxConstants {
    * Specifies the default highlight color for shape outlines.
    * Default is #0000FF. This is used in <mxEdgeHandler>.
    */
-  OUTLINE_HIGHLIGHT_COLOR: '#00FF00';
+  static OUTLINE_HIGHLIGHT_COLOR: '#00FF00';
 
   /**
    * Variable: OUTLINE_HIGHLIGHT_COLOR
@@ -261,7 +261,7 @@ declare class mxConstants {
    * Defines the strokewidth to be used for shape outlines.
    * Default is 5. This is used in <mxEdgeHandler>.
    */
-  OUTLINE_HIGHLIGHT_STROKEWIDTH: 5;
+  static OUTLINE_HIGHLIGHT_STROKEWIDTH: 5;
 
   /**
    * Variable: HIGHLIGHT_STROKEWIDTH
@@ -269,14 +269,14 @@ declare class mxConstants {
    * Defines the strokewidth to be used for the highlights.
    * Default is 3.
    */
-  HIGHLIGHT_STROKEWIDTH: 3;
+  static HIGHLIGHT_STROKEWIDTH: 3;
 
   /**
    * Variable: CONSTRAINT_HIGHLIGHT_SIZE
    *
    * Size of the constraint highlight (in px). Default is 2.
    */
-  HIGHLIGHT_SIZE: 2;
+  static HIGHLIGHT_SIZE: 2;
 
   /**
    * Variable: HIGHLIGHT_OPACITY
@@ -284,56 +284,56 @@ declare class mxConstants {
    * Opacity (in %) used for the highlights (including outline).
    * Default is 100.
    */
-  HIGHLIGHT_OPACITY: 100;
+  static HIGHLIGHT_OPACITY: 100;
 
   /**
    * Variable: CURSOR_MOVABLE_VERTEX
    *
    * Defines the cursor for a movable vertex. Default is 'move'.
    */
-  CURSOR_MOVABLE_VERTEX: 'move';
+  static CURSOR_MOVABLE_VERTEX: 'move';
 
   /**
    * Variable: CURSOR_MOVABLE_EDGE
    *
    * Defines the cursor for a movable edge. Default is 'move'.
    */
-  CURSOR_MOVABLE_EDGE: 'move';
+  static CURSOR_MOVABLE_EDGE: 'move';
 
   /**
    * Variable: CURSOR_LABEL_HANDLE
    *
    * Defines the cursor for a movable label. Default is 'default'.
    */
-  CURSOR_LABEL_HANDLE: 'default';
+  static CURSOR_LABEL_HANDLE: 'default';
 
   /**
    * Variable: CURSOR_TERMINAL_HANDLE
    *
    * Defines the cursor for a terminal handle. Default is 'pointer'.
    */
-  CURSOR_TERMINAL_HANDLE: 'pointer';
+  static CURSOR_TERMINAL_HANDLE: 'pointer';
 
   /**
    * Variable: CURSOR_BEND_HANDLE
    *
    * Defines the cursor for a movable bend. Default is 'crosshair'.
    */
-  CURSOR_BEND_HANDLE: 'crosshair';
+  static CURSOR_BEND_HANDLE: 'crosshair';
 
   /**
    * Variable: CURSOR_VIRTUAL_BEND_HANDLE
    *
    * Defines the cursor for a movable bend. Default is 'crosshair'.
    */
-  CURSOR_VIRTUAL_BEND_HANDLE: 'crosshair';
+  static CURSOR_VIRTUAL_BEND_HANDLE: 'crosshair';
 
   /**
    * Variable: CURSOR_CONNECT
    *
    * Defines the cursor for a connectable state. Default is 'pointer'.
    */
-  CURSOR_CONNECT: 'pointer';
+  static CURSOR_CONNECT: 'pointer';
 
   /**
    * Variable: HIGHLIGHT_COLOR
@@ -341,7 +341,7 @@ declare class mxConstants {
    * Defines the color to be used for the cell highlighting.
    * Use 'none' for no color. Default is #00FF00.
    */
-  HIGHLIGHT_COLOR: '#00FF00';
+  static HIGHLIGHT_COLOR: '#00FF00';
 
   /**
    * Variable: TARGET_HIGHLIGHT_COLOR
@@ -351,7 +351,7 @@ declare class mxConstants {
    * target terminal in the graph. Use 'none' for no color.
    * Default is #0000FF.
    */
-  CONNECT_TARGET_COLOR: '#0000FF';
+  static CONNECT_TARGET_COLOR: '#0000FF';
 
   /**
    * Variable: INVALID_CONNECT_TARGET_COLOR
@@ -361,7 +361,7 @@ declare class mxConstants {
    * or target terminal in the graph. Use 'none' for no color. Default is
    * #FF0000.
    */
-  INVALID_CONNECT_TARGET_COLOR: '#FF0000';
+  static INVALID_CONNECT_TARGET_COLOR: '#FF0000';
 
   /**
    * Variable: DROP_TARGET_COLOR
@@ -369,7 +369,7 @@ declare class mxConstants {
    * Defines the color to be used for the highlighting target parent cells
    * (for drag and drop). Use 'none' for no color. Default is #0000FF.
    */
-  DROP_TARGET_COLOR: '#0000FF';
+  static DROP_TARGET_COLOR: '#0000FF';
 
   /**
    * Variable: VALID_COLOR
@@ -377,7 +377,7 @@ declare class mxConstants {
    * Defines the color to be used for the coloring valid connection
    * previews. Use 'none' for no color. Default is #FF0000.
    */
-  VALID_COLOR: '#00FF00';
+  static VALID_COLOR: '#00FF00';
 
   /**
    * Variable: INVALID_COLOR
@@ -385,7 +385,7 @@ declare class mxConstants {
    * Defines the color to be used for the coloring invalid connection
    * previews. Use 'none' for no color. Default is #FF0000.
    */
-  INVALID_COLOR: '#FF0000';
+  static INVALID_COLOR: '#FF0000';
 
   /**
    * Variable: EDGE_SELECTION_COLOR
@@ -393,7 +393,7 @@ declare class mxConstants {
    * Defines the color to be used for the selection border of edges. Use
    * 'none' for no color. Default is #00FF00.
    */
-  EDGE_SELECTION_COLOR: '#00FF00';
+  static EDGE_SELECTION_COLOR: '#00FF00';
 
   /**
    * Variable: VERTEX_SELECTION_COLOR
@@ -401,7 +401,7 @@ declare class mxConstants {
    * Defines the color to be used for the selection border of vertices. Use
    * 'none' for no color. Default is #00FF00.
    */
-  VERTEX_SELECTION_COLOR: '#00FF00';
+  static VERTEX_SELECTION_COLOR: '#00FF00';
 
   /**
    * Variable: VERTEX_SELECTION_STROKEWIDTH
@@ -409,7 +409,7 @@ declare class mxConstants {
    * Defines the strokewidth to be used for vertex selections.
    * Default is 1.
    */
-  VERTEX_SELECTION_STROKEWIDTH: 1;
+  static VERTEX_SELECTION_STROKEWIDTH: 1;
 
   /**
    * Variable: EDGE_SELECTION_STROKEWIDTH
@@ -417,7 +417,7 @@ declare class mxConstants {
    * Defines the strokewidth to be used for edge selections.
    * Default is 1.
    */
-  EDGE_SELECTION_STROKEWIDTH: 1;
+  static EDGE_SELECTION_STROKEWIDTH: 1;
 
   /**
    * Variable: SELECTION_DASHED
@@ -425,7 +425,7 @@ declare class mxConstants {
    * Defines the dashed state to be used for the vertex selection
    * border. Default is true.
    */
-  VERTEX_SELECTION_DASHED: true;
+  static VERTEX_SELECTION_DASHED: true;
 
   /**
    * Variable: SELECTION_DASHED
@@ -433,7 +433,7 @@ declare class mxConstants {
    * Defines the dashed state to be used for the edge selection
    * border. Default is true.
    */
-  EDGE_SELECTION_DASHED: true;
+  static EDGE_SELECTION_DASHED: true;
 
   /**
    * Variable: GUIDE_COLOR
@@ -441,7 +441,7 @@ declare class mxConstants {
    * Defines the color to be used for the guidelines in mxGraphHandler.
    * Default is #FF0000.
    */
-  GUIDE_COLOR: '#FF0000';
+  static GUIDE_COLOR: '#FF0000';
 
   /**
    * Variable: GUIDE_STROKEWIDTH
@@ -449,7 +449,7 @@ declare class mxConstants {
    * Defines the strokewidth to be used for the guidelines in mxGraphHandler.
    * Default is 1.
    */
-  GUIDE_STROKEWIDTH: 1;
+  static GUIDE_STROKEWIDTH: 1;
 
   /**
    * Variable: OUTLINE_COLOR
@@ -457,7 +457,7 @@ declare class mxConstants {
    * Defines the color to be used for the outline rectangle
    * border.  Use 'none' for no color. Default is #0099FF.
    */
-  OUTLINE_COLOR: '#0099FF';
+  static OUTLINE_COLOR: '#0099FF';
 
   /**
    * Variable: OUTLINE_STROKEWIDTH
@@ -465,21 +465,21 @@ declare class mxConstants {
    * Defines the strokewidth to be used for the outline rectangle
    * stroke width. Default is 3.
    */
-  OUTLINE_STROKEWIDTH: number;
+  static OUTLINE_STROKEWIDTH: number;
 
   /**
    * Variable: HANDLE_SIZE
    *
    * Defines the default size for handles. Default is 6.
    */
-  HANDLE_SIZE: 6;
+  static HANDLE_SIZE: 6;
 
   /**
    * Variable: LABEL_HANDLE_SIZE
    *
    * Defines the default size for label handles. Default is 4.
    */
-  LABEL_HANDLE_SIZE: 4;
+  static LABEL_HANDLE_SIZE: 4;
 
   /**
    * Variable: HANDLE_FILLCOLOR
@@ -487,7 +487,7 @@ declare class mxConstants {
    * Defines the color to be used for the handle fill color. Use 'none' for
    * no color. Default is #00FF00 (green).
    */
-  HANDLE_FILLCOLOR: '#00FF00';
+  static HANDLE_FILLCOLOR: '#00FF00';
 
   /**
    * Variable: HANDLE_STROKECOLOR
@@ -495,7 +495,7 @@ declare class mxConstants {
    * Defines the color to be used for the handle stroke color. Use 'none' for
    * no color. Default is black.
    */
-  HANDLE_STROKECOLOR: 'black';
+  static HANDLE_STROKECOLOR: 'black';
 
   /**
    * Variable: LABEL_HANDLE_FILLCOLOR
@@ -503,7 +503,7 @@ declare class mxConstants {
    * Defines the color to be used for the label handle fill color. Use 'none'
    * for no color. Default is yellow.
    */
-  LABEL_HANDLE_FILLCOLOR: 'yellow';
+  static LABEL_HANDLE_FILLCOLOR: 'yellow';
 
   /**
    * Variable: CONNECT_HANDLE_FILLCOLOR
@@ -511,7 +511,7 @@ declare class mxConstants {
    * Defines the color to be used for the connect handle fill color. Use
    * 'none' for no color. Default is #0000FF (blue).
    */
-  CONNECT_HANDLE_FILLCOLOR: '#0000FF';
+  static CONNECT_HANDLE_FILLCOLOR: '#0000FF';
 
   /**
    * Variable: LOCKED_HANDLE_FILLCOLOR
@@ -519,7 +519,7 @@ declare class mxConstants {
    * Defines the color to be used for the locked handle fill color. Use
    * 'none' for no color. Default is #FF0000 (red).
    */
-  LOCKED_HANDLE_FILLCOLOR: '#FF0000';
+  static LOCKED_HANDLE_FILLCOLOR: '#FF0000';
 
   /**
    * Variable: OUTLINE_HANDLE_FILLCOLOR
@@ -527,7 +527,7 @@ declare class mxConstants {
    * Defines the color to be used for the outline sizer fill color. Use
    * 'none' for no color. Default is #00FFFF.
    */
-  OUTLINE_HANDLE_FILLCOLOR: '#00FFFF';
+  static OUTLINE_HANDLE_FILLCOLOR: '#00FFFF';
 
   /**
    * Variable: OUTLINE_HANDLE_STROKECOLOR
@@ -535,21 +535,21 @@ declare class mxConstants {
    * Defines the color to be used for the outline sizer stroke color. Use
    * 'none' for no color. Default is #0033FF.
    */
-  OUTLINE_HANDLE_STROKECOLOR: '#0033FF';
+  static OUTLINE_HANDLE_STROKECOLOR: '#0033FF';
 
   /**
    * Variable: DEFAULT_FONTFAMILY
    *
    * Defines the default family for all fonts. Default is Arial,Helvetica.
    */
-  DEFAULT_FONTFAMILY: 'Arial,Helvetica';
+  static DEFAULT_FONTFAMILY: 'Arial,Helvetica';
 
   /**
    * Variable: DEFAULT_FONTSIZE
    *
    * Defines the default size (in px). Default is 11.
    */
-  DEFAULT_FONTSIZE: 11;
+  static DEFAULT_FONTSIZE: 11;
 
   /**
    * Variable: DEFAULT_TEXT_DIRECTION
@@ -558,14 +558,14 @@ declare class mxConstants {
    * defined for it in the style. Default value is an empty string which means
    * the default system setting is used and no direction is set.
    */
-  DEFAULT_TEXT_DIRECTION: '';
+  static DEFAULT_TEXT_DIRECTION: '';
 
   /**
    * Variable: LINE_HEIGHT
    *
    * Defines the default line height for text labels. Default is 1.2.
    */
-  LINE_HEIGHT: 1.2;
+  static LINE_HEIGHT: 1.2;
 
   /**
    * Variable: WORD_WRAP
@@ -574,7 +574,7 @@ declare class mxConstants {
    * Change this to "break-word" to allow long words to be able to be broken
    * and wrap onto the next line.
    */
-  WORD_WRAP: 'normal';
+  static WORD_WRAP: 'normal';
 
   /**
    * Variable: ABSOLUTE_LINE_HEIGHT
@@ -582,7 +582,7 @@ declare class mxConstants {
    * Specifies if absolute line heights should be used (px) in CSS. Default
    * is false. Set this to true for backwards compatibility.
    */
-  ABSOLUTE_LINE_HEIGHT: false;
+  static ABSOLUTE_LINE_HEIGHT: false;
 
   /**
    * Variable: DEFAULT_FONTSTYLE
@@ -594,21 +594,21 @@ declare class mxConstants {
    * mxConstants.DEFAULT_FONTSTYLE = mxConstants.FONT_BOLD | mxConstants.FONT_ITALIC;
    * (end)
    */
-  DEFAULT_FONTSTYLE: 0;
+  static DEFAULT_FONTSTYLE: 0;
 
   /**
    * Variable: DEFAULT_STARTSIZE
    *
    * Defines the default start size for swimlanes. Default is 40.
    */
-  DEFAULT_STARTSIZE: 40;
+  static DEFAULT_STARTSIZE: 40;
 
   /**
    * Variable: DEFAULT_MARKERSIZE
    *
    * Defines the default size for all markers. Default is 6.
    */
-  DEFAULT_MARKERSIZE: 6;
+  static DEFAULT_MARKERSIZE: 6;
 
   /**
    * Variable: DEFAULT_IMAGESIZE
@@ -616,7 +616,7 @@ declare class mxConstants {
    * Defines the default width and height for images used in the
    * label shape. Default is 24.
    */
-  DEFAULT_IMAGESIZE: 24;
+  static DEFAULT_IMAGESIZE: 24;
 
   /**
    * Variable: ENTITY_SEGMENT
@@ -625,7 +625,7 @@ declare class mxConstants {
    * This can be overridden using <mxConstants.STYLE_SEGMENT> style.
    * Default is 30.
    */
-  ENTITY_SEGMENT: 30;
+  static ENTITY_SEGMENT: 30;
 
   /**
    * Variable: RECTANGLE_ROUNDING_FACTOR
@@ -633,35 +633,35 @@ declare class mxConstants {
    * Defines the rounding factor for rounded rectangles in percent between
    * 0 and 1. Values should be smaller than 0.5. Default is 0.15.
    */
-  RECTANGLE_ROUNDING_FACTOR: 0.15;
+  static RECTANGLE_ROUNDING_FACTOR: 0.15;
 
   /**
    * Variable: LINE_ARCSIZE
    *
    * Defines the size of the arcs for rounded edges. Default is 20.
    */
-  LINE_ARCSIZE: 20;
+  static LINE_ARCSIZE: 20;
 
   /**
    * Variable: ARROW_SPACING
    *
    * Defines the spacing between the arrow shape and its terminals. Default is 0.
    */
-  ARROW_SPACING: 0;
+  static ARROW_SPACING: 0;
 
   /**
    * Variable: ARROW_WIDTH
    *
    * Defines the width of the arrow shape. Default is 30.
    */
-  ARROW_WIDTH: 30;
+  static ARROW_WIDTH: 30;
 
   /**
    * Variable: ARROW_SIZE
    *
    * Defines the size of the arrowhead in the arrow shape. Default is 30.
    */
-  ARROW_SIZE: 30;
+  static ARROW_SIZE: 30;
 
   /**
    * Variable: PAGE_FORMAT_A4_PORTRAIT
@@ -669,7 +669,7 @@ declare class mxConstants {
    * Defines the rectangle for the A4 portrait page format. The dimensions
    * of this page format are 826x1169 pixels.
    */
-  PAGE_FORMAT_A4_PORTRAIT: mxRectangle;
+  static PAGE_FORMAT_A4_PORTRAIT: mxRectangle;
 
   /**
    * Variable: PAGE_FORMAT_A4_PORTRAIT
@@ -677,7 +677,7 @@ declare class mxConstants {
    * Defines the rectangle for the A4 portrait page format. The dimensions
    * of this page format are 826x1169 pixels.
    */
-  PAGE_FORMAT_A4_LANDSCAPE: mxRectangle;
+  static PAGE_FORMAT_A4_LANDSCAPE: mxRectangle;
 
   /**
    * Variable: PAGE_FORMAT_LETTER_PORTRAIT
@@ -685,7 +685,7 @@ declare class mxConstants {
    * Defines the rectangle for the Letter portrait page format. The
    * dimensions of this page format are 850x1100 pixels.
    */
-  PAGE_FORMAT_LETTER_PORTRAIT: mxRectangle;
+  static PAGE_FORMAT_LETTER_PORTRAIT: mxRectangle;
 
   /**
    * Variable: PAGE_FORMAT_LETTER_PORTRAIT
@@ -693,14 +693,14 @@ declare class mxConstants {
    * Defines the rectangle for the Letter portrait page format. The dimensions
    * of this page format are 850x1100 pixels.
    */
-  PAGE_FORMAT_LETTER_LANDSCAPE: mxRectangle;
+  static PAGE_FORMAT_LETTER_LANDSCAPE: mxRectangle;
 
   /**
    * Variable: NONE
    *
    * Defines the value for none. Default is "none".
    */
-  NONE: 'none';
+  static NONE: 'none';
 
   /**
    * Variable: STYLE_PERIMETER
@@ -721,7 +721,7 @@ declare class mxConstants {
    * connecting to a cell while keeping the actual terminal of the edge.
    * Value is "sourcePort".
    */
-  STYLE_SOURCE_PORT: 'sourcePort';
+  static STYLE_SOURCE_PORT: 'sourcePort';
 
   /**
    * Variable: STYLE_TARGET_PORT
@@ -731,7 +731,7 @@ declare class mxConstants {
    * connecting to a cell while keeping the actual terminal of the edge.
    * Value is "targetPort".
    */
-  STYLE_TARGET_PORT: 'targetPort';
+  static STYLE_TARGET_PORT: 'targetPort';
 
   /**
    * Variable: STYLE_PORT_CONSTRAINT
@@ -741,7 +741,7 @@ declare class mxConstants {
    * DIRECTION_EAST" and "DIRECTION_WEST". Value is
    * "portConstraint".
    */
-  STYLE_PORT_CONSTRAINT: 'portConstraint';
+  static STYLE_PORT_CONSTRAINT: 'portConstraint';
 
   /**
    * Variable: STYLE_PORT_CONSTRAINT_ROTATION
@@ -751,7 +751,7 @@ declare class mxConstants {
    * relative to the graph, 1 causes the constraints to rotate with
    * the vertex. Value is "portConstraintRotation".
    */
-  STYLE_PORT_CONSTRAINT_ROTATION: 'portConstraintRotation';
+  static STYLE_PORT_CONSTRAINT_ROTATION: 'portConstraintRotation';
 
   /**
    * Variable: STYLE_SOURCE_PORT_CONSTRAINT
@@ -760,7 +760,7 @@ declare class mxConstants {
    * Possible values are "DIRECTION_NORTH, DIRECTION_SOUTH, DIRECTION_EAST"
    * and "DIRECTION_WEST". Value is "sourcePortConstraint".
    */
-  STYLE_SOURCE_PORT_CONSTRAINT: 'sourcePortConstraint';
+  static STYLE_SOURCE_PORT_CONSTRAINT: 'sourcePortConstraint';
 
   /**
    * Variable: STYLE_TARGET_PORT_CONSTRAINT
@@ -769,7 +769,7 @@ declare class mxConstants {
    * Possible values are "DIRECTION_NORTH, DIRECTION_SOUTH, DIRECTION_EAST"
    * and "DIRECTION_WEST". Value is "targetPortConstraint".
    */
-  STYLE_TARGET_PORT_CONSTRAINT: 'targetPortConstraint';
+  static STYLE_TARGET_PORT_CONSTRAINT: 'targetPortConstraint';
 
   /**
    * Variable: STYLE_OPACITY
@@ -777,7 +777,7 @@ declare class mxConstants {
    * Defines the key for the opacity style. The type of the value is
    * numeric and the possible range is 0-100. Value is "opacity".
    */
-  STYLE_OPACITY: 'opacity';
+  static STYLE_OPACITY: 'opacity';
 
   /**
    * Variable: STYLE_FILL_OPACITY
@@ -785,7 +785,7 @@ declare class mxConstants {
    * Defines the key for the fill opacity style. The type of the value is
    * numeric and the possible range is 0-100. Value is "fillOpacity".
    */
-  STYLE_FILL_OPACITY: 'fillOpacity';
+  static STYLE_FILL_OPACITY: 'fillOpacity';
 
   /**
    * Variable: STYLE_STROKE_OPACITY
@@ -793,7 +793,7 @@ declare class mxConstants {
    * Defines the key for the stroke opacity style. The type of the value is
    * numeric and the possible range is 0-100. Value is "strokeOpacity".
    */
-  STYLE_STROKE_OPACITY: 'strokeOpacity';
+  static STYLE_STROKE_OPACITY: 'strokeOpacity';
 
   /**
    * Variable: STYLE_TEXT_OPACITY
@@ -801,7 +801,7 @@ declare class mxConstants {
    * Defines the key for the text opacity style. The type of the value is
    * numeric and the possible range is 0-100. Value is "textOpacity".
    */
-  STYLE_TEXT_OPACITY: 'textOpacity';
+  static STYLE_TEXT_OPACITY: 'textOpacity';
 
   /**
    * Variable: STYLE_TEXT_DIRECTION
@@ -813,7 +813,7 @@ declare class mxConstants {
    * It is used is no value is defined for this key in a given style. This is
    * an experimental style that is currently ignored in the backends.
    */
-  STYLE_TEXT_DIRECTION: 'textDirection';
+  static STYLE_TEXT_DIRECTION: 'textDirection';
 
   /**
    * Variable: STYLE_OVERFLOW
@@ -829,7 +829,7 @@ declare class mxConstants {
    * alignment, left should be used to avoid pixel offsets in Internet Explorer
    * 11 and earlier or if foreignObjects are disabled. Value is "overflow".
    */
-  STYLE_OVERFLOW: 'overflow';
+  static STYLE_OVERFLOW: 'overflow';
 
   /**
    * Variable: STYLE_ORTHOGONAL
@@ -840,7 +840,7 @@ declare class mxConstants {
    * used in <mxGraph.isOrthogonal>, which also returns true if the edgeStyle
    * of the edge is an elbow or entity. Value is "orthogonal".
    */
-  STYLE_ORTHOGONAL: 'orthogonal';
+  static STYLE_ORTHOGONAL: 'orthogonal';
 
   /**
    * Variable: STYLE_EXIT_X
@@ -848,7 +848,7 @@ declare class mxConstants {
    * Defines the key for the horizontal relative coordinate connection point
    * of an edge with its source terminal. Value is "exitX".
    */
-  STYLE_EXIT_X: 'exitX';
+  static STYLE_EXIT_X: 'exitX';
 
   /**
    * Variable: STYLE_EXIT_Y
@@ -856,7 +856,7 @@ declare class mxConstants {
    * Defines the key for the vertical relative coordinate connection point
    * of an edge with its source terminal. Value is "exitY".
    */
-  STYLE_EXIT_Y: 'exitY';
+  static STYLE_EXIT_Y: 'exitY';
 
   /**
    * Variable: STYLE_EXIT_PERIMETER
@@ -865,7 +865,7 @@ declare class mxConstants {
    * along the perimeter of the source. Possible values are 0 (false) and
    * 1 (true). Default is 1 (true). Value is "exitPerimeter".
    */
-  STYLE_EXIT_PERIMETER: 'exitPerimeter';
+  static STYLE_EXIT_PERIMETER: 'exitPerimeter';
 
   /**
    * Variable: STYLE_ENTRY_X
@@ -873,7 +873,7 @@ declare class mxConstants {
    * Defines the key for the horizontal relative coordinate connection point
    * of an edge with its target terminal. Value is "entryX".
    */
-  STYLE_ENTRY_X: 'entryX';
+  static STYLE_ENTRY_X: 'entryX';
 
   /**
    * Variable: STYLE_ENTRY_Y
@@ -881,7 +881,7 @@ declare class mxConstants {
    * Defines the key for the vertical relative coordinate connection point
    * of an edge with its target terminal. Value is "entryY".
    */
-  STYLE_ENTRY_Y: 'entryY';
+  static STYLE_ENTRY_Y: 'entryY';
 
   /**
    * Variable: STYLE_ENTRY_PERIMETER
@@ -890,7 +890,7 @@ declare class mxConstants {
    * along the perimeter of the target. Possible values are 0 (false) and
    * 1 (true). Default is 1 (true). Value is "entryPerimeter".
    */
-  STYLE_ENTRY_PERIMETER: 'entryPerimeter';
+  static STYLE_ENTRY_PERIMETER: 'entryPerimeter';
 
   /**
    * Variable: STYLE_WHITE_SPACE
@@ -903,7 +903,7 @@ declare class mxConstants {
    * necessary. This style is only used for HTML labels.
    * See <mxGraph.isWrapping>. Value is "whiteSpace".
    */
-  STYLE_WHITE_SPACE: 'whiteSpace';
+  static STYLE_WHITE_SPACE: 'whiteSpace';
 
   /**
    * Variable: STYLE_ROTATION
@@ -911,7 +911,7 @@ declare class mxConstants {
    * Defines the key for the rotation style. The type of the value is
    * numeric and the possible range is 0-360. Value is "rotation".
    */
-  STYLE_ROTATION: 'rotation';
+  static STYLE_ROTATION: 'rotation';
 
   /**
    * Variable: STYLE_FILLCOLOR
@@ -932,7 +932,7 @@ declare class mxConstants {
    * false in groups where the transparent part should allow any underlying
    * cells to be clickable.
    */
-  STYLE_POINTER_EVENTS: 'pointerEvents';
+  static STYLE_POINTER_EVENTS: 'pointerEvents';
 
   /**
    * Variable: STYLE_SWIMLANE_FILLCOLOR
@@ -941,7 +941,7 @@ declare class mxConstants {
    * values are all HTML color names or HEX codes. Default is no background.
    * Value is "swimlaneFillColor".
    */
-  STYLE_SWIMLANE_FILLCOLOR: 'swimlaneFillColor';
+  static STYLE_SWIMLANE_FILLCOLOR: 'swimlaneFillColor';
 
   /**
    * Variable: STYLE_MARGIN
@@ -949,7 +949,7 @@ declare class mxConstants {
    * Defines the key for the margin between the ellipses in the double ellipse shape.
    * Possible values are all positive numbers. Value is "margin".
    */
-  STYLE_MARGIN: 'margin';
+  static STYLE_MARGIN: 'margin';
 
   /**
    * Variable: STYLE_GRADIENTCOLOR
@@ -960,7 +960,7 @@ declare class mxConstants {
    * indicator shape. This is ignored if no fill color is defined. Value is
    * "gradientColor".
    */
-  STYLE_GRADIENTCOLOR: 'gradientColor';
+  static STYLE_GRADIENTCOLOR: 'gradientColor';
 
   /**
    * Variable: STYLE_GRADIENT_DIRECTION
@@ -974,7 +974,7 @@ declare class mxConstants {
    * bottom of paint pattern and <STYLE_GRADIENTCOLOR> at top, with a
    * gradient in-between. Value is "gradientDirection".
    */
-  STYLE_GRADIENT_DIRECTION: 'gradientDirection';
+  static STYLE_GRADIENT_DIRECTION: 'gradientDirection';
 
   /**
    * Variable: STYLE_STROKECOLOR
@@ -993,7 +993,7 @@ declare class mxConstants {
    * HTML color names or HEX codes. This style is only used for
    * <SHAPE_SWIMLANE> shapes. Value is "separatorColor".
    */
-  STYLE_SEPARATORCOLOR: 'separatorColor';
+  static STYLE_SEPARATORCOLOR: 'separatorColor';
 
   /**
    * Variable: STYLE_STROKEWIDTH
@@ -1043,7 +1043,7 @@ declare class mxConstants {
    * Defines the key for the width of the label if the label position is not
    * center. Value is "labelWidth".
    */
-  STYLE_LABEL_WIDTH: 'labelWidth';
+  static STYLE_LABEL_WIDTH: 'labelWidth';
 
   /**
    * Variable: STYLE_LABEL_POSITION
@@ -1059,7 +1059,7 @@ declare class mxConstants {
    * the label horizontally within the label bounds, use <STYLE_ALIGN>.
    * Value is "labelPosition".
    */
-  STYLE_LABEL_POSITION: 'labelPosition';
+  static STYLE_LABEL_POSITION: 'labelPosition';
 
   /**
    * Variable: STYLE_VERTICAL_LABEL_POSITION
@@ -1075,7 +1075,7 @@ declare class mxConstants {
    * the label vertically within the label bounds, use
    * <STYLE_VERTICAL_ALIGN>. Value is "verticalLabelPosition".
    */
-  STYLE_VERTICAL_LABEL_POSITION: 'verticalLabelPosition';
+  static STYLE_VERTICAL_LABEL_POSITION: 'verticalLabelPosition';
 
   /**
    * Variable: STYLE_IMAGE_ASPECT
@@ -1084,7 +1084,7 @@ declare class mxConstants {
    * not preserve aspect) or 1 (keep aspect). This is only used in
    * <mxImageShape>. Default is 1. Value is "imageAspect".
    */
-  STYLE_IMAGE_ASPECT: 'imageAspect';
+  static STYLE_IMAGE_ASPECT: 'imageAspect';
 
   /**
    * Variable: STYLE_IMAGE_ALIGN
@@ -1094,7 +1094,7 @@ declare class mxConstants {
    * vertex label is aligned horizontally within the label bounds of a
    * <SHAPE_LABEL> shape. Value is "imageAlign".
    */
-  STYLE_IMAGE_ALIGN: 'imageAlign';
+  static STYLE_IMAGE_ALIGN: 'imageAlign';
 
   /**
    * Variable: STYLE_IMAGE_VERTICAL_ALIGN
@@ -1104,7 +1104,7 @@ declare class mxConstants {
    * any image in the vertex label is aligned vertically within the label
    * bounds of a <SHAPE_LABEL> shape. Value is "imageVerticalAlign".
    */
-  STYLE_IMAGE_VERTICAL_ALIGN: 'imageVerticalAlign';
+  static STYLE_IMAGE_VERTICAL_ALIGN: 'imageVerticalAlign';
 
   /**
    * Variable: STYLE_GLASS
@@ -1113,7 +1113,7 @@ declare class mxConstants {
    * 1(enabled). The default value is 0. This is used in <mxLabel>. Value is
    * "glass".
    */
-  STYLE_GLASS: 'glass';
+  static STYLE_GLASS: 'glass';
 
   /**
    * Variable: STYLE_IMAGE
@@ -1125,7 +1125,7 @@ declare class mxConstants {
    * data (without the "base64"-prefix). Note that Data URLs are only
    * supported in modern browsers. Value is "image".
    */
-  STYLE_IMAGE: 'image';
+  static STYLE_IMAGE: 'image';
 
   /**
    * Variable: STYLE_IMAGE_WIDTH
@@ -1134,7 +1134,7 @@ declare class mxConstants {
    * int, the value is the image width in pixels and must be greater than 0.
    * Value is "imageWidth".
    */
-  STYLE_IMAGE_WIDTH: 'imageWidth';
+  static STYLE_IMAGE_WIDTH: 'imageWidth';
 
   /**
    * Variable: STYLE_IMAGE_HEIGHT
@@ -1143,7 +1143,7 @@ declare class mxConstants {
    * int, the value is the image height in pixels and must be greater than 0.
    * Value is "imageHeight".
    */
-  STYLE_IMAGE_HEIGHT: 'imageHeight';
+  static STYLE_IMAGE_HEIGHT: 'imageHeight';
 
   /**
    * Variable: STYLE_IMAGE_BACKGROUND
@@ -1152,7 +1152,7 @@ declare class mxConstants {
    * in <mxImageShape>. Possible values are all HTML color names or HEX
    * codes. Value is "imageBackground".
    */
-  STYLE_IMAGE_BACKGROUND: 'imageBackground';
+  static STYLE_IMAGE_BACKGROUND: 'imageBackground';
 
   /**
    * Variable: STYLE_IMAGE_BORDER
@@ -1161,7 +1161,7 @@ declare class mxConstants {
    * <mxImageShape>. Possible values are all HTML color names or HEX codes.
    * Value is "imageBorder".
    */
-  STYLE_IMAGE_BORDER: 'imageBorder';
+  static STYLE_IMAGE_BORDER: 'imageBorder';
 
   /**
    * Variable: STYLE_FLIPH
@@ -1170,7 +1170,7 @@ declare class mxConstants {
    * in <mxImageShape>. Possible values are 0 and 1. Default is 0. Value is
    * "flipH".
    */
-  STYLE_FLIPH: 'flipH';
+  static STYLE_FLIPH: 'flipH';
 
   /**
    * Variable: STYLE_FLIPV
@@ -1178,7 +1178,7 @@ declare class mxConstants {
    * Defines the key for the vertical flip. Possible values are 0 and 1.
    * Default is 0. Value is "flipV".
    */
-  STYLE_FLIPV: 'flipV';
+  static STYLE_FLIPV: 'flipV';
 
   /**
    * Variable: STYLE_NOLABEL
@@ -1187,7 +1187,7 @@ declare class mxConstants {
    * visible for a given cell. Possible values are true or false (1 or 0).
    * Default is false. Value is "noLabel".
    */
-  STYLE_NOLABEL: 'noLabel';
+  static STYLE_NOLABEL: 'noLabel';
 
   /**
    * Variable: STYLE_NOEDGESTYLE
@@ -1196,7 +1196,7 @@ declare class mxConstants {
    * style is applied for a given edge. Possible values are true or false
    * (1 or 0). Default is false. Value is "noEdgeStyle".
    */
-  STYLE_NOEDGESTYLE: 'noEdgeStyle';
+  static STYLE_NOEDGESTYLE: 'noEdgeStyle';
 
   /**
    * Variable: STYLE_LABEL_BACKGROUNDCOLOR
@@ -1204,7 +1204,7 @@ declare class mxConstants {
    * Defines the key for the label background color. Possible values are all
    * HTML color names or HEX codes. Value is "labelBackgroundColor".
    */
-  STYLE_LABEL_BACKGROUNDCOLOR: 'labelBackgroundColor';
+  static STYLE_LABEL_BACKGROUNDCOLOR: 'labelBackgroundColor';
 
   /**
    * Variable: STYLE_LABEL_BORDERCOLOR
@@ -1212,7 +1212,7 @@ declare class mxConstants {
    * Defines the key for the label border color. Possible values are all
    * HTML color names or HEX codes. Value is "labelBorderColor".
    */
-  STYLE_LABEL_BORDERCOLOR: 'labelBorderColor';
+  static STYLE_LABEL_BORDERCOLOR: 'labelBorderColor';
 
   /**
    * Variable: STYLE_LABEL_PADDING
@@ -1220,7 +1220,7 @@ declare class mxConstants {
    * Defines the key for the label padding, ie. the space between the label
    * border and the label. Value is "labelPadding".
    */
-  STYLE_LABEL_PADDING: 'labelPadding';
+  static STYLE_LABEL_PADDING: 'labelPadding';
 
   /**
    * Variable: STYLE_INDICATOR_SHAPE
@@ -1230,7 +1230,7 @@ declare class mxConstants {
    * shapes. The indicatorShape has precedence over the indicatorImage.
    * Value is "indicatorShape".
    */
-  STYLE_INDICATOR_SHAPE: 'indicatorShape';
+  static STYLE_INDICATOR_SHAPE: 'indicatorShape';
 
   /**
    * Variable: STYLE_INDICATOR_IMAGE
@@ -1239,7 +1239,7 @@ declare class mxConstants {
    * Possible values are all image URLs. The indicatorShape has
    * precedence over the indicatorImage. Value is "indicatorImage".
    */
-  STYLE_INDICATOR_IMAGE: 'indicatorImage';
+  static STYLE_INDICATOR_IMAGE: 'indicatorImage';
 
   /**
    * Variable: STYLE_INDICATOR_COLOR
@@ -1249,7 +1249,7 @@ declare class mxConstants {
    * to refer to the color of the parent swimlane if one exists. Value is
    * "indicatorColor".
    */
-  STYLE_INDICATOR_COLOR: 'indicatorColor';
+  static STYLE_INDICATOR_COLOR: 'indicatorColor';
 
   /**
    * Variable: STYLE_INDICATOR_STROKECOLOR
@@ -1257,7 +1257,7 @@ declare class mxConstants {
    * Defines the key for the indicator stroke color in <mxLabel>.
    * Possible values are all color codes. Value is "indicatorStrokeColor".
    */
-  STYLE_INDICATOR_STROKECOLOR: 'indicatorStrokeColor';
+  static STYLE_INDICATOR_STROKECOLOR: 'indicatorStrokeColor';
 
   /**
    * Variable: STYLE_INDICATOR_GRADIENTCOLOR
@@ -1266,7 +1266,7 @@ declare class mxConstants {
    * are all HTML color names or HEX codes. This style is only supported in
    * <SHAPE_LABEL> shapes. Value is "indicatorGradientColor".
    */
-  STYLE_INDICATOR_GRADIENTCOLOR: 'indicatorGradientColor';
+  static STYLE_INDICATOR_GRADIENTCOLOR: 'indicatorGradientColor';
 
   /**
    * Variable: STYLE_INDICATOR_SPACING
@@ -1275,7 +1275,7 @@ declare class mxConstants {
    * indicator in <mxLabel>. Possible values are in pixels. Value is
    * "indicatorSpacing".
    */
-  STYLE_INDICATOR_SPACING: 'indicatorSpacing';
+  static STYLE_INDICATOR_SPACING: 'indicatorSpacing';
 
   /**
    * Variable: STYLE_INDICATOR_WIDTH
@@ -1283,7 +1283,7 @@ declare class mxConstants {
    * Defines the key for the indicator width. Possible values start at 0 (in
    * pixels). Value is "indicatorWidth".
    */
-  STYLE_INDICATOR_WIDTH: 'indicatorWidth';
+  static STYLE_INDICATOR_WIDTH: 'indicatorWidth';
 
   /**
    * Variable: STYLE_INDICATOR_HEIGHT
@@ -1291,7 +1291,7 @@ declare class mxConstants {
    * Defines the key for the indicator height. Possible values start at 0 (in
    * pixels). Value is "indicatorHeight".
    */
-  STYLE_INDICATOR_HEIGHT: 'indicatorHeight';
+  static STYLE_INDICATOR_HEIGHT: 'indicatorHeight';
 
   /**
    * Variable: STYLE_INDICATOR_DIRECTION
@@ -1301,7 +1301,7 @@ declare class mxConstants {
    * Possible values are <DIRECTION_EAST> (default), <DIRECTION_WEST>;
    * <DIRECTION_NORTH> and <DIRECTION_SOUTH>. Value is "indicatorDirection".
    */
-  STYLE_INDICATOR_DIRECTION: 'indicatorDirection';
+  static STYLE_INDICATOR_DIRECTION: 'indicatorDirection';
 
   /**
    * Variable: STYLE_SHADOW
@@ -1309,7 +1309,7 @@ declare class mxConstants {
    * Defines the key for the shadow style. The type of the value is Boolean.
    * Value is "shadow".
    */
-  STYLE_SHADOW: 'shadow';
+  static STYLE_SHADOW: 'shadow';
 
   /**
    * Variable: STYLE_SEGMENT
@@ -1318,7 +1318,7 @@ declare class mxConstants {
    * and the value represents the size of the horizontal segment of the
    * entity relation style. Default is ENTITY_SEGMENT. Value is "segment".
    */
-  STYLE_SEGMENT: 'segment';
+  static STYLE_SEGMENT: 'segment';
 
   /**
    * Variable: STYLE_ENDARROW
@@ -1332,7 +1332,7 @@ declare class mxConstants {
    * style[mxConstants.STYLE_ENDARROW] = mxConstants.ARROW_CLASSIC;
    * (end)
    */
-  STYLE_ENDARROW: 'endArrow';
+  static STYLE_ENDARROW: 'endArrow';
 
   /**
    * Variable: STYLE_STARTARROW
@@ -1341,7 +1341,7 @@ declare class mxConstants {
    * constants with an ARROW-prefix. This is only used in <mxConnector>.
    * See <STYLE_ENDARROW>. Value is "startArrow".
    */
-  STYLE_STARTARROW: 'startArrow';
+  static STYLE_STARTARROW: 'startArrow';
 
   /**
    * Variable: STYLE_ENDSIZE
@@ -1350,7 +1350,7 @@ declare class mxConstants {
    * and the value represents the size of the end marker in pixels. Value is
    * "endSize".
    */
-  STYLE_ENDSIZE: 'endSize';
+  static STYLE_ENDSIZE: 'endSize';
 
   /**
    * Variable: STYLE_STARTSIZE
@@ -1360,7 +1360,7 @@ declare class mxConstants {
    * size of the swimlane title region depending on the shape it is used for.
    * Value is "startSize".
    */
-  STYLE_STARTSIZE: 'startSize';
+  static STYLE_STARTSIZE: 'startSize';
 
   /**
    * Variable: STYLE_SWIMLANE_LINE
@@ -1369,7 +1369,7 @@ declare class mxConstants {
    * the line between the title regio of a swimlane should be visible. Use 0
    * for hidden or 1 (default) for visible. Value is "swimlaneLine".
    */
-  STYLE_SWIMLANE_LINE: 'swimlaneLine';
+  static STYLE_SWIMLANE_LINE: 'swimlaneLine';
 
   /**
    * Variable: STYLE_ENDFILL
@@ -1378,7 +1378,7 @@ declare class mxConstants {
    * for fill. (This style is only exported via <mxImageExport>.) Value is
    * "endFill".
    */
-  STYLE_ENDFILL: 'endFill';
+  static STYLE_ENDFILL: 'endFill';
 
   /**
    * Variable: STYLE_STARTFILL
@@ -1387,7 +1387,7 @@ declare class mxConstants {
    * for fill. (This style is only exported via <mxImageExport>.) Value is
    * "startFill".
    */
-  STYLE_STARTFILL: 'startFill';
+  static STYLE_STARTFILL: 'startFill';
 
   /**
    * Variable: STYLE_DASHED
@@ -1395,7 +1395,7 @@ declare class mxConstants {
    * Defines the key for the dashed style. Use 0 (default) for non-dashed or 1
    * for dashed. Value is "dashed".
    */
-  STYLE_DASHED: 'dashed';
+  static STYLE_DASHED: 'dashed';
 
   /**
    * Defines the key for the dashed pattern style in SVG and image exports.
@@ -1407,7 +1407,7 @@ declare class mxConstants {
    * uses dashStyle instead as defined in the VML specification. This style
    * is only used in the <mxConnector> shape. Value is "dashPattern".
    */
-  STYLE_DASH_PATTERN: 'dashPattern';
+  static STYLE_DASH_PATTERN: 'dashPattern';
 
   /**
    * Variable: STYLE_FIX_DASH
@@ -1416,7 +1416,7 @@ declare class mxConstants {
    * that depend on the linewidth and 1 for dash patterns that ignore the
    * line width. Value is "fixDash".
    */
-  STYLE_FIX_DASH: 'fixDash';
+  static STYLE_FIX_DASH: 'fixDash';
 
   /**
    * Variable: STYLE_ROUNDED
@@ -1428,7 +1428,7 @@ declare class mxConstants {
    * rounded. Use 0 (default) for non-rounded or 1 for rounded. Value is
    * "rounded".
    */
-  STYLE_ROUNDED: 'rounded';
+  static STYLE_ROUNDED: 'rounded';
 
   /**
    * Variable: STYLE_CURVED
@@ -1437,7 +1437,7 @@ declare class mxConstants {
    * Boolean. It is only applicable for connector shapes. Use 0 (default)
    * for non-curved or 1 for curved. Value is "curved".
    */
-  STYLE_CURVED: 'curved';
+  static STYLE_CURVED: 'curved';
 
   /**
    * Variable: STYLE_ARCSIZE
@@ -1449,7 +1449,7 @@ declare class mxConstants {
    * this values is not specified then LINE_ARCSIZE is used.
    * (This style is only exported via <mxImageExport>.) Value is "arcSize".
    */
-  STYLE_ARCSIZE: 'arcSize';
+  static STYLE_ARCSIZE: 'arcSize';
 
   /**
    * Variable: STYLE_ABSOLUTE_ARCSIZE
@@ -1458,7 +1458,7 @@ declare class mxConstants {
    * arcSize for rectangles is abolute or relative. Possible values are 1
    * and 0 (default). Value is "absoluteArcSize".
    */
-  STYLE_ABSOLUTE_ARCSIZE: 'absoluteArcSize';
+  static STYLE_ABSOLUTE_ARCSIZE: 'absoluteArcSize';
 
   /**
    * Variable: STYLE_SOURCE_PERIMETER_SPACING
@@ -1468,7 +1468,7 @@ declare class mxConstants {
    * an edge and the perimeter of the source vertex in pixels. This style
    * only applies to edges. Value is "sourcePerimeterSpacing".
    */
-  STYLE_SOURCE_PERIMETER_SPACING: 'sourcePerimeterSpacing';
+  static STYLE_SOURCE_PERIMETER_SPACING: 'sourcePerimeterSpacing';
 
   /**
    * Variable: STYLE_TARGET_PERIMETER_SPACING
@@ -1478,7 +1478,7 @@ declare class mxConstants {
    * an edge and the perimeter of the target vertex in pixels. This style
    * only applies to edges. Value is "targetPerimeterSpacing".
    */
-  STYLE_TARGET_PERIMETER_SPACING: 'targetPerimeterSpacing';
+  static STYLE_TARGET_PERIMETER_SPACING: 'targetPerimeterSpacing';
 
   /**
    * Variable: STYLE_PERIMETER_SPACING
@@ -1509,7 +1509,7 @@ declare class mxConstants {
    * spacing, in pixels, added to the top side of a label in a vertex (style
    * applies to vertices only). Value is "spacingTop".
    */
-  STYLE_SPACING_TOP: 'spacingTop';
+  static STYLE_SPACING_TOP: 'spacingTop';
 
   /**
    * Variable: STYLE_SPACING_LEFT
@@ -1518,7 +1518,7 @@ declare class mxConstants {
    * spacing, in pixels, added to the left side of a label in a vertex (style
    * applies to vertices only). Value is "spacingLeft".
    */
-  STYLE_SPACING_LEFT: 'spacingLeft';
+  static STYLE_SPACING_LEFT: 'spacingLeft';
 
   /**
    * Variable: STYLE_SPACING_BOTTOM
@@ -1527,7 +1527,7 @@ declare class mxConstants {
    * spacing, in pixels, added to the bottom side of a label in a vertex
    * (style applies to vertices only). Value is "spacingBottom".
    */
-  STYLE_SPACING_BOTTOM: 'spacingBottom';
+  static STYLE_SPACING_BOTTOM: 'spacingBottom';
 
   /**
    * Variable: STYLE_SPACING_RIGHT
@@ -1536,7 +1536,7 @@ declare class mxConstants {
    * spacing, in pixels, added to the right side of a label in a vertex (style
    * applies to vertices only). Value is "spacingRight".
    */
-  STYLE_SPACING_RIGHT: 'spacingRight';
+  static STYLE_SPACING_RIGHT: 'spacingRight';
 
   /**
    * Variable: STYLE_HORIZONTAL
@@ -1549,7 +1549,7 @@ declare class mxConstants {
    * swimlane, this value affects only whether the label is drawn
    * horizontally or vertically. Value is "horizontal".
    */
-  STYLE_HORIZONTAL: 'horizontal';
+  static STYLE_HORIZONTAL: 'horizontal';
 
   /**
    * Variable: STYLE_DIRECTION
@@ -1559,7 +1559,7 @@ declare class mxConstants {
    * Possible values are <DIRECTION_EAST> (default), <DIRECTION_WEST>;
    * <DIRECTION_NORTH> and <DIRECTION_SOUTH>. Value is "direction".
    */
-  STYLE_DIRECTION: 'direction';
+  static STYLE_DIRECTION: 'direction';
 
   /**
    * Variable: STYLE_ANCHOR_POINT_DIRECTION
@@ -1570,7 +1570,7 @@ declare class mxConstants {
    * to ignore the direction style for fixed connection points. Value is
    * "anchorPointDirection".
    */
-  STYLE_ANCHOR_POINT_DIRECTION: 'anchorPointDirection';
+  static STYLE_ANCHOR_POINT_DIRECTION: 'anchorPointDirection';
 
   /**
    * Variable: STYLE_ELBOW
@@ -1581,7 +1581,7 @@ declare class mxConstants {
    * terminal vertices. The vertical style leaves the terminal vertices at
    * the top and bottom sides. Value is "elbow".
    */
-  STYLE_ELBOW: 'elbow';
+  static STYLE_ELBOW: 'elbow';
 
   /**
    * Variable: STYLE_FONTCOLOR
@@ -1589,7 +1589,7 @@ declare class mxConstants {
    * Defines the key for the fontColor style. Possible values are all HTML
    * color names or HEX codes. Value is "fontColor".
    */
-  STYLE_FONTCOLOR: 'fontColor';
+  static STYLE_FONTCOLOR: 'fontColor';
 
   /**
    * Variable: STYLE_FONTFAMILY
@@ -1598,7 +1598,7 @@ declare class mxConstants {
    * as Arial; Dialog; Verdana; Times New Roman. The value is of type String.
    * Value is fontFamily.
    */
-  STYLE_FONTFAMILY: 'fontFamily';
+  static STYLE_FONTFAMILY: 'fontFamily';
 
   /**
    * Variable: STYLE_FONTSIZE
@@ -1606,7 +1606,7 @@ declare class mxConstants {
    * Defines the key for the fontSize style (in px). The type of the value
    * is int. Value is "fontSize".
    */
-  STYLE_FONTSIZE: 'fontSize';
+  static STYLE_FONTSIZE: 'fontSize';
 
   /**
    * Variable: STYLE_FONTSTYLE
@@ -1615,7 +1615,7 @@ declare class mxConstants {
    * (sum) of <FONT_BOLD>, <FONT_ITALIC> and <FONT_UNDERLINE>.
    * The type of the value is int. Value is "fontStyle".
    */
-  STYLE_FONTSTYLE: 'fontStyle';
+  static STYLE_FONTSTYLE: 'fontStyle';
 
   /**
    * Variable: STYLE_ASPECT
@@ -1624,7 +1624,7 @@ declare class mxConstants {
    * If fixed is used then the aspect ratio of the cell will be maintained
    * when resizing. Default is empty. Value is "aspect".
    */
-  STYLE_ASPECT: 'aspect';
+  static STYLE_ASPECT: 'aspect';
 
   /**
    * Variable: STYLE_AUTOSIZE
@@ -1634,7 +1634,7 @@ declare class mxConstants {
    * Default is 0. See <mxGraph.isAutoSizeCell>. This is normally combined with
    * <STYLE_RESIZABLE> to disable manual sizing. Value is "autosize".
    */
-  STYLE_AUTOSIZE: 'autosize';
+  static STYLE_AUTOSIZE: 'autosize';
 
   /**
    * Variable: STYLE_FOLDABLE
@@ -1643,7 +1643,7 @@ declare class mxConstants {
    * using a folding icon. Possible values are 0 or 1. Default is 1. See
    * <mxGraph.isCellFoldable>. Value is "foldable".
    */
-  STYLE_FOLDABLE: 'foldable';
+  static STYLE_FOLDABLE: 'foldable';
 
   /**
    * Variable: STYLE_EDITABLE
@@ -1652,7 +1652,7 @@ declare class mxConstants {
    * a cell can be edited using the in-place editor. Possible values are 0 or
    * 1. Default is 1. See <mxGraph.isCellEditable>. Value is "editable".
    */
-  STYLE_EDITABLE: 'editable';
+  static STYLE_EDITABLE: 'editable';
 
   /**
    * Variable: STYLE_BACKGROUND_OUTLINE
@@ -1661,7 +1661,7 @@ declare class mxConstants {
    * only the background of a cell should be painted when it is highlighted.
    * Possible values are 0 or 1. Default is 0. Value is "backgroundOutline".
    */
-  STYLE_BACKGROUND_OUTLINE: 'backgroundOutline';
+  static STYLE_BACKGROUND_OUTLINE: 'backgroundOutline';
 
   /**
    * Variable: STYLE_BENDABLE
@@ -1670,7 +1670,7 @@ declare class mxConstants {
    * points of an edge can be moved. Possible values are 0 or 1. Default is
    * 1. See <mxGraph.isCellBendable>. Value is "bendable".
    */
-  STYLE_BENDABLE: 'bendable';
+  static STYLE_BENDABLE: 'bendable';
 
   /**
    * Variable: STYLE_MOVABLE
@@ -1679,7 +1679,7 @@ declare class mxConstants {
    * be moved. Possible values are 0 or 1. Default is 1. See
    * <mxGraph.isCellMovable>. Value is "movable".
    */
-  STYLE_MOVABLE: 'movable';
+  static STYLE_MOVABLE: 'movable';
 
   /**
    * Variable: STYLE_RESIZABLE
@@ -1688,7 +1688,7 @@ declare class mxConstants {
    * be resized. Possible values are 0 or 1. Default is 1. See
    * <mxGraph.isCellResizable>. Value is "resizable".
    */
-  STYLE_RESIZABLE: 'resizable';
+  static STYLE_RESIZABLE: 'resizable';
 
   /**
    * Variable: STYLE_RESIZE_WIDTH
@@ -1699,7 +1699,7 @@ declare class mxConstants {
    * then the cell's width will not be resized. Default is not defined. Value
    * is "resizeWidth".
    */
-  STYLE_RESIZE_WIDTH: 'resizeWidth';
+  static STYLE_RESIZE_WIDTH: 'resizeWidth';
 
   /**
    * Variable: STYLE_RESIZE_WIDTH
@@ -1710,7 +1710,7 @@ declare class mxConstants {
    * then the cell's height will not be resized. Default is not defined. Value
    * is "resizeHeight".
    */
-  STYLE_RESIZE_HEIGHT: 'resizeHeight';
+  static STYLE_RESIZE_HEIGHT: 'resizeHeight';
 
   /**
    * Variable: STYLE_ROTATABLE
@@ -1719,7 +1719,7 @@ declare class mxConstants {
    * be rotated. Possible values are 0 or 1. Default is 1. See
    * <mxGraph.isCellRotatable>. Value is "rotatable".
    */
-  STYLE_ROTATABLE: 'rotatable';
+  static STYLE_ROTATABLE: 'rotatable';
 
   /**
    * Variable: STYLE_CLONEABLE
@@ -1728,7 +1728,7 @@ declare class mxConstants {
    * be cloned. Possible values are 0 or 1. Default is 1. See
    * <mxGraph.isCellCloneable>. Value is "cloneable".
    */
-  STYLE_CLONEABLE: 'cloneable';
+  static STYLE_CLONEABLE: 'cloneable';
 
   /**
    * Variable: STYLE_DELETABLE
@@ -1737,7 +1737,7 @@ declare class mxConstants {
    * deleted. Possible values are 0 or 1. Default is 1. See
    * <mxGraph.isCellDeletable>. Value is "deletable".
    */
-  STYLE_DELETABLE: 'deletable';
+  static STYLE_DELETABLE: 'deletable';
 
   /**
    * Variable: STYLE_SHAPE
@@ -1753,7 +1753,7 @@ declare class mxConstants {
    * Defines the key for the edge style. Possible values are the functions
    * defined in <mxEdgeStyle>. Value is "edgeStyle".
    */
-  STYLE_EDGE: 'edgeStyle';
+  static STYLE_EDGE: 'edgeStyle';
 
   /**
    * Variable: STYLE_JETTY_SIZE
@@ -1762,7 +1762,7 @@ declare class mxConstants {
    * Default is 10. Possible values are all numeric values or "auto".
    * Value is "jettySize".
    */
-  STYLE_JETTY_SIZE: 'jettySize';
+  static STYLE_JETTY_SIZE: 'jettySize';
 
   /**
    * Variable: STYLE_SOURCE_JETTY_SIZE
@@ -1771,7 +1771,7 @@ declare class mxConstants {
    * Default is 10. Possible values are numeric values or "auto". This has
    * precedence over <STYLE_JETTY_SIZE>. Value is "sourceJettySize".
    */
-  STYLE_SOURCE_JETTY_SIZE: 'sourceJettySize';
+  static STYLE_SOURCE_JETTY_SIZE: 'sourceJettySize';
 
   /**
    * Variable: targetJettySize
@@ -1780,7 +1780,7 @@ declare class mxConstants {
    * Default is 10. Possible values are numeric values or "auto". This has
    * precedence over <STYLE_JETTY_SIZE>. Value is "targetJettySize".
    */
-  STYLE_TARGET_JETTY_SIZE: 'targetJettySize';
+  static STYLE_TARGET_JETTY_SIZE: 'targetJettySize';
 
   /**
    * Variable: STYLE_LOOP
@@ -1788,7 +1788,7 @@ declare class mxConstants {
    * Defines the key for the loop style. Possible values are the functions
    * defined in <mxEdgeStyle>. Value is "loopStyle".
    */
-  STYLE_LOOP: 'loopStyle';
+  static STYLE_LOOP: 'loopStyle';
 
   /**
    * Variable: STYLE_ORTHOGONAL_LOOP
@@ -1799,7 +1799,7 @@ declare class mxConstants {
    * uses <mxEdgeStyle.OrthConnector> but will be replaced with a dedicated
    * orthogonal loop router in later releases.
    */
-  STYLE_ORTHOGONAL_LOOP: 'orthogonalLoop';
+  static STYLE_ORTHOGONAL_LOOP: 'orthogonalLoop';
 
   /**
    * Variable: STYLE_ROUTING_CENTER_X
@@ -1809,7 +1809,7 @@ declare class mxConstants {
    * for connecting edges. The type of this value is numeric. Value is
    * "routingCenterX".
    */
-  STYLE_ROUTING_CENTER_X: 'routingCenterX';
+  static STYLE_ROUTING_CENTER_X: 'routingCenterX';
 
   /**
    * Variable: STYLE_ROUTING_CENTER_Y
@@ -1819,28 +1819,28 @@ declare class mxConstants {
    * for connecting edges. The type of this value is numeric. Value is
    * "routingCenterY".
    */
-  STYLE_ROUTING_CENTER_Y: 'routingCenterY';
+  static STYLE_ROUTING_CENTER_Y: 'routingCenterY';
 
   /**
    * Variable: FONT_BOLD
    *
    * Constant for bold fonts. Default is 1.
    */
-  FONT_BOLD: 1;
+  static FONT_BOLD: 1;
 
   /**
    * Variable: FONT_ITALIC
    *
    * Constant for italic fonts. Default is 2.
    */
-  FONT_ITALIC: 2;
+  static FONT_ITALIC: 2;
 
   /**
    * Variable: FONT_UNDERLINE
    *
    * Constant for underlined fonts. Default is 4.
    */
-  FONT_UNDERLINE: 4;
+  static FONT_UNDERLINE: 4;
 
   /**
    * Variable: SHAPE_RECTANGLE
@@ -1856,7 +1856,7 @@ declare class mxConstants {
    * Name under which <mxEllipse> is registered in <mxCellRenderer>.
    * Default is ellipse.
    */
-  SHAPE_ELLIPSE: 'ellipse';
+  static SHAPE_ELLIPSE: 'ellipse';
 
   /**
    * Variable: SHAPE_DOUBLE_ELLIPSE
@@ -1864,7 +1864,7 @@ declare class mxConstants {
    * Name under which <mxDoubleEllipse> is registered in <mxCellRenderer>.
    * Default is doubleEllipse.
    */
-  SHAPE_DOUBLE_ELLIPSE: 'doubleEllipse';
+  static SHAPE_DOUBLE_ELLIPSE: 'doubleEllipse';
 
   /**
    * Variable: SHAPE_RHOMBUS
@@ -1872,7 +1872,7 @@ declare class mxConstants {
    * Name under which <mxRhombus> is registered in <mxCellRenderer>.
    * Default is rhombus.
    */
-  SHAPE_RHOMBUS: 'rhombus';
+  static SHAPE_RHOMBUS: 'rhombus';
 
   /**
    * Variable: SHAPE_LINE
@@ -1880,7 +1880,7 @@ declare class mxConstants {
    * Name under which <mxLine> is registered in <mxCellRenderer>.
    * Default is line.
    */
-  SHAPE_LINE: 'line';
+  static SHAPE_LINE: 'line';
 
   /**
    * Variable: SHAPE_IMAGE
@@ -1888,7 +1888,7 @@ declare class mxConstants {
    * Name under which <mxImageShape> is registered in <mxCellRenderer>.
    * Default is image.
    */
-  SHAPE_IMAGE: 'image';
+  static SHAPE_IMAGE: 'image';
 
   /**
    * Variable: SHAPE_ARROW
@@ -1896,7 +1896,7 @@ declare class mxConstants {
    * Name under which <mxArrow> is registered in <mxCellRenderer>.
    * Default is arrow.
    */
-  SHAPE_ARROW: 'arrow';
+  static SHAPE_ARROW: 'arrow';
 
   /**
    * Variable: SHAPE_ARROW_CONNECTOR
@@ -1904,7 +1904,7 @@ declare class mxConstants {
    * Name under which <mxArrowConnector> is registered in <mxCellRenderer>.
    * Default is arrowConnector.
    */
-  SHAPE_ARROW_CONNECTOR: 'arrowConnector';
+  static SHAPE_ARROW_CONNECTOR: 'arrowConnector';
 
   /**
    * Variable: SHAPE_LABEL
@@ -1912,7 +1912,7 @@ declare class mxConstants {
    * Name under which <mxLabel> is registered in <mxCellRenderer>.
    * Default is label.
    */
-  SHAPE_LABEL: 'label';
+  static SHAPE_LABEL: 'label';
 
   /**
    * Variable: SHAPE_CYLINDER
@@ -1920,7 +1920,7 @@ declare class mxConstants {
    * Name under which <mxCylinder> is registered in <mxCellRenderer>.
    * Default is cylinder.
    */
-  SHAPE_CYLINDER: 'cylinder';
+  static SHAPE_CYLINDER: 'cylinder';
 
   /**
    * Variable: SHAPE_SWIMLANE
@@ -1928,7 +1928,7 @@ declare class mxConstants {
    * Name under which <mxSwimlane> is registered in <mxCellRenderer>.
    * Default is swimlane.
    */
-  SHAPE_SWIMLANE: 'swimlane';
+  static SHAPE_SWIMLANE: 'swimlane';
 
   /**
    * Variable: SHAPE_CONNECTOR
@@ -1936,7 +1936,7 @@ declare class mxConstants {
    * Name under which <mxConnector> is registered in <mxCellRenderer>.
    * Default is connector.
    */
-  SHAPE_CONNECTOR: 'connector';
+  static SHAPE_CONNECTOR: 'connector';
 
   /**
    * Variable: SHAPE_ACTOR
@@ -1944,7 +1944,7 @@ declare class mxConstants {
    * Name under which <mxActor> is registered in <mxCellRenderer>.
    * Default is actor.
    */
-  SHAPE_ACTOR: 'actor';
+  static SHAPE_ACTOR: 'actor';
 
   /**
    * Variable: SHAPE_CLOUD
@@ -1952,7 +1952,7 @@ declare class mxConstants {
    * Name under which <mxCloud> is registered in <mxCellRenderer>.
    * Default is cloud.
    */
-  SHAPE_CLOUD: 'cloud';
+  static SHAPE_CLOUD: 'cloud';
 
   /**
    * Variable: SHAPE_TRIANGLE
@@ -1960,7 +1960,7 @@ declare class mxConstants {
    * Name under which <mxTriangle> is registered in <mxCellRenderer>.
    * Default is triangle.
    */
-  SHAPE_TRIANGLE: 'triangle';
+  static SHAPE_TRIANGLE: 'triangle';
 
   /**
    * Variable: SHAPE_HEXAGON
@@ -1968,70 +1968,70 @@ declare class mxConstants {
    * Name under which <mxHexagon> is registered in <mxCellRenderer>.
    * Default is hexagon.
    */
-  SHAPE_HEXAGON: 'hexagon';
+  static SHAPE_HEXAGON: 'hexagon';
 
   /**
    * Variable: ARROW_CLASSIC
    *
    * Constant for classic arrow markers.
    */
-  ARROW_CLASSIC: 'classic';
+  static ARROW_CLASSIC: 'classic';
 
   /**
    * Variable: ARROW_CLASSIC_THIN
    *
    * Constant for thin classic arrow markers.
    */
-  ARROW_CLASSIC_THIN: 'classicThin';
+  static ARROW_CLASSIC_THIN: 'classicThin';
 
   /**
    * Variable: ARROW_BLOCK
    *
    * Constant for block arrow markers.
    */
-  ARROW_BLOCK: 'block';
+  static ARROW_BLOCK: 'block';
 
   /**
    * Variable: ARROW_BLOCK_THIN
    *
    * Constant for thin block arrow markers.
    */
-  ARROW_BLOCK_THIN: 'blockThin';
+  static ARROW_BLOCK_THIN: 'blockThin';
 
   /**
    * Variable: ARROW_OPEN
    *
    * Constant for open arrow markers.
    */
-  ARROW_OPEN: 'open';
+  static ARROW_OPEN: 'open';
 
   /**
    * Variable: ARROW_OPEN_THIN
    *
    * Constant for thin open arrow markers.
    */
-  ARROW_OPEN_THIN: 'openThin';
+  static ARROW_OPEN_THIN: 'openThin';
 
   /**
    * Variable: ARROW_OVAL
    *
    * Constant for oval arrow markers.
    */
-  ARROW_OVAL: 'oval';
+  static ARROW_OVAL: 'oval';
 
   /**
    * Variable: ARROW_DIAMOND
    *
    * Constant for diamond arrow markers.
    */
-  ARROW_DIAMOND: 'diamond';
+  static ARROW_DIAMOND: 'diamond';
 
   /**
    * Variable: ARROW_DIAMOND_THIN
    *
    * Constant for thin diamond arrow markers.
    */
-  ARROW_DIAMOND_THIN: 'diamondThin';
+  static ARROW_DIAMOND_THIN: 'diamondThin';
 
   /**
    * Variable: ALIGN_LEFT
@@ -2052,7 +2052,7 @@ declare class mxConstants {
    *
    * Constant for right horizontal alignment. Default is right.
    */
-  ALIGN_RIGHT: 'right';
+  static ALIGN_RIGHT: 'right';
 
   /**
    * Variable: ALIGN_TOP
@@ -2066,42 +2066,42 @@ declare class mxConstants {
    *
    * Constant for middle vertical alignment. Default is middle.
    */
-  ALIGN_MIDDLE: 'middle';
+  static ALIGN_MIDDLE: 'middle';
 
   /**
    * Variable: ALIGN_BOTTOM
    *
    * Constant for bottom vertical alignment. Default is bottom.
    */
-  ALIGN_BOTTOM: 'bottom';
+  static ALIGN_BOTTOM: 'bottom';
 
   /**
    * Variable: DIRECTION_NORTH
    *
    * Constant for direction north. Default is north.
    */
-  DIRECTION_NORTH: 'north';
+  static DIRECTION_NORTH: 'north';
 
   /**
    * Variable: DIRECTION_SOUTH
    *
    * Constant for direction south. Default is south.
    */
-  DIRECTION_SOUTH: 'south';
+  static DIRECTION_SOUTH: 'south';
 
   /**
    * Variable: DIRECTION_EAST
    *
    * Constant for direction east. Default is east.
    */
-  DIRECTION_EAST: 'east';
+  static DIRECTION_EAST: 'east';
 
   /**
    * Variable: DIRECTION_WEST
    *
    * Constant for direction west. Default is west.
    */
-  DIRECTION_WEST: 'west';
+  static DIRECTION_WEST: 'west';
 
   /**
    * Variable: TEXT_DIRECTION_DEFAULT
@@ -2109,7 +2109,7 @@ declare class mxConstants {
    * Constant for text direction default. Default is an empty string. Use
    * this value to use the default text direction of the operating system.
    */
-  TEXT_DIRECTION_DEFAULT: '';
+  static TEXT_DIRECTION_DEFAULT: '';
 
   /**
    * Variable: TEXT_DIRECTION_AUTO
@@ -2117,7 +2117,7 @@ declare class mxConstants {
    * Constant for text direction automatic. Default is auto. Use this value
    * to find the direction for a given text with <mxText.getAutoDirection>.
    */
-  TEXT_DIRECTION_AUTO: 'auto';
+  static TEXT_DIRECTION_AUTO: 'auto';
 
   /**
    * Variable: TEXT_DIRECTION_LTR
@@ -2125,7 +2125,7 @@ declare class mxConstants {
    * Constant for text direction left to right. Default is ltr. Use this
    * value for left to right text direction.
    */
-  TEXT_DIRECTION_LTR: 'ltr';
+  static TEXT_DIRECTION_LTR: 'ltr';
 
   /**
    * Variable: TEXT_DIRECTION_RTL
@@ -2133,63 +2133,63 @@ declare class mxConstants {
    * Constant for text direction right to left. Default is rtl. Use this
    * value for right to left text direction.
    */
-  TEXT_DIRECTION_RTL: 'rtl';
+  static TEXT_DIRECTION_RTL: 'rtl';
 
   /**
    * Variable: DIRECTION_MASK_NONE
    *
    * Constant for no direction.
    */
-  DIRECTION_MASK_NONE: 0;
+  static DIRECTION_MASK_NONE: 0;
 
   /**
    * Variable: DIRECTION_MASK_WEST
    *
    * Bitwise mask for west direction.
    */
-  DIRECTION_MASK_WEST: 1;
+  static DIRECTION_MASK_WEST: 1;
 
   /**
    * Variable: DIRECTION_MASK_NORTH
    *
    * Bitwise mask for north direction.
    */
-  DIRECTION_MASK_NORTH: 2;
+  static DIRECTION_MASK_NORTH: 2;
 
   /**
    * Variable: DIRECTION_MASK_SOUTH
    *
    * Bitwise mask for south direction.
    */
-  DIRECTION_MASK_SOUTH: 4;
+  static DIRECTION_MASK_SOUTH: 4;
 
   /**
    * Variable: DIRECTION_MASK_EAST
    *
    * Bitwise mask for east direction.
    */
-  DIRECTION_MASK_EAST: 8;
+  static DIRECTION_MASK_EAST: 8;
 
   /**
    * Variable: DIRECTION_MASK_ALL
    *
    * Bitwise mask for all directions.
    */
-  DIRECTION_MASK_ALL: 15;
+  static DIRECTION_MASK_ALL: 15;
 
   /**
    * Variable: ELBOW_VERTICAL
    *
    * Constant for elbow vertical. Default is horizontal.
    */
-  ELBOW_VERTICAL: 'vertical';
+  static ELBOW_VERTICAL: 'vertical';
 
   /**
    * Variable: ELBOW_HORIZONTAL
    *
    * Constant for elbow horizontal. Default is horizontal.
    */
-  ELBOW_HORIZONTAL: 'horizontal';
+  static ELBOW_HORIZONTAL: 'horizontal';
 
   /**
    * Variable: EDGESTYLE_ELBOW
@@ -2197,7 +2197,7 @@ declare class mxConstants {
    * Name of the elbow edge style. Can be used as a string value
    * for the STYLE_EDGE style.
    */
-  EDGESTYLE_ELBOW: 'elbowEdgeStyle';
+  static EDGESTYLE_ELBOW: 'elbowEdgeStyle';
 
   /**
    * Variable: EDGESTYLE_ENTITY_RELATION
@@ -2205,7 +2205,7 @@ declare class mxConstants {
    * Name of the entity relation edge style. Can be used as a string value
    * for the STYLE_EDGE style.
    */
-  EDGESTYLE_ENTITY_RELATION: 'entityRelationEdgeStyle';
+  static EDGESTYLE_ENTITY_RELATION: 'entityRelationEdgeStyle';
 
   /**
    * Variable: EDGESTYLE_LOOP
@@ -2213,7 +2213,7 @@ declare class mxConstants {
    * Name of the loop edge style. Can be used as a string value
    * for the STYLE_EDGE style.
    */
-  EDGESTYLE_LOOP: 'loopEdgeStyle';
+  static EDGESTYLE_LOOP: 'loopEdgeStyle';
 
   /**
    * Variable: EDGESTYLE_SIDETOSIDE
@@ -2221,7 +2221,7 @@ declare class mxConstants {
    * Name of the side to side edge style. Can be used as a string value
    * for the STYLE_EDGE style.
    */
-  EDGESTYLE_SIDETOSIDE: 'sideToSideEdgeStyle';
+  static EDGESTYLE_SIDETOSIDE: 'sideToSideEdgeStyle';
 
   /**
    * Variable: EDGESTYLE_TOPTOBOTTOM
@@ -2229,7 +2229,7 @@ declare class mxConstants {
    * Name of the top to bottom edge style. Can be used as a string value
    * for the STYLE_EDGE style.
    */
-  EDGESTYLE_TOPTOBOTTOM: 'topToBottomEdgeStyle';
+  static EDGESTYLE_TOPTOBOTTOM: 'topToBottomEdgeStyle';
 
   /**
    * Variable: EDGESTYLE_ORTHOGONAL
@@ -2237,7 +2237,7 @@ declare class mxConstants {
    * Name of the generic orthogonal edge style. Can be used as a string value
    * for the STYLE_EDGE style.
    */
-  EDGESTYLE_ORTHOGONAL: 'orthogonalEdgeStyle';
+  static EDGESTYLE_ORTHOGONAL: 'orthogonalEdgeStyle';
 
   /**
    * Variable: EDGESTYLE_SEGMENT
@@ -2245,7 +2245,7 @@ declare class mxConstants {
    * Name of the generic segment edge style. Can be used as a string value
    * for the STYLE_EDGE style.
    */
-  EDGESTYLE_SEGMENT: 'segmentEdgeStyle';
+  static EDGESTYLE_SEGMENT: 'segmentEdgeStyle';
 
   /**
    * Variable: PERIMETER_ELLIPSE
@@ -2253,7 +2253,7 @@ declare class mxConstants {
    * Name of the ellipse perimeter. Can be used as a string value
    * for the STYLE_PERIMETER style.
    */
-  PERIMETER_ELLIPSE: 'ellipsePerimeter';
+  static PERIMETER_ELLIPSE: 'ellipsePerimeter';
 
   /**
    * Variable: PERIMETER_RECTANGLE
@@ -2261,7 +2261,7 @@ declare class mxConstants {
    * Name of the rectangle perimeter. Can be used as a string value
    * for the STYLE_PERIMETER style.
    */
-  PERIMETER_RECTANGLE: 'rectanglePerimeter';
+  static PERIMETER_RECTANGLE: 'rectanglePerimeter';
 
   /**
    * Variable: PERIMETER_RHOMBUS
@@ -2269,7 +2269,7 @@ declare class mxConstants {
    * Name of the rhombus perimeter. Can be used as a string value
    * for the STYLE_PERIMETER style.
    */
-  PERIMETER_RHOMBUS: 'rhombusPerimeter';
+  static PERIMETER_RHOMBUS: 'rhombusPerimeter';
 
   /**
    * Variable: PERIMETER_HEXAGON
@@ -2277,7 +2277,7 @@ declare class mxConstants {
    * Name of the hexagon perimeter. Can be used as a string value
    * for the STYLE_PERIMETER style.
    */
-  PERIMETER_HEXAGON: 'hexagonPerimeter';
+  static PERIMETER_HEXAGON: 'hexagonPerimeter';
 
   /**
    * Variable: PERIMETER_TRIANGLE
@@ -2285,7 +2285,7 @@ declare class mxConstants {
    * Name of the triangle perimeter. Can be used as a string value
    * for the STYLE_PERIMETER style.
    */
-  PERIMETER_TRIANGLE: 'trianglePerimeter'
+  static PERIMETER_TRIANGLE: 'trianglePerimeter'
 
 }
 

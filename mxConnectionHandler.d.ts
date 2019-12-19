@@ -2,7 +2,7 @@
 
 declare class mxConnectionHandler extends mxEventSource {
 
-  constructor(graph: mxGraph, factoryMethod: (source: mxCell, target: mxCell, style?: string) => mxCell);
+  constructor(graph: mxGraph, factoryMethod?: (source: mxCell, target: mxCell, style?: string) => mxCell);
 
   /**
    * Variable: graph
@@ -662,7 +662,7 @@ declare class mxConnectionHandler extends mxEventSource {
    * implementation does only use <createEdge> if <factoryMethod> is defined,
    * otherwise <mxGraph.insertEdge> will be used.
    */
-  insertEdge(parent: mxCell, id: string, value: Element, source: mxCell, target: mxCell, style: string): mxCell;
+  insertEdge(parent: mxCell, id: string, value: any, source: mxCell, target: mxCell, style: string): mxCell;
 
   /**
    * Function: createTargetVertex

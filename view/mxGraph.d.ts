@@ -171,8 +171,19 @@ declare class mxGraph {
 
   allowNegativeCoordinates: boolean;
 
+  /**
+   * Specifies if a child should be constrained inside the parent bounds after a move or resize of the child.  Default is true.
+   * @type {boolean}
+   */
   constrainChildren: boolean;
 
+
+  /**
+   * Specifies if child cells with relative geometries should be constrained inside the parent bounds,
+   * if constrainChildren is true, and/or the maximumGraphBounds.
+   * Default is false.
+   * @type {boolean}
+   */
   constrainRelativeChildren: boolean;
 
   extendParents: boolean;
@@ -245,7 +256,7 @@ declare class mxGraph {
 
   //#endregion
 
-  constructor(container?: HTMLElement, model?: mxGraphModel, renderHint?: string, stylesheet?: string);
+  constructor(container?: HTMLElement, model?: mxGraphModel, renderHint?: string, stylesheet?: mxStylesheet);
 
 
   /**
@@ -4864,6 +4875,7 @@ declare class mxGraph {
    *
    * listener - Listener to be added to the graph event listeners.
    */
+  addMouseListener(obj: any): void;
   addMouseListener(listener: Function): void;
 
   /**

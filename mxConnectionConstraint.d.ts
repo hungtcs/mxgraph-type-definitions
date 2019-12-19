@@ -1,6 +1,19 @@
+
+/**
+ * Defines an object that contains the constraints about how to connect one side of an edge to its terminal.
+ * @class mxConnectionConstraint
+ */
 declare class mxConnectionConstraint {
 
-  constructor(point: mxPoint, perimeter: boolean, name?: string);
+  /**
+   * Constructs a new connection constraint for the given point and boolean arguments.
+   * @param point       Optional mxPoint that specifies the fixed location of the point in relative coordinates.  Default is null.
+   * @param perimeter   Optional boolean that specifies if the fixed point should be projected onto the perimeter of the terminal.  Default is true.
+   * @param name
+   * @param dx
+   * @param dy
+   */
+  constructor(point?: mxPoint, perimeter?: boolean, name?: string, dx?: number, dy?: number);
 
   /**
    * Variable: point

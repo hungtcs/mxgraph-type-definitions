@@ -153,7 +153,7 @@ declare class mxConstraintHandler {
    *
    * Returns true if the given icon intersects the given point.
    */
-  createHighlightShape(): mxRectangleShape;
+  createHighlightShape(): mxShape;
 
   /**
    * Function: intersects

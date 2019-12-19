@@ -121,7 +121,7 @@ declare class mxCell {
    * Returns the user object of the cell. The user
    * object is stored in <value>.
    */
-  getValue(): Element;
+  getValue(): any;
 
   /**
    * Function: setValue
@@ -129,7 +129,7 @@ declare class mxCell {
    * Sets the user object of the cell. The user object
    * is stored in <value>.
    */
-  setValue(value: Element): void;
+  setValue(value: any): void;
 
   /**
    * Function: valueChanged

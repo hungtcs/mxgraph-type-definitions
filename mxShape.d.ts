@@ -2,6 +2,8 @@
 declare class mxShape {
   constructor(stencil: mxStencil);
 
+  opacity: number;
+
   /**
    * Variable: dialect
    *
@@ -9,6 +11,8 @@ declare class mxShape {
    * This can be one of the DIALECT constants in <mxConstants>.
    */
   dialect: string;
+
+  isDashed: boolean;
 
   /**
    * Variable: scale
@@ -50,7 +54,7 @@ declare class mxShape {
    *
    * Holds the outermost DOM node that represents this shape.
    */
-  node: Element;
+  node: HTMLElement;
 
   /**
    * Variable: state

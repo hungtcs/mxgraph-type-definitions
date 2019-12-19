@@ -1,5 +1,5 @@
 
-/// <reference path="./mxGraph.d.ts" />
+/// <reference path="./view/mxGraph.d.ts" />
 /// <reference path="./mxAbstractCanvas2D.d.ts" />
 /// <reference path="./mxEventSource.d.ts" />
 /// <reference path="./mxPopupMenu.d.ts" />
@@ -21,7 +21,7 @@
 /// <reference path="./mxGraphView.d.ts" />
 /// <reference path="./mxShape.d.ts" />
 /// <reference path="./mxConnectionConstraint.d.ts" />
-/// <reference path="./mxGuide.d.ts" />
+/// <reference path="./util/mxGuide.d.ts" />
 /// <reference path="./mxStencil.d.ts" />
 /// <reference path="./mxConnectionHandler.d.ts" />
 /// <reference path="./mxImage.d.ts" />

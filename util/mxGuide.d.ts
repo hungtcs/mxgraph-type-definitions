@@ -1,7 +1,7 @@
 
 
 declare class mxGuide {
-  constructor(graph: mxGraph, states: mxCellState[]);
+  constructor(graph: mxGraph, states: Array<mxCellState|mxPoint>);
 
   /**
    * Variable: graph
@@ -114,4 +114,11 @@ declare class mxGuide {
    * Destroys all resources that this object uses.
    */
   destroy(): void;
+
+  /**
+   * Returns true if the given state should be ignored.
+   * @param state
+   */
+  isStateIgnored(state: mxCellState): boolean;
+
 }

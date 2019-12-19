@@ -1,7 +1,14 @@
 
 
 declare class mxGraphHandler {
-  constructor(graph: mxGraph);
+  cell: mxCell;
+  cells: Array<mxCell>;
+  first: mxPoint;
+  bounds: mxRectangle;
+  pBounds: mxRectangle;
+  allCells: mxDictionary<any>;
+  cloning: boolean;
+  cellCount: number;
 
   /**
    * Variable: graph
@@ -163,6 +170,8 @@ declare class mxGraphHandler {
    */
   rotationEnabled: boolean;
 
+  constructor(graph: mxGraph);
+
   /**
    * Function: isEnabled
    *
@@ -282,11 +291,18 @@ declare class mxGraphHandler {
   mouseDown(sender: any, me: mxMouseEvent): void;
 
   /**
+   * Adds the states for the given cell recursively to the given dictionary.
+   * @param cell
+   * @param dict
+   */
+  addStates(cell: mxCell, dict: any): number;
+
+  /**
    * Function: getGuideStates
    *
    * Creates an array of cell states which should be used as guides.
    */
-  getGuideStates(): mxCellState[];
+  getGuideStates(): Array<mxCellState|mxPoint>;
 
   /**
    * Function: getCells
