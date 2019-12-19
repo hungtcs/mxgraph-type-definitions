@@ -1,0 +1,20 @@
+{
+  "name": "mxgraph-type-definitions",
+  "version": "1.0.0",
+  "description": "this project is typescript definitions for mxGraph",
+  "main": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hungtcs/mxgraph-type-definitions.git"
+  },
+  "keywords": [
+    "mxgraph",
+    "types"
+  ],
+  "author": "鸿则 <hungtcs@163.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/hungtcs/mxgraph-type-definitions/issues"
+  },
+  "homepage": "https://github.com/hungtcs/mxgraph-type-definitions#readme"
+}
