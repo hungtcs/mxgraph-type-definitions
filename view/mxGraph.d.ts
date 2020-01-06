@@ -395,7 +395,7 @@ declare class mxGraph {
    *
    * Sets the <mxSelectionModel> that contains the selection.
    */
-  setSelectionModel(selectionModel: mxSelectionModel): void;
+  setSelectionModel(selectionModel: mxGraphSelectionModel): void;
 
   /**
    * Function: getSelectionCellsForChanges
