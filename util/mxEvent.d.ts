@@ -1,3 +1,4 @@
+
 declare class mxEvent {
 
   static UP: 'up';
@@ -8,8 +9,12 @@ declare class mxEvent {
   static CHANGE: 'change';
   static ESCAPE: 'escape';
   static TRANSLATE: 'translate';
+  static LAYOUT_CELLS: 'layoutCells';
   static START_EDITING: 'startEditing';
   static SCALE_AND_TRANSLATE: 'scaleAndTranslate';
+
+  static LABEL_HANDLE: -1;
+  static ROTATION_HANDLE: -2;
 
   /**
    * Binds the function to the specified event on the given element.

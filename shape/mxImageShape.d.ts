@@ -1,7 +1,7 @@
 
 declare class mxImageShape extends mxRectangleShape {
 
-  constructor(bounds: mxRectangle, image: mxImage, fill: string, stroke: string, strokewidth?: number);
+  constructor(bounds: mxRectangle, image: string, fill?: string, stroke?: string, strokewidth?: number);
 
 
   /**

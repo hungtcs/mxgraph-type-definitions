@@ -7,6 +7,7 @@
 /// <reference path="./mxGraph.d.ts" />
 /// <reference path="./mxGraphSelectionModel.d.ts" />
 /// <reference path="./mxGraphView.d.ts" />
+/// <reference path="./mxLayoutManager.d.ts" />
 /// <reference path="./mxMultiplicity.d.ts" />
 /// <reference path="./mxPerimeter.d.ts" />
 /// <reference path="./mxStylesheet.d.ts" />

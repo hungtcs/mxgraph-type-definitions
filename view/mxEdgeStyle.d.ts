@@ -91,14 +91,14 @@ declare class mxEdgeStyle {
    * result - Array of <mxPoints> that represent the actual points of the
    * edge.
    */
-  EntityRelation(state: mxCellState, source: mxCellState, target: mxCellState, points: mxPoint[], result: mxPoint[]): void;
+  static EntityRelation(state: mxCellState, source: mxCellState, target: mxCellState, points: mxPoint[], result: mxPoint[]): void;
 
   /**
   * Function: Loop
   *
   * Implements a self-reference, aka. loop.
   */
-  Loop(state: mxCellState, source: mxCellState, target: mxCellState, points: mxPoint[], result: mxPoint[]): void;
+ static Loop(state: mxCellState, source: mxCellState, target: mxCellState, points: mxPoint[], result: mxPoint[]): void;
 
   /**
    * Function: ElbowConnector
@@ -108,7 +108,7 @@ declare class mxEdgeStyle {
    * unspecified. See <EntityRelation> for a description of the
    * parameters.
    */
-  ElbowConnector(state: mxCellState, source: mxCellState, target: mxCellState, points: mxPoint[], result: mxPoint[]): void;
+  static ElbowConnector(state: mxCellState, source: mxCellState, target: mxCellState, points: mxPoint[], result: mxPoint[]): void;
 
   /**
    * Function: SideToSide
@@ -116,7 +116,7 @@ declare class mxEdgeStyle {
    * Implements a vertical elbow edge. See <EntityRelation> for a description
    * of the parameters.
    */
-  SideToSide(state: mxCellState, source: mxCellState, target: mxCellState, points: mxPoint[], result: mxPoint[]): void;
+  static SideToSide(state: mxCellState, source: mxCellState, target: mxCellState, points: mxPoint[], result: mxPoint[]): void;
 
   /**
    * Function: TopToBottom
@@ -124,7 +124,7 @@ declare class mxEdgeStyle {
    * Implements a horizontal elbow edge. See <EntityRelation> for a
    * description of the parameters.
    */
-  TopToBottom(state: mxCellState, source: mxCellState, target: mxCellState, points: mxPoint[], result: mxPoint[]): void;
+  static TopToBottom(state: mxCellState, source: mxCellState, target: mxCellState, points: mxPoint[], result: mxPoint[]): void;
 
   /**
    * Function: SegmentConnector
@@ -132,7 +132,7 @@ declare class mxEdgeStyle {
    * Implements an orthogonal edge style. Use <mxEdgeSegmentHandler>
    * as an interactive handler for this style.
    */
-  SegmentConnector(state: mxCellState, source: mxCellState, target: mxCellState, hints: mxPoint[], result: mxPoint[]): void;
+  static SegmentConnector(state: mxCellState, source: mxCellState, target: mxCellState, hints: mxPoint[], result: mxPoint[]): void;
 
 
   /**
@@ -151,6 +151,6 @@ declare class mxEdgeStyle {
    * edge.
    *
    */
-  OrthConnector(state: mxCellState, source: mxCellState, target: mxCellState, points: mxPoint[], result: mxPoint[]): void;
+  static OrthConnector(state: mxCellState, source: mxCellState, target: mxCellState, points: mxPoint[], result: mxPoint[]): void;
 
 }

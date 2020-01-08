@@ -1402,7 +1402,7 @@ declare class mxGraph {
    * recurse - Optional boolean which specifies if all descendants should be
    * autosized. Default is true.
    */
-  autoSizeCell(cell: mxCell[], recurse?: boolean): void;
+  autoSizeCell(cell: mxCell, recurse?: boolean): void;
 
   /**
    * Function: removeCells
@@ -4836,7 +4836,7 @@ declare class mxGraph {
    *
    * state - <mxCellState> to create the handler for.
    */
-  createEdgeHandler(state: mxCellState, edgeStyle: string): mxEdgeHandler;
+  createEdgeHandler(state: mxCellState, edgeStyle: any): mxEdgeHandler;
 
   /**
    * Function: createEdgeSegmentHandler

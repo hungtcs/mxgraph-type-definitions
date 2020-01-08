@@ -1,3 +1,40 @@
+
+declare class mxXXState {
+  dx: number;
+  dy: number;
+  scale: number;
+  alpha: number;
+  fillAlpha: number;
+  strokeAlpha: number;
+  fillColor: string;
+  gradientFillAlpha: number;
+  gradientColor: null
+  gradientAlpha: number;
+  gradientDirection: null
+  strokeColor: string;
+  strokeWidth: number;
+  dashed: boolean;
+  dashPattern: string;
+  fixDash: boolean;
+  lineCap: string;
+  lineJoin: string;
+  miterLimit: number;
+  fontColor: string;
+  fontBackgroundColor: null
+  fontBorderColor: null
+  fontSize: number;
+  fontFamily: string;
+  fontStyle: number;
+  shadow: boolean;
+  shadowColor: string;
+  shadowAlpha: number;
+  shadowDx: number;
+  shadowDy: number;
+  rotation: number;
+  rotationCx: number;
+  rotationCy: number;
+}
+
 declare class mxAbstractCanvas2D {
   constructor();
 
@@ -6,14 +43,14 @@ declare class mxAbstractCanvas2D {
    *
    * Holds the current state.
    */
-  state: HTMLCanvasElement;
+  state: mxXXState;
 
   /**
    * Variable: states
    *
    * Stack of states.
    */
-  states: HTMLCanvasElement[];
+  states: mxXXState[];
 
   /**
    * Variable: path

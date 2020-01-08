@@ -66,4 +66,31 @@ declare class mxUtils {
    * The error handler is invoked once on the first error or invalid response.
    */
   static getAll(urls: Array<string>, onload: (req: mxXmlRequest) => void, onerror: (err: mxXmlRequest) => void): void;
+
+  /**
+   * Returns true if the given ancestor is an ancestor of the given DOM node in the DOM.
+   * This also returns true if the child is the ancestor.
+   *
+   * @author 鸿则 <hungtcs@163.com>
+   * @date 2020-01-07
+   * @static
+   * @param {Node} ancestor DOM node that represents the ancestor.
+   * @param {Node} child    DOM node that represents the child.
+   * @returns {boolean}
+   */
+  static isAncestorNode(ancestor: Node, child: Node): boolean;
+
+  static makeDraggable(
+    element: Node,
+    graphF: mxGraph|Function,
+    funct: Function,
+    dragElement?: Node,
+    dx?: number,
+    dy?: number,
+    autoscroll?: boolean,
+    scalePreview?: boolean,
+    highlightDropTargets?: boolean,
+    getDropTarget?: Function,
+  ): mxDragSource;
+
 }
