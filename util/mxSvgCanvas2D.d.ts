@@ -1,3 +1,5 @@
+
+
 declare class mxSvgCanvas2D extends mxAbstractCanvas2D {
 
   constructor(root: Element, styleEnabled?: boolean);
@@ -185,7 +187,7 @@ declare class mxSvgCanvas2D extends mxAbstractCanvas2D {
    *
    * Private helper function to create SVG elements
    */
-  createElement(tagName: string, namespace: string): HTMLElement;
+  createElement(tagName: string, namespace?: string): HTMLElement;
 
   /**
    * Function: getAlternateContent

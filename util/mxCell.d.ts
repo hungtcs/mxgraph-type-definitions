@@ -347,7 +347,7 @@ declare class mxCell {
    * index - Optional integer that specifies the index at which the child
    * should be inserted into the child array.
    */
-  insert(child: mxCell, index: number): mxCell;
+  insert(child: mxCell, index?: number): mxCell;
 
   /**
    * Function: remove

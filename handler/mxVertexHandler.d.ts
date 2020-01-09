@@ -83,7 +83,7 @@ declare class mxVertexHandler {
    *
    * Specifies the cursor for the rotation handle. Default is 'crosshair'.
    */
-  rotationCursor: number;
+  rotationCursor: string;
 
   /**
    * Variable: livePreview
@@ -240,7 +240,7 @@ declare class mxVertexHandler {
    * index. Only images and rectangles should be returned if support for HTML
    * labels with not foreign objects is required.
    */
-  createSizerShape(bounds: mxRectangle, index: number, fillColor: string): mxRectangleShape;
+  createSizerShape(bounds: mxRectangle, index: number, fillColor: string): mxShape;
 
   /**
    * Function: createBounds

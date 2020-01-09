@@ -88,7 +88,7 @@ declare class mxCellRenderer {
    * key - String representing the shape name.
    * shape - Constructor of the <mxShape> subclass.
    */
-  private registerShape(key: string, shape: any);
+  static registerShape(key: string, shape: typeof mxShape): void;
 
   /**
    * Function: initializeShape

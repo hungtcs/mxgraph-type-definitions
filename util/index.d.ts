@@ -2,6 +2,7 @@
 /// <reference path="./mxCell.d.ts" />
 /// <reference path="./mxConstants.d.ts" />
 /// <reference path="./mxDictionary.d.ts" />
+/// <reference path="./mxDragSource.d.ts" />
 /// <reference path="./mxEvent.d.ts" />
 /// <reference path="./mxEventObject.d.ts" />
 /// <reference path="./mxEventSource.d.ts" />
