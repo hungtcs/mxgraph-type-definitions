@@ -119,4 +119,31 @@ declare class mxUtils {
 
   static createXmlDocument(): XMLDocument;
 
+  /**
+   * Returns the offset for the specified container as an mxPoint.
+   * The offset is the distance from the top left corner of the container to the top left corner of the document.
+   *
+   * @author 鸿则 <hungtcs@163.com>
+   * @date 2020-01-09
+   * @static
+   * @param {HTMLElement} container
+   * @param {boolean} scrollOffset
+   * @returns {mxPoint}
+   */
+  static getOffset(container: HTMLElement, scrollOffset?: boolean): mxPoint;
+
+  /**
+   * Returns the top, left corner of the viewrect as an mxPoint.
+   *
+   * @author 鸿则 <hungtcs@163.com>
+   * @date 2020-01-09
+   * @static
+   * @param {HTMLElement} node
+   * @param {boolean} [includeAncestors]
+   * @param {boolean} [includeDocument]
+   * @returns {mxPoint}
+   */
+  static getScrollOrigin(node: HTMLElement, includeAncestors?: boolean, includeDocument?: boolean): mxPoint;
+
+
 }

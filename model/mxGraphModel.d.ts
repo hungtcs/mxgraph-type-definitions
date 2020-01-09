@@ -131,7 +131,7 @@ declare class mxGraphModel extends mxEventSource {
    *
    * id - A string representing the Id of the cell.
    */
-  getCell(id: string);
+  getCell(id: string): mxCell;
 
   /**
    * Function: filterCells

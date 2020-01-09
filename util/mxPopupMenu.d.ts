@@ -1,6 +1,6 @@
 
 declare class mxPopupMenu extends mxEventSource {
-  constructor(factoryMethod: (panningHandler: mxPanningHandler, cell: mxCell, me: mxMouseEvent) => any);
+  constructor(factoryMethod: (handler: mxPopupMenuHandler, cell: mxCell, me: mxMouseEvent) => any);
 
   /**
    * Variable: submenuImage
@@ -23,7 +23,7 @@ declare class mxPopupMenu extends mxEventSource {
    * current panning handler, the <mxCell> under the mouse and the mouse
    * event that triggered the call as arguments.
    */
-  factoryMethod: (panningHandler: mxPanningHandler, cell: mxCell, me: mxMouseEvent) => any;
+  factoryMethod: (handler: mxPopupMenuHandler, cell: mxCell, me: mxMouseEvent) => any;
 
   /**
    * Variable: useLeftButtonForPopup

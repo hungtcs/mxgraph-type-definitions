@@ -1,4 +1,5 @@
 declare class mxCell {
+  [key: string]: any;
 
   constructor(value?: any, geometry?: mxGeometry, style?: string);
 

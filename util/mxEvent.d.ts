@@ -427,12 +427,16 @@ declare class mxEvent {
   static isPopupTrigger(evt: any): boolean;
 
   static isMouseEvent(evt: any): boolean;
+  static isLeftMouseButton(evt: any): boolean;
+  static isRightMouseButton(evt: any): boolean;
+  static isMiddleMouseButton(evt: any): boolean;
 
   /**
    * Returns true if the event was generated using a touch device (not a pen or mouse).
    * @param event
    */
   static isTouchEvent(event: Event): boolean;
+  static isMultiTouchEvent(event: Event): boolean;
 
   /**
    * Disables the context menu for the given element.

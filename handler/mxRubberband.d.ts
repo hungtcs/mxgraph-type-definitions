@@ -6,6 +6,8 @@
  */
 declare class mxRubberband {
 
+  graph: mxGraph;
+
   /**
    * Optional fade out effect.  Default is false.
    */
@@ -25,6 +27,10 @@ declare class mxRubberband {
    * Creates the rubberband selection shape.
    */
   createShape(): HTMLElement;
+
+  isEnabled(): boolean;
+
+  start(x: number, y: number): void;
 
 
 }
