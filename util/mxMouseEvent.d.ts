@@ -137,5 +137,5 @@ declare class mxMouseEvent {
    * preventDefault - Specifies if the native event should be canceled. Default
    * is true.
    */
-  consume(preventDefault: boolean): void;
+  consume(preventDefault?: boolean): void;
 }

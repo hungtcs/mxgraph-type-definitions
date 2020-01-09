@@ -117,4 +117,6 @@ declare class mxUtils {
     getDropTarget?: Function,
   ): mxDragSource;
 
+  static createXmlDocument(): XMLDocument;
+
 }

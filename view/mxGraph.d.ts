@@ -1,6 +1,6 @@
 
 
-declare class mxGraph {
+declare class mxGraph extends mxEventSource {
   //#region variables
 
   container: HTMLElement;
@@ -4873,7 +4873,7 @@ declare class mxGraph {
    *
    * listener - Listener to be added to the graph event listeners.
    */
-  addMouseListener(obj: any): void;
+  addMouseListener(obj: { [key: string]: (sender: mxEventSource, event: mxMouseEvent) => any }): void;
   addMouseListener(listener: Function): void;
 
   /**
