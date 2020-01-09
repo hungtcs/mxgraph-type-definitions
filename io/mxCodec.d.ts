@@ -18,6 +18,15 @@ declare class mxCodec {
    * @param node XML node to be decoded.
    * @param into Optional object to be decodec into.
    */
-  decode(node: Document, into: any): void;
+  decode(node: Element, into: any): void;
+
+  /**
+   * Encodes the specified object and returns the resulting XML node.
+   *
+   * @author 鸿则 <hungtcs@163.com>
+   * @date 2019-12-27
+   * @param {mxGraphModel} obj    Object to be encoded.
+   */
+  encode(obj: any): XMLDocument;
 
 }

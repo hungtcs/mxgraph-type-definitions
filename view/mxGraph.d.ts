@@ -1288,16 +1288,14 @@ declare class mxGraph {
    * relative - Optional boolean that specifies if the geometry is relative.
    * Default is false.
    */
-  insertVertex(parent: mxCell, id: string, value: any,
-    x: number, y: number, width: number, height: number, style?: string, relative?: boolean): mxCell;
+  insertVertex(parent: mxCell, id: string, value: any, x: number, y: number, width: number, height: number, style?: string, relative?: boolean): mxCell;
 
   /**
    * Function: createVertex
    *
    * Hook method that creates the new vertex for <insertVertex>.
    */
-  createVertex(parent: mxCell, id: string, value: any,
-    x: string, y: string, width: string, height: string, style?: string, relative?: boolean): mxCell;
+  createVertex(parent: mxCell, id: string, value: any, x: number, y: number, width: number, height: number, style?: string, relative?: boolean): mxCell;
 
   /**
    * Function: insertEdge

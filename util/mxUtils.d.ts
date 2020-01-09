@@ -66,4 +66,31 @@ declare class mxUtils {
    * The error handler is invoked once on the first error or invalid response.
    */
   static getAll(urls: Array<string>, onload: (req: mxXmlRequest) => void, onerror: (err: mxXmlRequest) => void): void;
+
+
+  /**
+   * Returns the XML content of the specified node.
+   * For Internet Explorer, all \r\n\t[\t]* are removed from the XML string and the remaining \r\n are replaced by \n.
+   * All \n are then replaced with linefeed, or &#xa; if no linefeed is defined.
+   *
+   * @author 鸿则 <hungtcs@163.com>
+   * @date 2019-12-27
+   * @static
+   * @param {XMLDocument} node      DOM node to return the XML for.
+   * @param {*} linefeed            Optional string that linefeeds are converted into.  Default is &#xa;
+   */
+  static getXml(node: XMLDocument, linefeed?: string): string;
+
+
+  /**
+   * Parses the specified XML string into a new XML document and returns the new document.
+   *
+   * @author 鸿则 <hungtcs@163.com>
+   * @date 2019-12-27
+   * @static
+   * @param {string} xml
+   * @returns {XMLDocument}
+   */
+  static parseXml(xml: string): XMLDocument;
+
 }
