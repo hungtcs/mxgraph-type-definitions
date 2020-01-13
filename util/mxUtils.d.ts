@@ -145,5 +145,8 @@ declare class mxUtils {
    */
   static getScrollOrigin(node: HTMLElement, includeAncestors?: boolean, includeDocument?: boolean): mxPoint;
 
+  static importNode(doc: Document, node: any, allChildren: any): any;
+
+  static removeWhitespace(node: any, before: boolean);
 
 }

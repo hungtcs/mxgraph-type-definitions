@@ -6,10 +6,14 @@
  */
 declare class mxCodec {
 
+  document: XMLDocument;
+
   /**
    * Constructs an XML encoder/decoder for the specified owner document.
    */
   constructor(document?: XMLDocument);
+
+  updateElements();
 
   /**
    * Decodes the given XML node.  The optional “into” argument specifies an existing object to be used.
@@ -18,7 +22,7 @@ declare class mxCodec {
    * @param node XML node to be decoded.
    * @param into Optional object to be decodec into.
    */
-  decode(node: Element, into: any): void;
+  decode(node: Element, into?: any): void;
 
   /**
    * Encodes the specified object and returns the resulting XML node.
@@ -28,5 +32,7 @@ declare class mxCodec {
    * @param {mxGraphModel} obj    Object to be encoded.
    */
   encode(obj: any): XMLDocument;
+
+  getObject(id: any): any;
 
 }
