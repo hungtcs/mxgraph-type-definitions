@@ -1587,7 +1587,7 @@ declare class mxGraph extends mxEventSource {
    *
    * cell - <mxCell> whose size should be updated.
    */
-  updateCellSize(cell: mxCell, ignoreChildren: boolean): mxCell;
+  updateCellSize(cell: mxCell, ignoreChildren?: boolean): mxCell;
 
   /**
    * Function: cellSizeUpdated
