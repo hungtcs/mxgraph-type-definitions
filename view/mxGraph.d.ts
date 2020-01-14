@@ -414,7 +414,7 @@ declare class mxGraph extends mxEventSource {
    *
    * changes - Array that contains the individual changes.
    */
-  graphModelChanged(changes: mxRootChange | mxChildChange | mxTerminalChange | mxGeometryChange | mxValueChange | mxStyleChange): void;
+  graphModelChanged(changes: Array<mxRootChange | mxChildChange | mxTerminalChange | mxGeometryChange | mxValueChange | mxStyleChange>): void;
 
   /**
    * Function: getRemovedCellsForChanges
