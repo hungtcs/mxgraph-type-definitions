@@ -1791,7 +1791,7 @@ declare class mxGraph extends mxEventSource {
    * evt - Mouseevent that triggered the invocation.
    * mapping - Optional mapping for existing clones.
    */
-  importCells(cells: mxCell[], dx: number, dy: number, target: mxCell, evt: Event, mapping: any): mxCell[];
+  importCells(cells: mxCell[], dx: number, dy: number, target: mxCell, evt?: Event, mapping?: any): mxCell[];
 
   /**
    * Function: moveCells
