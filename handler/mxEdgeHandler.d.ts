@@ -267,7 +267,7 @@ declare class mxEdgeHandler {
    *
    * Returns <mxConstants.EDGE_SELECTION_DASHED>.
    */
-  isSelectionDashed(): string;
+  isSelectionDashed(): boolean;
 
   /**
    * Function: isConnectableCell
