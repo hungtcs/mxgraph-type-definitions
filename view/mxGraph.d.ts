@@ -2731,7 +2731,7 @@ declare class mxGraph extends mxEventSource {
    *
    * cell - <mxCell> whose label should be returned.
    */
-  getLabel(cell: mxCell): string;
+  getLabel(cell: mxCell): string | Node;
 
   /**
    * Function: isHtmlLabel

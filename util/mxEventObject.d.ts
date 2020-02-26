@@ -41,7 +41,7 @@ declare class mxEventObject {
    *
    * Returns the property for the given key.
    */
-  getProperty(key: string): any[];
+  getProperty(key: string): any;
 
   /**
    * Function: isConsumed
