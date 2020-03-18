@@ -1,5 +1,7 @@
 declare class mxCircleLayout {
-
+  x0: number;
+  y0: number;
+  radius: number;
   moveCircle: boolean;
   disableEdgeStyle: boolean;
 
