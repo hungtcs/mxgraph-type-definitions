@@ -2,6 +2,8 @@
 declare class mxShape {
   constructor(stencil: mxStencil);
 
+  constraints: Array<mxConnectionConstraint>;
+
   opacity: number;
 
   /**
