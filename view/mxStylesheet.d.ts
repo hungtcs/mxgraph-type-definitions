@@ -1,5 +1,5 @@
 declare interface StyleMap {
-  [styleKey: string]: string|number;
+  [styleKey: string]: any;
 }
 
 declare class mxStylesheet {

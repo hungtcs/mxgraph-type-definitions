@@ -11,3 +11,4 @@
 /// <reference path="./mxMultiplicity.d.ts" />
 /// <reference path="./mxPerimeter.d.ts" />
 /// <reference path="./mxStylesheet.d.ts" />
+/// <reference path="./mxSwimlaneManager.d.ts" />

@@ -625,7 +625,7 @@ declare class mxConstants {
    * This can be overridden using <mxConstants.STYLE_SEGMENT> style.
    * Default is 30.
    */
-  static ENTITY_SEGMENT: 30;
+  static ENTITY_SEGMENT: number;
 
   /**
    * Variable: RECTANGLE_ROUNDING_FACTOR
