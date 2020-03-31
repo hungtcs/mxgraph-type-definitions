@@ -1,6 +1,7 @@
 
 
 declare class mxConnectionHandler extends mxEventSource {
+  sourceConstraint: mxConnectionConstraint;
 
   constructor(graph: mxGraph, factoryMethod?: (source: mxCell, target: mxCell, style?: string) => mxCell);
 
@@ -700,7 +701,7 @@ declare class mxConnectionHandler extends mxEventSource {
    * target - <mxCell> that represents the target terminal.
    * style - Optional style from the preview edge.
    */
-  createEdge(value: Element, source: mxCell, target: mxCell, style: string): mxCell;
+  createEdge(value?: any, source?: mxCell, target?: mxCell, style?: string): mxCell;
 
   /**
    * Function: destroy

@@ -2,6 +2,8 @@
 
 declare class mxConstraintHandler {
 
+  currentConstraint: mxConnectionConstraint;
+
   constructor(graph: mxGraph, factoryMethod?: (source: mxCell, target: mxCell) => mxCell);
 
   /**

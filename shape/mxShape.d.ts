@@ -1,5 +1,5 @@
 
-declare class mxShape {
+declare class mxShape extends mxStencil {
   constructor(stencil: mxStencil);
 
   constraints: Array<mxConnectionConstraint>;
