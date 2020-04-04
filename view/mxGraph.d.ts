@@ -1893,7 +1893,7 @@ declare class mxGraph extends mxEventSource {
    *
    * edge - <mxCell> whose points should be reset.
    */
-  resetEdge(edge: mxCell);
+  resetEdge(edge: mxCell): mxCell;
 
   /**
    * Group: Cell connecting and connection constraints

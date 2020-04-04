@@ -2,6 +2,8 @@ declare class mxGeometry extends mxRectangle {
 
   constructor(x?: number, y?: number, width?: number, height?: number);
 
+  clone(): mxGeometry;
+
   /**
    * Variable: TRANSLATE_CONTROL_POINTS
    *
