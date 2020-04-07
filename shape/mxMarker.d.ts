@@ -1,28 +1,38 @@
+/// <reference path="../util/mxAbstractCanvas2D.d.ts" />
+
+/**
+ * A static class that implements all markers for VML and SVG using a registry.
+ * NOTE: The signatures in this class will change.
+ * @class mxMarker
+ */
 declare class mxMarker {
+
   /**
-   * Class: mxMarker
-   *
-   * A static class that implements all markers for VML and SVG using a
-   * registry. NOTE: The signatures in this class will change.
-   *
-   * Variable: markers
-   *
    * Maps from markers names to functions to paint the markers.
    */
   static markers: Map<string, Function>;
 
   /**
-   * Function: addMarker
-   *
    * Adds a factory method that updates a given endpoint and returns a
    * function to paint the marker onto the given canvas.
    */
-  static addMarker(type: string, funct: Function);
+  static addMarker(type: string, funct: Function): void;
+
   /**
-   * Function: createMarker
-   *
    * Returns a function to paint the given marker.
+   * TODO: need check
    */
-  static createMarker(canvas, shape, type, pe, unitX, unitY, size, source, sw, filled);
+  static createMarker(
+    canvas: mxAbstractCanvas2D,
+    shape: any,
+    type: string,
+    pe: PointerEvent,
+    unitX: number,
+    unitY: number,
+    size: number,
+    source: any,
+    sw: number,
+    filled: boolean,
+  ): () => void;
 
 }

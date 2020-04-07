@@ -1,11 +1,62 @@
+/// <reference path="./mxShape.d.ts" />
 
-
+/**
+ * Extends mxShape to implement a text shape.
+ * To change vertical text from bottom to top to top to bottom,
+ * the following code can be used:
+ * @example
+ * ```javascript
+ * mxText.prototype.verticalTextRotation = 90;
+ * ```
+ * @class mxText
+ * @extends {mxShape}
+ */
 declare class mxText extends mxShape {
 
-  constructor(value: string, bounds: mxRectangle, align: string, valign: string, color: string,
-    family: string, size: number, fontStyle: string | 0, spacing: number, spacingTop: number, spacingRight: number,
-    spacingBottom: number, spacingLeft: number, horizontal: boolean, background: string, border: string,
-    wrap: boolean, clipped: boolean, overflow: string, labelPadding: string, textDirection: string);
+  /**
+   * @param value             String that represents the text to be displayed.  This is stored in <value>.
+   * @param bounds            mxRectangle that defines the bounds.  This is stored in mxShape.bounds.
+   * @param align             Specifies the horizontal alignment.  Default is ‘’.  This is stored in <align>.
+   * @param valign            Specifies the vertical alignment.  Default is ‘’.  This is stored in <valign>.
+   * @param color             String that specifies the text color.  Default is ‘black’.  This is stored in <color>.
+   * @param family            String that specifies the font family.  Default is mxConstants.DEFAULT_FONTFAMILY.  This is stored in <family>.
+   * @param size              Integer that specifies the font size.  Default is mxConstants.DEFAULT_FONTSIZE.  This is stored in <size>.
+   * @param fontStyle         Specifies the font style.  Default is 0.  This is stored in <fontStyle>.
+   * @param spacing           Integer that specifies the global spacing.  Default is 2.  This is stored in <spacing>.
+   * @param spacingTop        Integer that specifies the top spacing.  Default is 0.  The sum of the spacing and this is stored in <spacingTop>.
+   * @param spacingRight      Integer that specifies the right spacing.  Default is 0.  The sum of the spacing and this is stored in <spacingRight>.
+   * @param spacingBottom     Integer that specifies the bottom spacing.  Default is 0.The sum of the spacing and this is stored in <spacingBottom>.
+   * @param spacingLeft       Integer that specifies the left spacing.  Default is 0.  The sum of the spacing and this is stored in <spacingLeft>.
+   * @param horizontal        Boolean that specifies if the label is horizontal.  Default is true.  This is stored in <horizontal>.
+   * @param background        String that specifies the background color.  Default is null.  This is stored in <background>.
+   * @param border            String that specifies the label border color.  Default is null.  This is stored in <border>.
+   * @param wrap              Specifies if word-wrapping should be enabled.  Default is false.  This is stored in <wrap>.
+   * @param clipped           Specifies if the label should be clipped.  Default is false.  This is stored in <clipped>.
+   * @param overflow          Value of the overflow style.  Default is ‘visible’.
+   */
+  constructor(
+    value: string,
+    bounds: mxRectangle,
+    align?: string,
+    valign?: string,
+    color?: string,
+    family?: string,
+    size?: number,
+    fontStyle?: string | 0,
+    spacing?: number,
+    spacingTop?: number,
+    spacingRight?: number,
+    spacingBottom?: number,
+    spacingLeft?: number,
+    horizontal?: boolean,
+    background?: string,
+    border?: string,
+    wrap?: boolean,
+    clipped?: boolean,
+    overflow?: string,
+    labelPadding?: string,
+    textDirection?: string,
+  );
 
   /**
    * Variable: baseSpacingTop
@@ -271,4 +322,5 @@ declare class mxText extends mxShape {
    * Returns the spacing as an <mxPoint>.
    */
   getSpacing(): mxPoint;
+
 }
