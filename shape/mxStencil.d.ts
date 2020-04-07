@@ -1,4 +1,13 @@
-declare class mxStencil {
+/// <reference path="./mxShape.d.ts" />
+/// <reference path="../util/mxRectangle.d.ts" />
+/// <reference path="../util/mxAbstractCanvas2D.d.ts" />
+
+/**
+ * Implements a generic shape which is based on a XML node as a description.
+ *
+ * @class mxStencil
+ */
+declare class mxStencil extends mxShape {
 
   constructor(desc: Element);
 

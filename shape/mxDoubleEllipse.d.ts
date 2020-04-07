@@ -1,6 +1,7 @@
 ///<reference path="mxShape.d.ts"/>
 ///<reference path="../util/mxAbstractCanvas2D.d.ts"/>
 ///<reference path="../util/mxRectangle.d.ts"/>
+
 /**
  * Extends {@link mxShape} to implement a double ellipse shape.
  *
@@ -61,4 +62,5 @@ declare class mxDoubleEllipse extends mxShape {
    * @returns the bounds for the label.
    */
   getLabelBounds(rect: mxRectangle): mxRectangle;
+
 }

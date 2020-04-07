@@ -1,6 +1,7 @@
 ///<reference path="mxShape.d.ts"/>
 ///<reference path="../util/mxAbstractCanvas2D.d.ts"/>
 ///<reference path="../util/mxRectangle.d.ts"/>
+
 /**
  * Extends {@link mxShape} to implement an actor shape. If a custom shape with one
  * filled area is needed, then this shape's {@link redrawPath} method should be overridden.
@@ -25,6 +26,7 @@
  * ```
  */
 declare class mxActor extends mxShape {
+
   /**
    * Constructs a new actor shape.
    *
@@ -34,6 +36,11 @@ declare class mxActor extends mxShape {
    * @param strokewidth    Optional integer that defines the stroke width. Default is 1. This is stored in {@link mxShape.strokewidth}.
    */
   constructor(bounds: mxRectangle, fill: string, stroke: string, strokewidth?: number);
+
+  /**
+   * Redirects to redrawPath for subclasses to work.
+   */
+  paintVertexShape(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number): void;
 
   /**
    * Draws the path for this shape.

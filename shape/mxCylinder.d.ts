@@ -1,6 +1,7 @@
 ///<reference path="mxShape.d.ts"/>
 ///<reference path="../util/mxAbstractCanvas2D.d.ts"/>
 ///<reference path="../util/mxRectangle.d.ts"/>
+
 /**
  * Extends {@link mxShape} to implement an cylinder shape. If a custom shape with one filled area and an overlay path is
  * needed, then this shape's {@link redrawPath} should be overridden.

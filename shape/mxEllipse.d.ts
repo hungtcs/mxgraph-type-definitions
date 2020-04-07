@@ -1,3 +1,7 @@
+/// <reference path="./mxShape.d.ts" />
+/// <reference path="../util/mxRectangle.d.ts" />
+/// <reference path="../util/mxAbstractCanvas2D.d.ts" />
+
 /**
  * Extends mxShape to implement an ellipse shape.
  * This shape is registered under mxConstants.SHAPE_ELLIPSE in mxCellRenderer.
@@ -12,4 +16,8 @@ declare class mxEllipse extends mxShape {
    */
   constructor(bounds: mxRectangle, fill: string, stroke: string, strokewidth?: number);
 
+  /**
+   * Paints the ellipse shape.
+   */
+  paintVertexShape(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number): void;
 }

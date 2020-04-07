@@ -1,4 +1,5 @@
 ///<reference path="mxActor.d.ts"/>
+
 /**
  * Extends {@link mxActor} to implement a cloud shape.
  *

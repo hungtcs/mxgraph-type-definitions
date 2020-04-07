@@ -1,5 +1,62 @@
+/// <reference path="./mxStencil.d.ts" />
+/// <reference path="../util/mxPoint.d.ts" />
+/// <reference path="../util/mxSvgCanvas2D.d.ts" />
+/// <reference path="../util/mxVmlCanvas2D.d.ts" />
+/// <reference path="../view/mxCellState.d.ts" />
+/// <reference path="../view/mxConnectionConstraint.d.ts" />
 
-declare class mxShape extends mxStencil {
+/**
+ * Base class for all shapes.
+ * A shape in mxGraph is a separate implementation for SVG, VML and HTML.
+ * Which implementation to use is controlled by the dialect property which
+ * is assigned from within the mxCellRenderer when the shape is created.
+ * The dialect must be assigned for a shape, and it does normally depend on
+ * the browser and the confiuration of the graph (see mxGraph rendering hint).
+ *
+ * For each supported shape in SVG and VML, a corresponding shape exists in
+ * mxGraph, namely for text, image, rectangle, rhombus, ellipse and polyline.
+ * The other shapes are a combination of these shapes (eg. label and swimlane)
+ * or they consist of one or more (filled) path objects (eg. actor and cylinder).
+ * The HTML implementation is optional but may be required for a HTML-only view
+ * of the graph.
+ *
+ * ### Custom Shapes
+ * To extend from this class, the basic code looks as follows.
+ * In the special case where the custom shape consists only of one filled region
+ * or one filled region and an additional stroke the mxActor and mxCylinder
+ * should be subclassed, respectively.
+ * @example
+ * ```javascript
+ * function CustomShape() { }
+ *
+ * CustomShape.prototype = new mxShape();
+ * CustomShape.prototype.constructor = CustomShape;
+ * ```
+ * To register a custom shape in an existing graph instance, one must register the
+ * shape under a new name in the graph’s cell renderer as follows:
+ * @example
+ * ```javascript
+ * mxCellRenderer.registerShape('customShape', CustomShape);
+ * ```
+ * The second argument is the name of the constructor.
+ * In order to use the shape you can refer to the given name above in a stylesheet.
+ * For example, to change the shape for the default vertex style, the following code
+ * is used:
+ * @example
+ * ```javascript
+ * var style = graph.getStylesheet().getDefaultVertexStyle();
+ * style[mxConstants.STYLE_SHAPE] = 'customShape';
+ * ```
+ *
+ * @class mxShape
+ * @extends {mxStencil}
+ */
+declare class mxShape {
+
+  /**
+   * Constructs a new shape.
+   * @param {mxStencil} stencil
+   */
   constructor(stencil: mxStencil);
 
   constraints: Array<mxConnectionConstraint>;
@@ -198,7 +255,7 @@ declare class mxShape extends mxStencil {
    *
    * Returns 0, or 0.5 if <strokewidth> % 2 == 1.
    */
-  getSvgScreenOffset(): 0 | 0.5;
+  getSvgScreenOffset(): number;
 
   /**
    * Function: create
@@ -580,4 +637,5 @@ declare class mxShape extends mxStencil {
    * node associated with the shape using <mxEvent.release>.
    */
   destroy(): void;
+
 }

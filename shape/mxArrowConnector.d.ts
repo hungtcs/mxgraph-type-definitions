@@ -3,6 +3,7 @@
 ///<reference path="../util/mxPoint.d.ts"/>
 ///<reference path="../util/mxRectangle.d.ts"/>
 ///<reference path="../view/mxCellState.d.ts"/>
+
 /**
  * Extends {@link mxShape} to implement an new rounded arrow shape with support for waypoints and double arrows. The
  * shape is used to represent edges, not vertices.
@@ -43,7 +44,7 @@ declare class mxArrowConnector extends mxShape {
   /**
    * Augments the bounding box with the edge width and markers.
    */
-  augmentBoundingBox(bbox: mxRectangle);
+  augmentBoundingBox(bbox: mxRectangle): void;
 
   /**
    * Paints the line shape.

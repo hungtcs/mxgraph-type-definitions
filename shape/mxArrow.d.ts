@@ -2,6 +2,7 @@
 ///<reference path="../util/mxAbstractCanvas2D.d.ts"/>
 ///<reference path="../util/mxPoint.d.ts"/>
 ///<reference path="../util/mxRectangle.d.ts"/>
+
 /**
  * Extends {@link mxShape} to implement an arrow shape. The shape is used to represent edges, not vertices.
  *
