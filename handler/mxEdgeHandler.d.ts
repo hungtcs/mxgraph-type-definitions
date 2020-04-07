@@ -1,6 +1,23 @@
 
 
+/**
+ * Graph event handler that reconnects edges and modifies control points and the edge
+ * label location.
+ * Uses <mxTerminalMarker> for finding and highlighting new source and target vertices.
+ * This handler is automatically created in mxGraph.createHandler for each selected edge.
+ * **To enable adding/removing control points, the following code can be used**
+ * @example
+ * ```
+ * mxEdgeHandler.prototype.addEnabled = true;
+ * mxEdgeHandler.prototype.removeEnabled = true;
+ * ```
+ * Note: This experimental feature is not recommended for production use.
+ * @class mxEdgeHandler
+ */
 declare class mxEdgeHandler {
+
+  labelHandleImage: mxImage;
+
   constructor(state: mxCellState);
 
   /**

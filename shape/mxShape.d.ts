@@ -59,9 +59,26 @@ declare class mxShape {
    */
   constructor(stencil: mxStencil);
 
-  constraints: Array<mxConnectionConstraint>;
+  /**
+   * @author 鸿则<hungtcs@163.com>
+   * These parameters cannot be found in the API,
+   * but it does exist and is necessary
+   */
+  strokewidth: number;
+
+  rotation: number;
 
   opacity: number;
+
+  fillOpacity: number;
+
+  strokeOpacity: number;
+
+  flipH: boolean;
+
+  flipV: boolean;
+
+  constraints: Array<mxConnectionConstraint>;
 
   /**
    * Variable: dialect

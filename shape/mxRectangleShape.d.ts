@@ -19,6 +19,19 @@ declare class mxRectangleShape extends mxShape {
   constructor(bounds: mxRectangle, fill: string, stroke: string, strokewidth?: number);
 
   /**
+   * @author 鸿则<hungtcs@163.com>
+   * These parameters cannot be found in the API,
+   * but it does exist and is necessary
+   */
+  bounds: mxRectangle;
+
+  fill: string;
+
+  stroke: string;
+
+  strokewidth: number;
+
+  /**
    * Returns true for non-rounded, non-rotated shapes with no glass gradient.
    */
   isHtmlAllowed(): boolean;
