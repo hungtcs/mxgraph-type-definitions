@@ -194,4 +194,6 @@ declare class mxGeometry extends mxRectangle {
    */
   equals(obj: mxGeometry): boolean;
 
+  clone(): mxGeometry;
+
 }
