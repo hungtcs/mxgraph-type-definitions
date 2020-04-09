@@ -82,7 +82,7 @@ declare class mxStencil extends mxShape {
    *
    * Holds the strokewidth direction from the description.
    */
-  strokewidth: string;
+  strokewidth: number;
 
   /**
    * Function: parseDescription

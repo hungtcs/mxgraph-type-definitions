@@ -1,5 +1,4 @@
 /// <reference path="./mxAbstractCanvas2D.d.ts" />
-/// <reference path="./mxCell.d.ts" />
 /// <reference path="./mxConstants.d.ts" />
 /// <reference path="./mxDictionary.d.ts" />
 /// <reference path="./mxDragSource.d.ts" />
