@@ -53,17 +53,17 @@ declare class mxGraphAbstractHierarchyCell {
    * be used for hashing the nodes in the model dfs and so hashCode
    * was created
    */
-  temp: any;
+  temp: Array<any>;
 
   /**
    * Returns the cells this cell connects to on the next layer up
    */
-  getNextLayerConnectedCells(layer: any): Array<mxCell>;
+  getNextLayerConnectedCells(layer: any): mxCell;
 
   /**
    * Returns the cells this cell connects to on the next layer down
    */
-  getPreviousLayerConnectedCells(layer: any): Array<mxCell>;
+  getPreviousLayerConnectedCells(layer: any): mxCell;
 
   /**
    * Returns whether or not this cell is an edge
