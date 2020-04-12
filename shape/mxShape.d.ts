@@ -436,11 +436,9 @@ declare class mxShape {
   updateHtmlBounds(node: HTMLElement): void;
 
   /**
-   * Function: paint
-   *
    * Generic rendering code.
    */
-  paint(c: mxAbstractCanvas2D);
+  paint(c: mxAbstractCanvas2D): void;
 
   /**
    * Function: getGradientBounds
@@ -498,11 +496,9 @@ declare class mxShape {
    */
   paintGlassEffect(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number, arc: number): void;
   /**
-   * Function: addPoints
-   *
    * Paints the given points with rounded corners.
    */
-  addPoints(c: mxAbstractCanvas2D, pts: mxPoint[], rounded: boolean, arcSize: number, close: boolean, exclude: mxPoint[], initialMove: boolean);
+  addPoints(c: mxAbstractCanvas2D, pts: mxPoint[], rounded: boolean, arcSize: number, close: boolean, exclude: mxPoint[], initialMove: boolean): void;
 
   /**
    * Function: resetStyles
@@ -590,11 +586,9 @@ declare class mxShape {
   createBoundingBox(): mxRectangle;
 
   /**
-   * Function: augmentBoundingBox
-   *
    * Augments the bounding box with the strokewidth and shadow offsets.
    */
-  augmentBoundingBox(bbox: mxRectangle);
+  augmentBoundingBox(bbox: mxRectangle): void;
 
   /**
    * Function: isPaintBoundsInverted
