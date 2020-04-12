@@ -5,4 +5,5 @@
 /// <reference path="./mxFastOrganicLayout.d.ts" />
 /// <reference path="./mxGraphLayout.d.ts" />
 /// <reference path="./mxParallelEdgeLayout.d.ts" />
+/// <reference path="./mxRadialTreeLayout.d.ts" />
 /// <reference path="./mxStackLayout.d.ts" />
