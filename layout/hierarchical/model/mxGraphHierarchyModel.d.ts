@@ -42,7 +42,7 @@ declare class mxGraphHierarchyModel {
   /**
    * Mapping from rank number to actual rank
    */
-  ranks: any;
+  ranks: Array<number>;
 
   /**
    * Store of roots of this hierarchy model, these are real graph cells, not
