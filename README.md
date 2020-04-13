@@ -1,6 +1,8 @@
 mxGraph Type Definitions
 ====
 
+![npm](https://img.shields.io/npm/v/mxgraph-type-definitions)
+
 This project is typescript definitions for [mxGraph].
 
 ### Usage
@@ -14,9 +16,9 @@ npm install --save-dev mxgraph-type-definitions
 | Module         | Progress  | Checked |
 |:---------------|:---------:|:-------:|
 | editor         | not yet   | no      |
-| handler        | partial   | no      |
+| handler        | completed | no      |
 | io             | completed | no      |
-| layout         | partial   | no      |
+| layout         | completed | no      |
 | model          | completed | no      |
 | shape          | completed | no      |
 | util           | partial   | no      |
