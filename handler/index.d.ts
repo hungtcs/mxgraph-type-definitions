@@ -1,4 +1,6 @@
+/// <reference path="./mxCellHighlight.d.ts" />
 /// <reference path="./mxCellMarker.d.ts" />
+/// <reference path="./mxCellTracker.d.ts" />
 /// <reference path="./mxConnectionHandler.d.ts" />
 /// <reference path="./mxConstraintHandler.d.ts" />
 /// <reference path="./mxEdgeHandler.d.ts" />
