@@ -9,14 +9,20 @@ declare class mxCoordinateAssignment extends mxHierarchicalLayoutStage {
    * Creates a coordinate assignment.
    *
    * @param layout
-   * @param intraCellSpacing - the minimum buffer between cells on the same rank
-   * @param interRankCellSpacing - the minimum distance between cells on adjacent ranks
-   * @param orientation - the position of the root node(s) relative to the graph
-   * @param initialX - the leftmost coordinate node placement starts at
+   * @param intraCellSpacing        the minimum buffer between cells on the same rank
+   * @param interRankCellSpacing    the minimum distance between cells on adjacent ranks
+   * @param orientation             the position of the root node(s) relative to the graph
+   * @param initialX                the leftmost coordinate node placement starts at
    * @param parallelEdgeSpacing
    */
-  constructor(layout: mxHierarchicalLayout, intraCellSpacing: number, interRankCellSpacing: number,
-              orientation: string, initialX: number, parallelEdgeSpacing: number);
+  constructor(
+    layout: mxHierarchicalLayout,
+    intraCellSpacing: number,
+    interRankCellSpacing: number,
+    orientation: string,
+    initialX: number,
+    parallelEdgeSpacing: number,
+  );
 
 
   /**
@@ -74,8 +80,6 @@ declare class mxCoordinateAssignment extends mxHierarchicalLayoutStage {
   channelBuffer: number;
 
   /**
-   * Variable: jettyPositions
-   *
    * Map of internal edges and (x,y) pair of positions of the start and end jetty
    * for that edge where it connects to the source and target vertices.
    * Note this should technically be a WeakHashMap, but since JS does not
@@ -84,7 +88,7 @@ declare class mxCoordinateAssignment extends mxHierarchicalLayoutStage {
    * Note that the y co-ord is the offset of the jetty, not the
    * absolute point
    */
-    // TODO to be reviewed
+  // TODO to be reviewed
   jettyPositions: Record<string, Array<number>>;
 
   /**
@@ -154,7 +158,7 @@ declare class mxCoordinateAssignment extends mxHierarchicalLayoutStage {
   /**
    * A store of connections to the layer below for speed
    */
-    // TODO previousLayerConnectedCache type. The js code of this class do not used it!
+  // TODO previousLayerConnectedCache type. The js code of this class do not used it!
   previousLayerConnectedCache: any;
 
   /**
@@ -174,8 +178,6 @@ declare class mxCoordinateAssignment extends mxHierarchicalLayoutStage {
   execute(parent: mxCell): void;
 
   /**
-   * Function: minNode
-   *
    * Performs one median positioning sweep in both directions
    */
   minNode(model: mxGraphHierarchyModel): void;
@@ -202,7 +204,7 @@ declare class mxCoordinateAssignment extends mxHierarchicalLayoutStage {
    * cell and the cells it is connected to on the next layer
    *
    * @param currentCell   the cell whose weight is to be calculated
-   * @param collection the cells the specified cell is connected to
+   * @param collection    the cells the specified cell is connected to
    */
   calculatedWeightedValue(currentCell: mxCell, collection: Array<mxCell>): number;
 
@@ -222,12 +224,10 @@ declare class mxCoordinateAssignment extends mxHierarchicalLayoutStage {
    * @param facade    the facade describing the input graph
    * @param model     an internal model of the hierarchical layout
    */
-// TODO facade type (seems unused in js code)
+  // TODO facade type (seems unused in js code)
   initialCoords(facade: any, model: mxGraphHierarchyModel): void;
 
   /**
-   * Function: rankCoordinates
-   *
    * Sets up the layout in an initial positioning. All the first cells in each
    * rank are moved to the left and the rest of the rank inserted as close
    * together as their size and buffering permits. This method works on just
@@ -235,11 +235,11 @@ declare class mxCoordinateAssignment extends mxHierarchicalLayoutStage {
    *
    * Parameters:
    *
-   * rankValue - the current rank being processed
-   * graph - the facade describing the input graph
-   * model - an internal model of the hierarchical layout
+   * @param rankValue the current rank being processed
+   * @param graph     the facade describing the input graph
+   * @param model     an internal model of the hierarchical layout
    */
-// TODO graph type (seems unused in js code)
+  // TODO graph type (seems unused in js code)
   rankCoordinates(rankValue: number, graph: any, model: mxGraphHierarchyModel): void;
 
   /**
@@ -249,7 +249,7 @@ declare class mxCoordinateAssignment extends mxHierarchicalLayoutStage {
    * @param graph   the facade describing the input graph
    * @param model   an internal model of the hierarchical layout
    */
-// TODO graph type (seems unused in js code)
+  // TODO graph type (seems unused in js code)
   calculateWidestRank(graph: any, model: mxGraphHierarchyModel): void;
 
   /**
@@ -259,7 +259,7 @@ declare class mxCoordinateAssignment extends mxHierarchicalLayoutStage {
    * @param graph   the facade describing the input graph
    * @param model   an internal model of the hierarchical layout
    */
-// TODO graph type (seems unused in js code)
+  // TODO graph type (seems unused in js code)
   minPath(graph: any, model: mxGraphHierarchyModel): void;
 
   /**
@@ -280,7 +280,7 @@ declare class mxCoordinateAssignment extends mxHierarchicalLayoutStage {
    * @param graph   the input graph
    * @param model   the layout model
    */
-// TODO graph type (seems unused in js code)
+  // TODO graph type (seems unused in js code)
   setCellLocations(graph: any, model: mxGraphHierarchyModel): void;
 
   /**

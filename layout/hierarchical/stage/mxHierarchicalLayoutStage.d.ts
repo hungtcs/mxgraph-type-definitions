@@ -1,6 +1,6 @@
 /**
  * The specific layout interface for hierarchical layouts. It adds a
- * <code>run</code> method with a parameter for the hierarchical layout model
+ * `run` method with a parameter for the hierarchical layout model
  * that is shared between the layout stages.
  */
 declare class mxHierarchicalLayoutStage {
