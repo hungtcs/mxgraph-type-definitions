@@ -1,7 +1,7 @@
 mxGraph Type Definitions
 ====
 
-![npm](https://img.shields.io/npm/v/mxgraph-type-definitions)
+[![npm version](https://badge.fury.io/js/mxgraph-type-definitions.svg)](https://badge.fury.io/js/mxgraph-type-definitions)
 
 This project is typescript definitions for [mxGraph].
 
