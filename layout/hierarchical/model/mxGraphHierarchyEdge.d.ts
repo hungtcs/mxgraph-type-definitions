@@ -53,8 +53,7 @@ declare class mxGraphHierarchyEdge extends mxGraphAbstractHierarchyCell {
   /**
    * Returns the cells this cell connects to on the next layer down
    */
-  getPreviousLayerConnectedCells(layer: number): Array<mxCell>;
-
+  getPreviousLayerConnectedCells(layer: number): mxCell;
 
   /**
    * Returns true.
