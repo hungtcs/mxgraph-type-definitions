@@ -213,7 +213,7 @@ declare class mxCellState extends mxRectangle {
    *
    * Copies all fields from the given state to this state.
    */
-  setState(state: mxCellState);
+  setState(state: mxCellState): void;
 
   /**
    * Function: clone

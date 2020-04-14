@@ -1,12 +1,46 @@
-
-
+/**
+ * @class mxGraphSelectionModel
+ *
+ * Implements the selection model for a graph. Here is a listener that handles
+ * all removed selection cells.
+ *
+ * @example
+ * ```javascript
+ * graph.getSelectionModel().addListener(mxEvent.CHANGE, function(sender, evt)
+ * {
+ *   var cells = evt.getProperty('added');
+ *
+ *   for (var i = 0; i < cells.length; i++)
+ *   {
+ *     // Handle cells[i]...
+ *   }
+ * });
+ * ```
+ *
+ * ### Event: mxEvent.UNDO
+ *
+ * Fires after the selection was changed in {@link changeSelection}. The
+ * `edit` property contains the {@link mxUndoableEdit} which contains the
+ * {@link mxSelectionChange}.
+ *
+ * ### Event: mxEvent.CHANGE
+ *
+ * Fires after the selection changes by executing an {@link mxSelectionChange}. The
+ * `added` and `removed` properties contain arrays of
+ * cells that have been added to or removed from the selection, respectively.
+ * The names are inverted due to historic reasons. This cannot be changed.
+ */
 declare class mxGraphSelectionModel extends mxEventSource {
 
-  private cells: mxCell[];
+  /**
+   * @constructor
+   * Constructs a new graph selection model for the given {@link mxGraph}.
+   *
+   * @param graph Reference to the enclosing {@link mxGraph}.
+   */
+  constructor(graph: mxGraph);
 
   /**
-   * Variable: doneResource
-   *
    * Specifies the resource key for the status message after a long operation.
    * If the resource for this key does not exist then the value is used as
    * the status message. Default is 'done'.
@@ -14,8 +48,6 @@ declare class mxGraphSelectionModel extends mxEventSource {
   doneResource: 'done' | '';
 
   /**
-   * Variable: updatingSelectionResource
-   *
    * Specifies the resource key for the status message while the selection is
    * being updated. If the resource for this key does not exist then the
    * value is used as the status message. Default is 'updatingSelection'.
@@ -23,188 +55,135 @@ declare class mxGraphSelectionModel extends mxEventSource {
   updatingSelectionResource: 'updatingSelection' | '';
 
   /**
-   * Variable: graph
-   *
-   * Reference to the enclosing <mxGraph>.
+   * Reference to the enclosing {@link mxGraph}.
    */
   graph: mxGraph;
 
   /**
-   * Variable: singleSelection
-   *
    * Specifies if only one selected item at a time is allowed.
    * Default is false.
    */
   singleSelection: boolean;
 
-  constructor(graph: mxGraph);
-
   /**
-   * Function: isSingleSelection
-   *
-   * Returns <singleSelection> as a boolean.
+   * Returns {@link singleSelection} as a boolean.
    */
   isSingleSelection(): boolean;
 
   /**
-   * Function: setSingleSelection
+   * Sets the {@link singleSelection} flag.
    *
-   * Sets the <singleSelection> flag.
-   *
-   * Parameters:
-   *
-   * singleSelection - Boolean that specifies the new value for
-   * <singleSelection>.
+   * @param {boolean} singleSelection Boolean that specifies the new value for
+   * {@link singleSelection}.
    */
   setSingleSelection(singleSelection: boolean): void;
 
   /**
-   * Function: isSelected
-   *
-   * Returns true if the given <mxCell> is selected.
+   * Returns true if the given {@link mxCell} is selected.
    */
   isSelected(cell: mxCell): boolean;
 
   /**
-   * Function: isEmpty
-   *
    * Returns true if no cells are currently selected.
    */
   isEmpty(): boolean;
 
   /**
-   * Function: clear
-   *
-   * Clears the selection and fires a <change> event if the selection was not
+   * Clears the selection and fires a {@link change} event if the selection was not
    * empty.
    */
   clear(): void;
 
   /**
-   * Function: setCell
+   * Selects the specified {@link mxCell} using {@link setCells}.
    *
-   * Selects the specified <mxCell> using <setCells>.
-   *
-   * Parameters:
-   *
-   * cell - <mxCell> to be selected.
+   * @param cell {@link mxCell} to be selected.
    */
   setCell(cell: mxCell): void;
 
   /**
-   * Function: setCells
+   * Selects the given array of {@link mxCells} and fires a {@link change} event.
    *
-   * Selects the given array of <mxCells> and fires a <change> event.
-   *
-   * Parameters:
-   *
-   * cells - Array of <mxCells> to be selected.
+   * @param cells Array of {@link mxCells} to be selected.
    */
-  setCells(cells: mxCell[]): void;
+  setCells(cells: Array<mxCell>): void;
 
   /**
-   * Function: getFirstSelectableCell
-   *
    * Returns the first selectable cell in the given array of cells.
    */
-  getFirstSelectableCell(cells: mxCell[]): mxCell;
+  getFirstSelectableCell(cells: Array<mxCell>): mxCell;
 
   /**
-   * Function: addCell
+   * Adds the given {@link mxCell} to the selection and fires a {@link select} event.
    *
-   * Adds the given <mxCell> to the selection and fires a <select> event.
-   *
-   * Parameters:
-   *
-   * cell - <mxCell> to add to the selection.
+   * @param cell {@link mxCell} to add to the selection.
    */
   addCell(cell: mxCell): void;
 
   /**
-   * Function: addCells
-   *
-   * Adds the given array of <mxCells> to the selection and fires a <select>
+   * Adds the given array of {@link mxCells} to the selection and fires a {@link select}
    * event.
    *
-   * Parameters:
-   *
-   * cells - Array of <mxCells> to add to the selection.
+   * @param cells Array of {@link mxCells} to add to the selection.
    */
-  addCells(cells: mxCell[]): void;
+  addCells(cells: Array<mxCell>): void;
 
   /**
-   * Function: removeCell
-   *
-   * Removes the specified <mxCell> from the selection and fires a <select>
+   * Removes the specified {@link mxCell} from the selection and fires a {@link select}
    * event for the remaining cells.
    *
-   * Parameters:
-   *
-   * cell - <mxCell> to remove from the selection.
+   * @param cell {@link mxCell} to remove from the selection.
    */
   removeCell(cell: mxCell): void;
 
-  /**
-   * Function: removeCells
-   */
-  removeCells(cells: mxCell[]): void;
+  /**/
+  removeCells(cells: Array<mxCell>): void;
 
   /**
-   * Function: changeSelection
+   * Adds/removes the specified arrays of {@link mxCell} to/from the selection.
    *
-   * Inner callback to add the specified <mxCell> to the selection. No event
+   * @param added Array of {@link mxCell} to add to the selection.
+   * @param remove Array of {@link mxCell} to remove from the selection.
+   */
+  changeSelection(added: Array<mxCell>, removed: Array<mxCell>): void;
+
+  /**
+   * Inner callback to add the specified {@link mxCell} to the selection. No event
    * is fired in this implementation.
    *
    * Paramters:
    *
-   * cell - <mxCell> to add to the selection.
-   */
-  changeSelection(added: mxCell[], removed: mxCell[]): void;
-
-  /**
-   * Function: cellAdded
-   *
-   * Inner callback to add the specified <mxCell> to the selection. No event
-   * is fired in this implementation.
-   *
-   * Paramters:
-   *
-   * cell - <mxCell> to add to the selection.
+   * @param cell {@link mxCell} to add to the selection.
    */
   cellAdded(cell: mxCell): void;
 
   /**
-   * Function: cellRemoved
-   *
-   * Inner callback to remove the specified <mxCell> from the selection. No
+   * Inner callback to remove the specified {@link mxCell} from the selection. No
    * event is fired in this implementation.
    *
-   * Parameters:
-   *
-   * cell - <mxCell> to remove from the selection.
+   * @param cell {@link mxCell} to remove from the selection.
    */
   cellRemoved(cell: mxCell): void;
+
 }
 
+
 /**
- * Class: mxSelectionChange
- *
+ * @class mxSelectionChange
  * Action to change the current root in a view.
- *
- * Constructor: mxCurrentRootChange
- *
- * Constructs a change of the current root in the given view.
  */
 declare class mxSelectionChange {
-  private selectionModel: mxGraphSelectionModel;
-  private added: mxCell[];
-  private removed: mxCell[];
-
-  constructor(selectionModel: mxGraphSelectionModel, added: mxCell[], removed: mxCell[]);
 
   /**
-   * Function: execute
+   * Creates an instance of mxSelectionChange.
    *
+   * @param {mxGraphSelectionModel} selectionModel
+   * @param {Array<mxCell>} added
+   * @param {Array<mxCell>} removed
+   */
+  constructor(selectionModel: mxGraphSelectionModel, added: Array<mxCell>, removed: Array<mxCell>);
+
+  /**
    * Changes the current root of the view.
    */
   execute(): void;

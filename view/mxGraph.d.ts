@@ -402,7 +402,7 @@ declare class mxGraph extends mxEventSource {
    *
    * Returns the cells to be selected for the given array of changes.
    */
-  getSelectionCellsForChanges(changes): mxCell[];
+  getSelectionCellsForChanges(changes: any): mxCell[];
 
   /**
    * Function: graphModelChanged
@@ -2311,7 +2311,7 @@ declare class mxGraph extends mxEventSource {
    * argument that keeps the graph scrolled to the center. If the center argument
    * is omitted, then <centerZoom> will be used as its value.
    */
-  zoom(factor: number, center: boolean);
+  zoom(factor: number, center: boolean): void;
 
   /**
    * Function: zoomToRect
