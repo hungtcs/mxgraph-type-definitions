@@ -35,3 +35,6 @@ please refer to the following links
 
 [mxGraph]: https://www.npmjs.com/package/mxgraph
 [mxgraph-road-to-DefinitelyTyped]: https://github.com/process-analytics/mxgraph-road-to-DefinitelyTyped
+
+### Some Useful Regular Expressions
+- [helpers.md](./helpers.md)
