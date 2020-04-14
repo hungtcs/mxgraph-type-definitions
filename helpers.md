@@ -24,14 +24,19 @@ RegExp Helper
     \* (\w+) -
     * @param $1
     ```
-5. for example codes
+5. for codes
+    ```
+    <code>((\w|\d)+)</code>
+    `$1`
+    ```
+6. for example codes
     ```
     \(code\)
     @example \n * ```javascript
 
     \(end\) to ```
     ```
-6. replace to blank
+7. replace to blank
     ```
     \n \* Variable: .+\n \*
     \n \* Function: .+\n \*

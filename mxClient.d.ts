@@ -150,123 +150,123 @@ declare let mxLanguages: Array<string>;
  */
 declare class mxClient {
   /**
-   *  Contains the current version of the mxGraph library.
+   * Contains the current version of the mxGraph library.
    */
   static VERSION: string;
   /**
-   *  True if the current browser is Internet Explorer 10 or below.
+   * True if the current browser is Internet Explorer 10 or below.
    */
   static IS_IE: boolean;
   /**
-   *  True if the current browser is Internet Explorer 6.x.
+   * True if the current browser is Internet Explorer 6.x.
    */
   static IS_IE6: boolean;
   /**
-   *  True if the current browser is Internet Explorer 11.x.
+   * True if the current browser is Internet Explorer 11.x.
    */
   static IS_IE11: boolean;
   /**
-   *  True if the current browser is Microsoft Edge.
+   * True if the current browser is Microsoft Edge.
    */
   static IS_EDGE: boolean;
   /**
-   *  True if the current browser is Internet Explorer and it is in quirks mode.
+   * True if the current browser is Internet Explorer and it is in quirks mode.
    */
   static IS_QUIRKS: boolean;
   /**
-   *  True if the browser is IE11 in enterprise mode (IE8 standards mode).
+   * True if the browser is IE11 in enterprise mode (IE8 standards mode).
    */
   static IS_EM: boolean;
   /**
-   *  Prefix for VML namespace in node names.
+   * Prefix for VML namespace in node names.
    */
   static VML_PREFIX: string;
   /**
-   *  Prefix for VML office namespace in node names.
+   * Prefix for VML office namespace in node names.
    */
   static OFFICE_PREFIX: string;
   /**
-   *  True if the current browser is Netscape (including Firefox).
+   * True if the current browser is Netscape (including Firefox).
    */
   static IS_NS: boolean;
   /**
-   *  True if the current browser is Opera.
+   * True if the current browser is Opera.
    */
   static IS_OP: boolean;
   /**
-   *  True if -o-transform is available as a CSS style, ie for Opera browsers based on a Presto engine with version 2.5 or later.
+   * True if -o-transform is available as a CSS style, ie for Opera browsers based on a Presto engine with version 2.5 or later.
    */
   static IS_OT: boolean;
   /**
-   *  True if the current browser is Safari.
+   * True if the current browser is Safari.
    */
   static IS_SF: boolean;
   /**
-   *  Returns true if the user agent contains Android.
+   * Returns true if the user agent contains Android.
    */
   static IS_ANDROID: boolean;
   /**
-   *  Returns true if the user agent is an iPad, iPhone or iPod.
+   * Returns true if the user agent is an iPad, iPhone or iPod.
    */
   static IS_IOS: boolean;
   /**
-   *  Returns the major version number for iOS devices or 0 if the device is not an iOS device.
+   * Returns the major version number for iOS devices or 0 if the device is not an iOS device.
    */
   static IOS_VERSION: string;
   /**
-   *  True if the current browser is Google Chrome.
+   * True if the current browser is Google Chrome.
    */
   static IS_GC: boolean;
   /**
-   *  True if the this is running inside a Chrome App.
+   * True if the this is running inside a Chrome App.
    */
   static IS_CHROMEAPP: boolean;
   /**
-   *  True if the current browser is Firefox.
+   * True if the current browser is Firefox.
    */
   static IS_FF: boolean;
   /**
-   *  True if -moz-transform is available as a CSS style.
+   * True if -moz-transform is available as a CSS style.
    */
   static IS_MT: boolean;
   /**
-   *  True if the browser supports VML.
+   * True if the browser supports VML.
    */
   static IS_VML: boolean;
   /**
-   *  True if the browser supports SVG.
+   * True if the browser supports SVG.
    */
   static IS_SVG: boolean;
   /**
-   *  True if foreignObject support is not available.
+   * True if foreignObject support is not available.
    */
   static NO_FO: boolean;
   /**
-   *  True if the client is a Windows.
+   * True if the client is a Windows.
    */
   static IS_WIN: boolean;
   /**
-   *  True if the client is a Mac.
+   * True if the client is a Mac.
    */
   static IS_MAC: boolean;
   /**
-   *  True if the client is a Chrome OS.
+   * True if the client is a Chrome OS.
    */
   static IS_CHROMEOS: boolean;
   /**
-   *  True if this device supports touchstart/-move/-end events (Apple iOS, Android, Chromebook and Chrome Browser on touch-enabled devices).
+   * True if this device supports touchstart/-move/-end events (Apple iOS, Android, Chromebook and Chrome Browser on touch-enabled devices).
    */
   static IS_TOUCH: boolean;
   /**
-   *  True if this device supports Microsoft pointer events (always false on Macs).
+   * True if this device supports Microsoft pointer events (always false on Macs).
    */
   static IS_POINTER: boolean;
   /**
-   *  True if the documents location does not start with http:// or https://.
+   * True if the documents location does not start with http:// or https://.
    */
   static IS_LOCAL: boolean;
   /**
-   *  Contains the base names of the default bundles if mxLoadResources is false.
+   * Contains the base names of the default bundles if mxLoadResources is false.
    */
   static defaultBundles: string;
 
