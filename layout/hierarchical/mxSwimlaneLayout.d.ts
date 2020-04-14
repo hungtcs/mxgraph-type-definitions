@@ -152,7 +152,7 @@ declare class mxSwimlaneLayout extends mxGraphLayout {
    * @param parent      Parent {@link mxCell} that contains the children to be laid out.
    * @param swimlanes   Ordered array of swimlanes to be laid out
    */
-  execute(parent: mxCell, swimlanes: Array<mxCell>): void;
+  execute(parent: mxCell, swimlanes?: Array<mxCell>): void;
 
   /**
    * Updates the bounds of the given array of groups so that it includes all child vertices.
@@ -236,7 +236,8 @@ declare class mxSwimlaneLayout extends mxGraphLayout {
    * @param filledVertexSet
    * @param swimlaneIndex   the laid out order index of the swimlane vertex is contained in
    */
-  traverse(vertex: mxCell, directed: boolean, edge: mxCell | null, allVertices: Array<mxCell>, currentComp: Array<mxCell>, hierarchyVertices: Array<mxCell>, filledVertexSet: Array<mxCell>, swimlaneIndex: number): void;
+  traverse(vertex?: mxCell, directed?: boolean, edge?: mxCell, allVertices?: Array<mxCell>, currentComp?: Array<mxCell>,
+      hierarchyVertices?: Array<mxCell>, filledVertexSet?: Array<mxCell>, swimlaneIndex?: number): void;
 
   /**
    * Executes the cycle stage using mxMinimumCycleRemover.

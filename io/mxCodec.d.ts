@@ -13,6 +13,7 @@
  *
  * The following code is used to encode a graph model.
  *
+ * @example
  * ```javascript
  * var encoder = new mxCodec();
  * var result = encoder.encode(graph.getModel());
@@ -26,6 +27,7 @@
  * an XML file, eg. {@link mxUtils.get}, or using {@link mxUtils.parseXml} for parsing an
  * XML string.
  *
+ * @example
  * ```javascript
  * var doc = mxUtils.parseXml(xmlString);
  * var codec = new mxCodec(doc);
@@ -38,6 +40,7 @@
  * graph model. Note that the cells do not have a parent reference so they can
  * be added anywhere in the cell hierarchy after parsing.
  *
+ * @example
  * ```javascript
  * var xml = '<root><mxCell id="2" value="Hello," vertex="1"><mxGeometry x="20" y="20" width="80" height="30" as="geometry"/></mxCell><mxCell id="3" value="World!" vertex="1"><mxGeometry x="200" y="150" width="80" height="30" as="geometry"/></mxCell><mxCell id="4" value="" edge="1" source="2" target="3"><mxGeometry relative="1" as="geometry"/></mxCell></root>';
  * var doc = mxUtils.parseXml(xml);
@@ -59,6 +62,7 @@
  * Using the following code, the selection cells of a graph are encoded and the
  * output is displayed in a dialog box.
  *
+ * @example
  * ```javascript
  * var enc = new mxCodec();
  * var cells = graph.getSelectionCells();
@@ -73,6 +77,7 @@
  * For debugging I/O you can use the following code to get the sequence of
  * encoded objects:
  *
+ * @example
  * ```javascript
  * var oldEncode = encode;
  * encode(obj)
@@ -87,6 +92,7 @@
  * Note that the I/O system adds object codecs for new object automatically. For
  * decoding those objects, the constructor should be written as follows:
  *
+ * @example
  * ```javascript
  * var MyObj(name)
  * {
@@ -129,7 +135,6 @@ declare class mxCodec {
    * Specifies if default values should be encoded. Default is false.
    */
   encodeDefaults: boolean;
-
 
   /**
    * Assoiates the given object with the given ID and returns the given object.
@@ -220,7 +225,7 @@ declare class mxCodec {
    *
    * @param obj Object to be encoded.
    */
-  encode(obj: any): Node;
+  encode(obj: any): XMLDocument;
 
   /**
    * Decodes the given XML node. The optional "into"
