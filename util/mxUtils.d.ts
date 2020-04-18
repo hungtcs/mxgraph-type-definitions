@@ -105,8 +105,8 @@ declare class mxUtils {
   static isAncestorNode(ancestor: Node, child: Node): boolean;
 
   static makeDraggable(
-    element: Node,
-    graphF: mxGraph|Function,
+    element: HTMLElement,
+    graphF: mxGraph,
     funct: Function,
     dragElement?: Node,
     dx?: number,
@@ -114,7 +114,7 @@ declare class mxUtils {
     autoscroll?: boolean,
     scalePreview?: boolean,
     highlightDropTargets?: boolean,
-    getDropTarget?: Function,
+    getDropTarget?: (graph: mxGraph, x: number, y: number, evt: PointerEvent) => mxCell,
   ): mxDragSource;
 
   static createXmlDocument(): XMLDocument;
@@ -147,6 +147,6 @@ declare class mxUtils {
 
   static importNode(doc: Document, node: any, allChildren: any): any;
 
-  static removeWhitespace(node: any, before: boolean);
+  static removeWhitespace(node: any, before: boolean): void;
 
 }

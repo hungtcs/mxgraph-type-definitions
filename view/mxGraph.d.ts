@@ -4257,7 +4257,7 @@ declare class mxGraph extends mxEventSource {
    * ignoreFn - Optional function that returns true if cell should be ignored.
    * The function is passed the cell state and the x and y parameter.
    */
-  getCellAt(x: number, y: number, parent: mxCell, vertices?: boolean, edges?: boolean, ignoreFn?: Function): mxCell;
+  getCellAt(x: number, y: number, parent?: mxCell, vertices?: boolean, edges?: boolean, ignoreFn?: Function): mxCell;
 
   /**
    * Function: intersects
