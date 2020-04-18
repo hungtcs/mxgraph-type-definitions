@@ -99,7 +99,7 @@ declare class mxEvent {
   /**
    * Returns the event's target or srcElement depending on the browser.
    */
-  getSource<T extends EventTarget = any>(evt: Event): T;
+  static getSource<T extends EventTarget = any>(evt: Event): T;
 
   /**
    * Returns true if the event has been consumed using {@link consume}.

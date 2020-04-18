@@ -52,7 +52,7 @@ declare class mxMouseEvent {
    *
    * Returns <evt>.
    */
-  getEvent(): Event
+  getEvent(): MouseEvent
 
   /**
    * Function: getSource
