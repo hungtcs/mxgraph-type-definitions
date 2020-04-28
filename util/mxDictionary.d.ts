@@ -1,4 +1,4 @@
-declare class mxDictionary<T> {
+declare class mxDictionary<T=any> {
   constructor();
 
   /**
@@ -20,7 +20,7 @@ declare class mxDictionary<T> {
    *
    * Returns the value for the given key.
    */
-  get(key: string): T;
+  get(key: any): T;
 
   /**
    * Function: put
@@ -28,7 +28,7 @@ declare class mxDictionary<T> {
    * Stores the value under the given key and returns the previous
    * value for that key.
    */
-  put(key: string, value: T): T;
+  put(key: any, value: T): T;
 
   /**
    * Function: remove

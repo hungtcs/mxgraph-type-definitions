@@ -5,7 +5,7 @@
  *
  * Implements a layout manager that runs a given layout after any changes to the graph:
  *
- * Example:
+ * ### Example
  *
  * @example
  * ```javascript

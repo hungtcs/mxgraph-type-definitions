@@ -4,6 +4,8 @@ declare class mxCellState extends mxRectangle {
 
   constructor(view: mxGraphView, cell: mxCell, style: { [key: string]: any });
 
+  control: mxShape;
+
   /**
    * Variable: view
    *

@@ -236,7 +236,8 @@ declare class mxSwimlaneLayout extends mxGraphLayout {
    * @param filledVertexSet
    * @param swimlaneIndex   the laid out order index of the swimlane vertex is contained in
    */
-  traverse(vertex?: mxCell, directed?: boolean, edge?: mxCell, allVertices?: Array<mxCell>, currentComp?: Array<mxCell>,
+  traverse(vertex: mxCell, directed?: boolean, func?: Function, edge?: mxCell, visited?: mxDictionary): void;
+  traverse(vertex: mxCell, directed?: boolean, edge?: mxCell, allVertices?: Array<mxCell>, currentComp?: Array<mxCell>,
       hierarchyVertices?: Array<mxCell>, filledVertexSet?: Array<mxCell>, swimlaneIndex?: number): void;
 
   /**

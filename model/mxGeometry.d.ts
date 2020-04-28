@@ -125,6 +125,8 @@ declare class mxGeometry extends mxRectangle {
    */
   relative: boolean;
 
+  setRelative(relative: boolean): void;
+
   /**
    * Swaps the x, y, width and height with the values stored in
    * {@link alternateBounds} and puts the previous values into {@link alternateBounds} as
