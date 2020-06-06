@@ -1842,11 +1842,11 @@ declare class mxConstants {
    */
   static FONT_UNDERLINE: 4;
 
-	/**
-	 * Constant for strikthrough fonts. Default is 8.
+  /**
+   * Constant for strikthrough fonts. Default is 8.
    * @since mxgraph 4.1.0
-	 */
-	static FONT_STRIKETHROUGH: 8;
+   */
+  static FONT_STRIKETHROUGH: 8;
 
   /**
    * Variable: SHAPE_RECTANGLE
