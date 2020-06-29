@@ -104,7 +104,7 @@ declare class mxEvent {
   /**
    * Returns true if the event has been consumed using {@link consume}.
    */
-  static isConsumed(evt: mxEventObject | mxMouseEvent): boolean;
+  static isConsumed(evt: mxEventObject | mxMouseEvent | Event): boolean;
 
   /**
    * Returns true if the event was generated using a touch device (not a pen or mouse).

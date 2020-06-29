@@ -316,7 +316,7 @@ declare class mxGraphModel extends mxEventSource {
    *
    * @param cell  Optional {@link mxCell} that specifies the child.
    */
-  getRoot(cell: mxCell): mxCell;
+  getRoot(cell?: mxCell): mxCell;
 
   /**
    * Sets the {@link root} of the model using {@link mxRootChange} and adds the change to

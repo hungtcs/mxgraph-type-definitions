@@ -55,6 +55,13 @@ declare class mxCell {
   constructor(value?: any, geometry?: mxGeometry, style?: string);
 
   /**
+   * @see {mxGraph.getCellOverlays}
+   *
+   * @type {Array<mxCellOverlay>}
+   */
+  overlays: Array<mxCellOverlay>;
+
+  /**
    * Holds the Id. Default is null.
    */
   id: string;
