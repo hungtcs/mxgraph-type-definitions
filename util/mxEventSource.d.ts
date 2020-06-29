@@ -51,7 +51,7 @@ declare class mxEventSource {
    *
    * Sets <eventSource>.
    */
-  setEventSource(value: any)
+  setEventSource(value: any): void
 
   /**
    * Function: addListener
@@ -61,14 +61,14 @@ declare class mxEventSource {
    *
    * The parameters of the listener are the sender and an <mxEventObject>.
    */
-  addListener(name: string, funct: (...args: any[]) => any);
+  addListener(name: string, funct: (...args: any[]) => any): void;
 
   /**
    * Function: removeListener
    *
    * Removes all occurrences of the given listener from <eventListeners>.
    */
-  removeListener(funct: (...args: any[]) => any);
+  removeListener(funct: (...args: any[]) => any): void;
 
   /**
    * Function: fireEvent
@@ -89,6 +89,6 @@ declare class mxEventSource {
    * sender - Optional sender to be passed to the listener. Default value is
    * the return value of <getEventSource>.
    */
-  fireEvent(evt: mxEventObject, sender: any);
+  fireEvent(evt: mxEventObject, sender: any): void;
 
 }

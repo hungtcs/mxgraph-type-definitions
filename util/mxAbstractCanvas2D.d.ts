@@ -162,7 +162,7 @@ declare class mxAbstractCanvas2D {
    *
    * Rotates the given point and returns the result as an <mxPoint>.
    */
-  rotatePoint(x: number, y: number, theta: number, cx: number, cy: number);
+  rotatePoint(x: number, y: number, theta: number, cx: number, cy: number): void;
 
   /**
    * Function: save
@@ -246,14 +246,14 @@ declare class mxAbstractCanvas2D {
    *
    * Sets the current stroke color.
    */
-  setStrokeColor(value: string);
+  setStrokeColor(value: string): void;
 
   /**
    * Function: setStrokeWidth
    *
    * Sets the current stroke width.
    */
-  setStrokeWidth(value: number);
+  setStrokeWidth(value: number): void;
 
   /**
    * Function: setDashed
@@ -364,7 +364,7 @@ declare class mxAbstractCanvas2D {
    *
    * Starts a new path.
    */
-  begin();
+  begin(): void;
 
   /**
    * Function: moveTo
