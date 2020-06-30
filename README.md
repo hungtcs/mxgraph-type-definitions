@@ -14,6 +14,15 @@ npm install --save-dev mxgraph-type-definitions
 
 ### Progress
 
+The definitions currently target mxGraph `4.1.1`. See the implementation status in the following table.
+- progress: initial support
+  - not yet: no support at all
+  - partial: implementation started but some classes/fields/methods are missing
+  - completed: all classes/fields/methods should exist (fill an issue and/or provide a Pull Request if you detect an issue) but
+    - TSDoc is not fully accurate
+    - some type declaration may be wrong
+- checked: a finest review has been conducted about TSDoc, mxGraph types used by functions/methods, fields, ...
+
 | Module         | Progress  | Checked |
 |:---------------|:---------:|:-------:|
 | editor         | not yet   | no      |
