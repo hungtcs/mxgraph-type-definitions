@@ -234,7 +234,7 @@ declare class mxGraphView extends mxEventSource {
    * @param force Boolean indicating if the current root should be ignored for
    * recursion.
    */
-  clear(cell: mxCell, force: boolean, recurse: boolean): void;
+  clear(cell?: mxCell, force?: boolean, recurse?: boolean): void;
 
   /**
    * Invalidates the state of the given cell, all its descendants and
@@ -253,7 +253,7 @@ declare class mxGraphView extends mxEventSource {
    * @param cell Optional {@link mxCell} to be used as the root of the validation.
    * Default is {@link currentRoot} or the root of the model.
    */
-  validate(cell: mxCell): void;
+  validate(cell?: mxCell): void;
 
   /**
    * Returns the bounds for an empty graph. This returns a rectangle at
@@ -561,7 +561,7 @@ declare class mxGraphView extends mxEventSource {
    * @param {mxCellState} terminal mxCellState that represents the terminal.
    * @param {number} border Number that adds a border between the shape and the perimeter.
    */
-  getPerimeterBounds(terminal: mxCellState, border: number): mxRectangle;
+  getPerimeterBounds(terminal: mxCellState, border?: number): mxRectangle;
 
   /**
    * Returns the perimeter function for the given state.

@@ -1,4 +1,5 @@
 declare class mxRectangle extends mxPoint {
+
   constructor(x: number, y: number, width: number, height: number);
 
   /**
@@ -86,5 +87,9 @@ declare class mxRectangle extends mxPoint {
    * Returns a new <mxRectangle> which is a copy of the given rectangle.
    */
   fromRectangle(rect: mxRectangle): mxRectangle;
+
+  clone(): mxRectangle;
+
+  static fromRectangle(rect: mxRectangle): mxRectangle;
 
 }

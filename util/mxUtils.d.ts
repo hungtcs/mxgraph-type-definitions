@@ -91,6 +91,7 @@ declare class mxUtils {
    * @returns {XMLDocument}
    */
   static parseXml(xml: string): XMLDocument;
+
   /**
    * Returns true if the given ancestor is an ancestor of the given DOM node in the DOM.
    * This also returns true if the child is the ancestor.
@@ -148,5 +149,7 @@ declare class mxUtils {
   static importNode(doc: Document, node: any, allChildren: any): any;
 
   static removeWhitespace(node: any, before: boolean): void;
+
+  static hasScrollbars(container: HTMLElement): boolean;
 
 }
