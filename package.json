@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/hungtcs/mxgraph-type-definitions/issues"
   },
-  "homepage": "https://github.com/hungtcs/mxgraph-type-definitions#readme"
+  "homepage": "https://github.com/hungtcs/mxgraph-type-definitions#readme",
+  "scripts": {
+    "test": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  }
 }
