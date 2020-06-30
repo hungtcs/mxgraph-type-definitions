@@ -74,11 +74,11 @@ declare class mxLog {
   /**
    * Adds the specified strings to the console.
    */
-  static write();
+  static write(): void;
 
   /**
    * Adds the specified strings to the console, appending a linefeed at the end of each string.
    */
-  static writeln();
+  static writeln(): void;
 
 }

@@ -194,7 +194,7 @@ declare class mxSvgCanvas2D extends mxAbstractCanvas2D {
    *
    * Returns the alternate content for the given foreignObject.
    */
-  createAlternateContent(fo, x: number, y: number, w: number, h: number, str: string, align: string, valign: string, wrap: string, format: string, overflow: string, clip: string, rotation: number);
+  createAlternateContent(fo: Element, x: number, y: number, w: number, h: number, str: string, align: string, valign: string, wrap: string, format: string, overflow: string, clip: string, rotation: number): Element;
 
   /**
    * Function: createGradientId
@@ -320,7 +320,7 @@ declare class mxSvgCanvas2D extends mxAbstractCanvas2D {
    *
    * Private helper function to create SVG elements
    */
-  image(x: number, y: number, w: number, h: number, src: string, aspect: boolean, flipH: boolean, flipV: boolean);
+  image(x: number, y: number, w: number, h: number, src: string, aspect: boolean, flipH: boolean, flipV: boolean): void;
 
   /**
    * Function: convertHtml
