@@ -9,8 +9,10 @@ declare class mxMarker {
 
   /**
    * Maps from markers names to functions to paint the markers.
+   *
+   * Mapping: the attribute name on the object is the marker type, the associated value is the function to paint the marker
    */
-  static markers: Map<string, Function>;
+  static markers: object;
 
   /**
    * Adds a factory method that updates a given endpoint and returns a
