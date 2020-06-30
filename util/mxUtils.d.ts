@@ -150,4 +150,6 @@ declare class mxUtils {
 
   static removeWhitespace(node: any, before: boolean): void;
 
+  static hasScrollbars(container: HTMLElement): boolean;
+
 }
