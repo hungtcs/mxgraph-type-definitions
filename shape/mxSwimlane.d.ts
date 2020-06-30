@@ -65,7 +65,9 @@ declare class mxSwimlane extends mxShape {
   /**
    * Returns the arcsize for the swimlane.
    */
-  getArcSize(w, h, start?): number;
+  // TODO 'start' marked optional otherwise, as super method does not have this argument, a TSC error occurs
+  // in mxgraph@4.2.0, this method has been renamed into 'getSwimlaneArcSize'
+  getArcSize(w: number, h: number, start?: number): number;
 
   /**
    * Paints the swimlane vertex shape.
@@ -80,22 +82,22 @@ declare class mxSwimlane extends mxShape {
   /**
    * Paints the swimlane vertex shape.
    */
-  paintSwimlane(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number, start, fill, swimlaneLine: boolean): void;
+  paintSwimlane(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number, start: number, fill: string, swimlaneLine: boolean): void;
 
   /**
    * Paints the swimlane vertex shape.
    */
-  paintRoundedSwimlane(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number, start, r, fill, swimlaneLine: boolean): void;
+  paintRoundedSwimlane(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number, start: number, r: number, fill: string, swimlaneLine: boolean): void;
 
   /**
    * Paints the divider between swimlane title and content area.
    */
-  paintDivider(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number, start, shadow): void;
+  paintDivider(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number, start: number, shadow: boolean): void;
 
   /**
    * Paints the vertical or horizontal separator line between swimlanes.
    */
-  paintSeparator(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number, start, color): void;
+  paintSeparator(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number, start: number, color: string): void;
 
   /**
    * Paints the swimlane vertex shape.

@@ -137,7 +137,7 @@ declare class mxStencil extends mxShape {
    *
    * Draws this stencil inside the given bounds.
    */
-  drawChildren(canvas: mxAbstractCanvas2D, shape: string, x: number, y: number, w: number, h: number, node: Element, aspect: string, disableShadow: boolean, paint: boolean)
+  drawChildren(canvas: mxAbstractCanvas2D, shape: string, x: number, y: number, w: number, h: number, node: Element, aspect: string, disableShadow: boolean, paint: boolean): void;
 
   /**
    * Function: computeAspect

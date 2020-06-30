@@ -20,7 +20,7 @@ declare class mxRectangle extends mxPoint {
    *
    * Sets this rectangle to the specified values
    */
-  setRect(x: number, y: number, w: number, h: number);
+  setRect(x: number, y: number, w: number, h: number): void;
 
   /**
    * Function: getCenterX

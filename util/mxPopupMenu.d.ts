@@ -102,7 +102,7 @@ declare class mxPopupMenu extends mxEventSource {
    *
    * me - <mxMouseEvent> that represents the mouse event.
    */
-  isPopupTrigger(me): boolean;
+  isPopupTrigger(me: mxMouseEvent): boolean;
 
   /**
    * Function: addItem
