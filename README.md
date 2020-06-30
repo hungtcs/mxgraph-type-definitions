@@ -1,6 +1,7 @@
 mxGraph Type Definitions
 ====
 
+[![Build](https://github.com/hungtcs/mxgraph-type-definitions/issues/workflows/Build/badge.svg)](https://github.com/hungtcs/mxgraph-type-definitions/actions)
 [![npm version](https://badge.fury.io/js/mxgraph-type-definitions.svg)](https://badge.fury.io/js/mxgraph-type-definitions)
 
 This project is typescript definitions for [mxGraph].
