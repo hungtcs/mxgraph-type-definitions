@@ -298,7 +298,7 @@ declare abstract class mxAbstractCanvas2D {
   /**
    * Enables or disables and configures the current shadow.
    */
-  setShadowAlpha(value: boolean): void;
+  setShadowAlpha(value: number): void;
 
   /**
    * Enables or disables and configures the current shadow.
