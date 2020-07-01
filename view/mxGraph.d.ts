@@ -77,7 +77,7 @@ declare class mxGraph extends mxEventSource {
    * performance. Default is mxConstants.DIALECT_MIXEDHTML (for IE).
    * @param stylesheet Optional {@link mxStylesheet} to be used in the graph.
    */
-  constructor(container: HTMLElement, model?: mxGraphModel, renderHint?: string, stylesheet?: string);
+  constructor(container: HTMLElement, model?: mxGraphModel, renderHint?: string, stylesheet?: mxStylesheet);
 
   container: HTMLElement;
 
@@ -848,7 +848,7 @@ declare class mxGraph extends mxEventSource {
   /**
    * Creates a new {@link mxGraphView} to be used in this graph.
    */
-  createGraphView: mxGraphView;
+  createGraphView(): mxGraphView;
 
   /**
    * Creates a new {@link mxCellRenderer} to be used in this graph.
@@ -4297,14 +4297,14 @@ declare class mxGraph extends mxEventSource {
    *
    * @param listener Listener to be added to the graph event listeners.
    */
-  addMouseListener(listener: Function): void
+  addMouseListener(listener: { [key: string]: (sender: mxEventSource, me: mxMouseEvent) => void }): void
 
   /**
    * Removes the specified graph listener.
    *
    * @param listener Listener to be removed from the graph event listeners.
    */
-  removeMouseListener(listener: Function): void;
+  removeMouseListener(listener: { [key: string]: (sender: mxEventSource, me: mxMouseEvent) => void }): void;
 
   /**
    * Sets the graphX and graphY properties if the given {@link mxMouseEvent} if
