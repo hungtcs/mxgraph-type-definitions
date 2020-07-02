@@ -699,7 +699,7 @@ declare class mxGraphView extends mxEventSource {
    * Returns the DOM node that contains the background-, draw- and
    * overlay- and decoratorpanes.
    */
-  getCanvas(): Element;
+  getCanvas(): SVGElement;
 
   /**
    * Returns the DOM node that represents the background layer.

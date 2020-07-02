@@ -8,6 +8,8 @@
  */
 declare class mxStencilRegistry {
 
+  static stencils: { [key: string]: mxStencil };
+
   /**
    * Adds the given <mxStencil>.
    * @static

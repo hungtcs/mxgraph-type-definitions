@@ -116,7 +116,7 @@ declare class mxConstants {
    * DOM node of type ELEMENT.
    * @default 1
    */
-  static NODETYPE_ELEMENT: number;
+  static NODETYPE_ELEMENT: 1;
 
   /**
    * DOM node of type ATTRIBUTE.

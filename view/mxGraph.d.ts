@@ -1657,7 +1657,7 @@ declare class mxGraph extends mxEventSource {
    * @param source Optional {@link mxCell} that represents the source terminal.
    * @param target Optional {@link mxCell} that represents the target terminal.
    */
-  addCell(cell: mxCell, parent: mxCell, index?: number, source?: mxCell, target?: mxCell): mxCell;
+  addCell(cell: mxCell, parent?: mxCell, index?: number, source?: mxCell, target?: mxCell): mxCell;
 
   /**
    * Adds the cells to the parent at the given index, connecting each cell to
@@ -1674,7 +1674,7 @@ declare class mxGraph extends mxEventSource {
    * @param absolute Optional boolean indicating of cells should be kept at
    * their absolute position. Default is false.
    */
-  addCells(cells: mxCell[], parent: mxCell, index?: number, source?: mxCell, target?: mxCell): mxCell[];
+  addCells(cells: mxCell[], parent?: mxCell, index?: number, source?: mxCell, target?: mxCell): mxCell[];
 
   /**
    * Adds the specified cells to the given parent. This method fires
