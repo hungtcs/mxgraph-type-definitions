@@ -21,4 +21,5 @@
 /// <reference path="./mxUrlConverter.d.ts" />
 /// <reference path="./mxUtils.d.ts" />
 /// <reference path="./mxVmlCanvas2D.d.ts" />
+/// <reference path="./mxXmlCanvas2D.d.ts" />
 /// <reference path="./mxXmlRequest.d.ts" />
