@@ -1,6 +1,7 @@
 
 declare class mxMouseEvent {
-  constructor(evt: Event, state: mxCellState);
+
+  constructor(evt: Event, state?: mxCellState);
 
   /**
    * Variable: consumed

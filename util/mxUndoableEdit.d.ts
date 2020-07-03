@@ -15,7 +15,7 @@ declare class mxUndoableEdit {
    * expected to either have an undo and redo function, or an execute
    * function. Default is an empty array.
    */
-  changes: mxUndoableChange[];
+  changes: Array<mxGeometryChange|mxChildChange|mxStyleChange|mxVisibleChange|mxCollapseChange|mxValueChange|mxTerminalChange|mxCurrentRootChange|any>
 
   /**
    * Variable: significant

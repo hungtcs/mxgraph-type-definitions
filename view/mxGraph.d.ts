@@ -1081,7 +1081,7 @@ declare class mxGraph extends mxEventSource {
    *
    * @param evt Mouseevent that represents the keystroke.
    */
-  escape(evt: MouseEvent): void;
+  escape(evt?: MouseEvent): void;
 
   /**
    * Processes a singleclick on an optional cell and fires a {@link click} event.
@@ -1425,7 +1425,7 @@ declare class mxGraph extends mxEventSource {
    * @param cells Array of {@link mxCells} to move to the background. If null is
    * specified then the selection cells are used.
    */
-  orderCells(back: boolean, cells: mxCell[]): mxCell[];
+  orderCells(back: boolean, cells?: mxCell[]): mxCell[];
 
   /**
    * Moves the given cells to the front or back. This method fires
@@ -3593,7 +3593,7 @@ declare class mxGraph extends mxEventSource {
    *
    * @param cell {@link mxCell} that should be checked.
    */
-  isEditing(cell: mxCell): boolean;
+  isEditing(cell?: mxCell): boolean;
 
   /**
    * Returns true if the size of the given cell should automatically be
@@ -4359,7 +4359,7 @@ declare class mxGraph extends mxEventSource {
    * @param me {@link mxMouseEvent} to be fired.
    * @param sender Optional sender argument. Default is this.
    */
-  fireMouseEvent(evtName: string, me: mxMouseEvent, sender: mxEventSource): void
+  fireMouseEvent(evtName: string, me: mxMouseEvent, sender?: mxEventSource): void
 
   /**
    * Consumes the given {@link mxMouseEvent} if it's a touchStart event.

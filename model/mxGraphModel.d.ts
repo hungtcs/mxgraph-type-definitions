@@ -1017,6 +1017,19 @@ declare class mxRootChange {
 declare class mxChildChange {
 
   constructor(model: mxGraphModel, parent: mxCell, child: mxCell, index: number);
+
+  child: mxCell;
+
+  index: number;
+
+  model: mxGraphModel;
+
+  parent: mxCell;
+
+  previous: any;
+
+  previousIndex: number;
+
   /**
    * Changes the parent of {@link child}` using
    * <mxGraphModel.parentForCellChanged> and
@@ -1033,6 +1046,7 @@ declare class mxChildChange {
    * @warning doc from mxGraph source code is incorrect
    */
   connect(cell: mxCell, isConnect: boolean): void;
+
 }
 
 /**
@@ -1109,6 +1123,14 @@ declare class mxGeometryChange {
 
   constructor(model: mxGraphModel, cell: mxCell, geometry: mxGeometry);
 
+  model: mxGraphModel;
+
+  cell: mxCell;
+
+  geometry: mxGeometry;
+
+  previous: mxGeometry;
+
   /**
    * Function: execute
    *
@@ -1133,6 +1155,14 @@ declare class mxGeometryChange {
 declare class mxCollapseChange {
 
   constructor(model: mxGraphModel, cell: mxCell, collapsed: boolean);
+
+  model: mxGraphModel;
+
+  cell: mxCell;
+
+  geometry: boolean;
+
+  previous: boolean;
 
   /**
    * Function: execute
