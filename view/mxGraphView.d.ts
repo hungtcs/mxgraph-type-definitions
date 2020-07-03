@@ -46,6 +46,8 @@ declare class mxGraphView extends mxEventSource {
 
   constructor(graph: mxGraph);
 
+  canvas: SVGSVGElement;
+
   EMPTY_POINT: mxPoint;
 
   /**

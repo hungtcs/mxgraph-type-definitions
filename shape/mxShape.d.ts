@@ -80,6 +80,8 @@ declare class mxShape {
 
   constraints: Array<mxConnectionConstraint>;
 
+  isShadow: boolean;
+
   /**
    * Variable: dialect
    *
