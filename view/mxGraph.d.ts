@@ -1454,7 +1454,7 @@ declare class mxGraph extends mxEventSource {
    * @param cells Optional array of {@link mxCell} to be grouped. If null is specified
    * then the selection cells are used.
    */
-  groupCells(group: mxCell, border?: number, cells?: mxCell[]): mxCell;
+  groupCells(group: mxCell | null, border?: number, cells?: mxCell[]): mxCell;
 
   /**
    * Returns the cells with the same parent as the first cell
