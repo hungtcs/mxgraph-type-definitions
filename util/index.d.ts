@@ -11,6 +11,7 @@
 /// <reference path="./mxLog.d.ts" />
 /// <reference path="./mxMorphing.d.ts" />
 /// <reference path="./mxMouseEvent.d.ts" />
+/// <reference path="./mxObjectIdentity.d.ts" />
 /// <reference path="./mxPanningManager.d.ts" />
 /// <reference path="./mxPoint.d.ts" />
 /// <reference path="./mxPopupMenu.d.ts" />
