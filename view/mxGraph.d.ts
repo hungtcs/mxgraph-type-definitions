@@ -1285,7 +1285,7 @@ declare class mxGraph extends mxEventSource {
    * selection cells are changed.
    *
    * @param style String representing the new style of the cells.
-   * @param cells Optional array of {@link mxCells} to set the style for. Default is the
+   * @param cells Optional array of {@link mxCell} to set the style for. Default is the
    * selection cells.
    */
   setCellStyle(style: string, cells?: mxCell[]): void;
@@ -1316,7 +1316,7 @@ declare class mxGraph extends mxEventSource {
    * @param key String representing the key for the boolean value to be toggled.
    * @param defaultValue Optional boolean default value if no value is defined.
    * Default is false.
-   * @param cells Optional array of {@link mxCells} whose styles should be modified.
+   * @param cells Optional array of {@link mxCell} whose styles should be modified.
    * Default is the selection cells.
    */
   toggleCellStyles(key: string, defaultValue?: boolean, cells?: mxCell[]): any;
@@ -1330,7 +1330,7 @@ declare class mxGraph extends mxEventSource {
    *
    * @param key String representing the key to be assigned.
    * @param value String representing the new value for the key.
-   * @param cells Optional array of {@link mxCells} to change the style for. Default is
+   * @param cells Optional array of {@link mxCell} to change the style for. Default is
    * the selection cells.
    */
   setCellStyles(key: string, value: any, cells?: mxCell[]): void;
@@ -1341,7 +1341,7 @@ declare class mxGraph extends mxEventSource {
    *
    * @param key String representing the key to toggle the flag in.
    * @param flag Integer that represents the bit to be toggled.
-   * @param cells Optional array of {@link mxCells} to change the style for. Default is
+   * @param cells Optional array of {@link mxCell} to change the style for. Default is
    * the selection cells.
    */
   toggleCellStyleFlags(key: string, flag: number, cells?: mxCell[]): void;
@@ -1353,7 +1353,7 @@ declare class mxGraph extends mxEventSource {
    * @param key String representing the key to toggle the flag in.
    * @param flag Integer that represents the bit to be toggled.
    * @param value Boolean value to be used or null if the value should be toggled.
-   * @param cells Optional array of {@link mxCells} to change the style for. Default is
+   * @param cells Optional array of {@link mxCell} to change the style for. Default is
    * the selection cells.
    */
   setCellStyleFlags(key: string, flag: number, value: boolean, cells?: mxCell[]): void;
@@ -1364,7 +1364,7 @@ declare class mxGraph extends mxEventSource {
    *
    * @param align Specifies the alignment. Possible values are all constants in
    * mxConstants with an ALIGN prefix.
-   * @param cells Array of {@link mxCells} to be aligned.
+   * @param cells Array of {@link mxCell} to be aligned.
    * @param param Optional coordinate for the alignment.
    */
   alignCells(align: string, cells: mxCell[], param?: any): mxCell[];
@@ -1422,7 +1422,7 @@ declare class mxGraph extends mxEventSource {
    * transaction is in progress.
    *
    * @param back Boolean that specifies if the cells should be moved to back.
-   * @param cells Array of {@link mxCells} to move to the background. If null is
+   * @param cells Array of {@link mxCell} to move to the background. If null is
    * specified then the selection cells are used.
    */
   orderCells(back: boolean, cells?: mxCell[]): mxCell[];
@@ -1431,7 +1431,7 @@ declare class mxGraph extends mxEventSource {
    * Moves the given cells to the front or back. This method fires
    * {@link mxEvent.CELLS_ORDERED} while the transaction is in progress.
    *
-   * @param cells Array of {@link mxCells} whose order should be changed.
+   * @param cells Array of {@link mxCell} whose order should be changed.
    * @param back Boolean that specifies if the cells should be moved to back.
    */
   cellsOrdered(cells: mxCell[], back?: boolean): void;
@@ -1451,7 +1451,7 @@ declare class mxGraph extends mxEventSource {
    * then a new group is created using {@link createGroupCell}.
    * @param border Optional integer that specifies the border between the child
    * area and the group bounds. Default is 0.
-   * @param cells Optional array of {@link mxCells} to be grouped. If null is specified
+   * @param cells Optional array of {@link mxCell} to be grouped. If null is specified
    * then the selection cells are used.
    */
   groupCells(group: mxCell, border?: number, cells?: mxCell[]): mxCell;
@@ -1468,7 +1468,7 @@ declare class mxGraph extends mxEventSource {
   getBoundsForGroup(group: mxCell, children: mxCell[], border?: number): mxRectangle;
 
   /**
-   * Hook for creating the group cell to hold the given array of {@link mxCells} if
+   * Hook for creating the group cell to hold the given array of {@link mxCell} if
    * no group cell was given to the {@link group} function.
    *
    * The following code can be used to set the style of new group cells.
@@ -1499,7 +1499,7 @@ declare class mxGraph extends mxEventSource {
   /**
    * Hook to remove the groups after {@link ungroupCells}.
    *
-   * @param cells Array of {@link mxCells} that were ungrouped.
+   * @param cells Array of {@link mxCell} that were ungrouped.
    */
   removeCellsAfterUngroup(cells: mxCell[]): void;
 
@@ -1507,7 +1507,7 @@ declare class mxGraph extends mxEventSource {
    * Removes the specified cells from their parents and adds them to the
    * default parent. Returns the cells that were removed from their parents.
    *
-   * @param cells Array of {@link mxCells} to be removed from their parents.
+   * @param cells Array of {@link mxCell} to be removed from their parents.
    */
   removeCellsFromParent(cells: mxCell[]): mxCell[];
 
@@ -1530,10 +1530,10 @@ declare class mxGraph extends mxEventSource {
   updateGroupBounds(cells: mxCell[], border?: number, moveGroup?: boolean, topBorder?: number, rightBorder?: number, bottomBorder?: number, leftBorder?: number): mxCell[];
 
   /**
-   * Returns the bounding box for the given array of {@link mxCells}. The bounding box for
+   * Returns the bounding box for the given array of {@link mxCell}. The bounding box for
    * each cell and its descendants is computed using {@link mxGraphView.getBoundingBox}.
    *
-   * @param cells Array of {@link mxCells} whose bounding box should be returned.
+   * @param cells Array of {@link mxCell} whose bounding box should be returned.
    */
   getBoundingBox(cells: mxCell[]): mxRectangle;
 
@@ -1555,7 +1555,7 @@ declare class mxGraph extends mxEventSource {
    * given array, then the respective end is assigned a terminal point and the
    * terminal is removed.
    *
-   * @param cells Array of {@link mxCells} to be cloned.
+   * @param cells Array of {@link mxCell} to be cloned.
    * @param allowInvalidEdges Optional boolean that specifies if invalid edges
    * should be cloned. Default is true.
    * @param mapping Optional mapping for existing clones.
@@ -1665,7 +1665,7 @@ declare class mxGraph extends mxEventSource {
    * {@link cellsAdded}. This method fires {@link mxEvent.ADD_CELLS} while the
    * transaction is in progress. Returns the cells that were added.
    *
-   * @param cells Array of {@link mxCells} to be inserted.
+   * @param cells Array of {@link mxCell} to be inserted.
    * @param parent {@link mxCell} that represents the new parent. If no parent is
    * given then the default parent is used.
    * @param index Optional index to insert the cells at. Default is to append.
@@ -1685,7 +1685,7 @@ declare class mxGraph extends mxEventSource {
   /**
    * Resizes the specified cell to just fit around the its label and/or children
    *
-   * @param cell {@link mxCells} to be resized.
+   * @param cell {@link mxCell} to be resized.
    * @param recurse Optional boolean which specifies if all descendants should be
    * autosized. Default is true.
    */
@@ -1697,7 +1697,7 @@ declare class mxGraph extends mxEventSource {
    * This method fires {@link mxEvent.REMOVE_CELLS} while the transaction is in
    * progress. The removed cells are returned as an array.
    *
-   * @param cells Array of {@link mxCells} to remove. If null is specified then the
+   * @param cells Array of {@link mxCell} to remove. If null is specified then the
    * selection cells which are deletable are used.
    * @param includeEdges Optional boolean which specifies if all connected edges
    * should be removed as well. Default is true.
@@ -1708,7 +1708,7 @@ declare class mxGraph extends mxEventSource {
    * Removes the given cells from the model. This method fires
    * {@link mxEvent.CELLS_REMOVED} while the transaction is in progress.
    *
-   * @param cells Array of {@link mxCells} to remove.
+   * @param cells Array of {@link mxCell} to remove.
    */
   cellsRemoved(cells: mxCell[]): void;
 
@@ -1719,7 +1719,7 @@ declare class mxGraph extends mxEventSource {
    * is in progress. Returns the new edge that was inserted.
    *
    * @param edge {@link mxCell} that represents the edge to be splitted.
-   * @param cells {@link mxCells} that represents the cells to insert into the edge.
+   * @param cells {@link mxCell} that represents the cells to insert into the edge.
    * @param newEdge {@link mxCell} that represents the edge to be inserted.
    * @param dx Optional integer that specifies the vector to move the cells.
    * @param dy Optional integer that specifies the vector to move the cells.
@@ -1741,7 +1741,7 @@ declare class mxGraph extends mxEventSource {
    * progress. Returns the cells whose visible state was changed.
    *
    * @param show Boolean that specifies the visible state to be assigned.
-   * @param cells Array of {@link mxCells} whose visible state should be changed. If
+   * @param cells Array of {@link mxCell} whose visible state should be changed. If
    * null is specified then the selection cells are used.
    * @param includeEdges Optional boolean indicating if the visible state of all
    * connected edges should be changed as well. Default is true.
@@ -1751,7 +1751,7 @@ declare class mxGraph extends mxEventSource {
   /**
    * Sets the visible state of the specified cells.
    *
-   * @param cells Array of {@link mxCells} whose visible state should be changed.
+   * @param cells Array of {@link mxCell} whose visible state should be changed.
    * @param show Boolean that specifies the visible state to be assigned.
    */
   cellsToggled(cells: mxCell[], show: boolean): void;
@@ -1769,7 +1769,7 @@ declare class mxGraph extends mxEventSource {
    * @param collapsed Boolean indicating the collapsed state to be assigned.
    * @param recurse Optional boolean indicating if the collapsed state of all
    * descendants should be set. Default is false.
-   * @param cells Array of {@link mxCells} whose collapsed state should be set. If
+   * @param cells Array of {@link mxCell} whose collapsed state should be set. If
    * null is specified then the foldable selection cells are used.
    * @param checkFoldable Optional boolean indicating of isCellFoldable should be
    * checked. Default is false.
@@ -1782,7 +1782,7 @@ declare class mxGraph extends mxEventSource {
    * {@link mxEvent.CELLS_FOLDED} while the transaction is in progress. Returns the
    * cells whose collapsed state was changed.
    *
-   * @param cells Array of {@link mxCells} whose collapsed state should be set.
+   * @param cells Array of {@link mxCell} whose collapsed state should be set.
    * @param collapsed Boolean indicating the collapsed state to be assigned.
    * @param recurse Boolean indicating if the collapsed state of all descendants
    * should be set.
@@ -1886,7 +1886,7 @@ declare class mxGraph extends mxEventSource {
    * event while the transaction is in progress. Returns the cells which
    * have been passed to the function.
    *
-   * @param cells Array of {@link mxCells} whose bounds should be changed.
+   * @param cells Array of {@link mxCell} whose bounds should be changed.
    * @param bounds Array of {@link mxRectangles} that represent the new bounds.
    */
   resizeCells(cells: mxCell[], bounds: mxRectangle[], recurse: boolean): mxCell[];
@@ -1929,7 +1929,7 @@ declare class mxGraph extends mxEventSource {
    * });
    * ```
    *
-   * @param cells Array of {@link mxCells} whose bounds should be changed.
+   * @param cells Array of {@link mxCell} whose bounds should be changed.
    * @param bounds Array of {@link mxRectangles} that represent the new bounds.
    * @param recurse Optional boolean that specifies if the children should be resized.
    */
@@ -1990,7 +1990,7 @@ declare class mxGraph extends mxEventSource {
    * method and returns the inserted cells. This shortcut is used if
    * cells are inserted via datatransfer.
    *
-   * @param cells Array of {@link mxCells} to be imported.
+   * @param cells Array of {@link mxCell} to be imported.
    * @param dx Integer that specifies the x-coordinate of the vector. Default is 0.
    * @param dy Integer that specifies the y-coordinate of the vector. Default is 0.
    * @param target {@link mxCell} that represents the new parent of the cells.
@@ -2012,7 +2012,7 @@ declare class mxGraph extends mxEventSource {
    * graph.moveCells(graph.getChildCells(null, true, true), 10, 10);
    * ```
    *
-   * @param cells Array of {@link mxCells} to be moved, cloned or added to the target.
+   * @param cells Array of {@link mxCell} to be moved, cloned or added to the target.
    * @param dx Integer that specifies the x-coordinate of the vector. Default is 0.
    * @param dy Integer that specifies the y-coordinate of the vector. Default is 0.
    * @param clone Boolean indicating if the cells should be cloned. Default is false.
@@ -2063,7 +2063,7 @@ declare class mxGraph extends mxEventSource {
    * Resets the control points of the edges that are connected to the given
    * cells if not both ends of the edge are in the given cells array.
    *
-   * @param cells Array of {@link mxCells} for which the connected edges should be
+   * @param cells Array of {@link mxCell} for which the connected edges should be
    * reset.
    */
   resetEdges(cells: mxCell[]): void;
@@ -2156,7 +2156,7 @@ declare class mxGraph extends mxEventSource {
    * Disconnects the given edges from the terminals which are not in the
    * given array.
    *
-   * @param cells Array of {@link mxCells} to be disconnected.
+   * @param cells Array of {@link mxCell} to be disconnected.
    */
   disconnectGraph(cells: mxCell[]): void;
 
@@ -2325,7 +2325,7 @@ declare class mxGraph extends mxEventSource {
    * }
    * ```
    *
-   * @param cells Array of {@link mxCells} whose bounds should be returned.
+   * @param cells Array of {@link mxCell} whose bounds should be returned.
    * @param includeEdges Specifies if edge bounds should be included by computing
    * the bounding box for all points in geometry. Default is false.
    */
@@ -3761,7 +3761,7 @@ declare class mxGraph extends mxEventSource {
    * and its child count is greater than 0.
    *
    * @param cell {@link mxCell} that represents the possible drop target.
-   * @param cells {@link mxCells} that should be dropped into the target.
+   * @param cells {@link mxCell} that should be dropped into the target.
    * @param evt Mouseevent that triggered the invocation.
    */
   isValidDropTarget(cell: mxCell, cells: mxCell[], evt: Event): boolean;
@@ -3771,7 +3771,7 @@ declare class mxGraph extends mxEventSource {
    * given cell as a new terminal between the two.
    *
    * @param target {@link mxCell} that represents the edge to be splitted.
-   * @param cells {@link mxCells} that should split the edge.
+   * @param cells {@link mxCell} that should split the edge.
    * @param evt Mouseevent that triggered the invocation.
    */
   isSplitTarget(target: mxCell, cells: mxCell[], evt: Event): boolean;
@@ -3785,7 +3785,7 @@ declare class mxGraph extends mxEventSource {
    *
    * This function should only be used if {@link isDropEnabled} returns true.
    *
-   * @param cells Array of {@link mxCells} which are to be dropped onto the target.
+   * @param cells Array of {@link mxCell} which are to be dropped onto the target.
    * @param evt Mouseevent for the drag and drop.
    * @param cell {@link mxCell} that is under the mousepointer.
    * @param clone Optional boolean to indicate of cells will be cloned.
@@ -3964,7 +3964,7 @@ declare class mxGraph extends mxEventSource {
    * Returns all distinct visible opposite cells for the specified terminal
    * on the given edges.
    *
-   * @param edges Array of {@link mxCells} that contains the edges whose opposite
+   * @param edges Array of {@link mxCell} that contains the edges whose opposite
    * terminals should be returned.
    * @param terminal Terminal that specifies the end whose opposite should be
    * returned.
@@ -4101,12 +4101,12 @@ declare class mxGraph extends mxEventSource {
   getSelectionCount(): number;
 
   /**
-   * Returns the first cell from the array of selected {@link mxCells}.
+   * Returns the first cell from the array of selected {@link mxCell}.
    */
   getSelectionCell(): mxCell;
 
   /**
-   * Returns the array of selected {@link mxCells}.
+   * Returns the array of selected {@link mxCell}.
    */
   getSelectionCells(): mxCell[];
 
@@ -4120,7 +4120,7 @@ declare class mxGraph extends mxEventSource {
   /**
    * Sets the selection cell.
    *
-   * @param cells Array of {@link mxCells} to be selected.
+   * @param cells Array of {@link mxCell} to be selected.
    */
   setSelectionCells(cells: mxCell[]): void;
 
@@ -4134,7 +4134,7 @@ declare class mxGraph extends mxEventSource {
   /**
    * Adds the given cells to the selection.
    *
-   * @param cells Array of {@link mxCells} to be added to the selection.
+   * @param cells Array of {@link mxCell} to be added to the selection.
    */
   addSelectionCells(cells: mxCell[]): void;
 
@@ -4148,7 +4148,7 @@ declare class mxGraph extends mxEventSource {
   /**
    * Removes the given cells from the selection.
    *
-   * @param cells Array of {@link mxCells} to be removed from the selection.
+   * @param cells Array of {@link mxCell} to be removed from the selection.
    */
   removeSelectionCells(cells: mxCell[]): void;
 
@@ -4244,7 +4244,7 @@ declare class mxGraph extends mxEventSource {
    * replacing the selection depending on whether the given mouse event is a
    * toggle event.
    *
-   * @param cells Array of {@link mxCells} to be selected.
+   * @param cells Array of {@link mxCell} to be selected.
    * @param evt Optional mouseevent that triggered the selection.
    */
   selectCellsForEvent(cells: mxCell[], evt?: MouseEvent): void;

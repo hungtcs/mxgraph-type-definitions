@@ -127,7 +127,7 @@ declare class mxSwimlaneManager extends mxEventSource {
   /**
    * Called if any cells have been added.
    *
-   * @param cell Array of {@link mxCells} that have been added.
+   * @param cell Array of {@link mxCell} that have been added.
    */
   cellsAdded(cells: Array<mxCell>): void;
 
@@ -143,7 +143,7 @@ declare class mxSwimlaneManager extends mxEventSource {
    * Called if any cells have been resizes. Calls {@link swimlaneResized} for all
    * swimlanes where {@link isSwimlaneIgnored} returns false.
    *
-   * @param cells Array of {@link mxCells} whose size was changed.
+   * @param cells Array of {@link mxCell} whose size was changed.
    */
   cellsResized(cells: Array<mxCell>): void;
 

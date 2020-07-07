@@ -160,9 +160,9 @@ declare class mxGraphView extends mxEventSource {
   setGraphBounds(value: mxRectangle): void;
 
   /**
-   * Returns the union of all {@link mxCellStates} for the given array of {@link mxCells}.
+   * Returns the union of all {@link mxCellStates} for the given array of {@link mxCell}.
    *
-   * @param cells Array of {@link mxCells} whose bounds should be returned.
+   * @param cells Array of {@link mxCell} whose bounds should be returned.
    */
   getBounds(cells: mxCell[]): mxRectangle;
 
@@ -675,7 +675,7 @@ declare class mxGraphView extends mxEventSource {
   setStates(value: mxDictionary<mxCellState>): void;
 
   /**
-   * Returns the {@link mxCellStates} for the given array of {@link mxCells}. The array
+   * Returns the {@link mxCellStates} for the given array of {@link mxCell}. The array
    * contains all states that are not null, that is, the returned array may
    * have less elements than the given array. If no argument is given, then
    * this returns {@link states}.

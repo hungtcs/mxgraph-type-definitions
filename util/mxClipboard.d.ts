@@ -84,7 +84,7 @@ static STEPSIZE: number;
 static insertCount: number;
 
 /**
- * Holds the array of {@link mxCells} currently in the clipboard.
+ * Holds the array of {@link mxCell} currently in the clipboard.
  */
 static cells: Array<mxCell>;
 
@@ -104,12 +104,12 @@ static getCells(): Array<mxCell>;
 static isEmpty(): boolean;
 
 /**
- * Cuts the given array of {@link mxCells} from the specified graph.
+ * Cuts the given array of {@link mxCell} from the specified graph.
  * If cells is null then the selection cells of the graph will
  * be used. Returns the cells that have been cut from the graph.
  *
  * @param graph - {@link mxGraph} that contains the cells to be cut.
- * @param cells - Optional array of {@link mxCells} to be cut.
+ * @param cells - Optional array of {@link mxCell} to be cut.
  */
 static cut(graph: mxGraph, cells?: Array<mxCell>): Array<mxCell>;
 
@@ -118,17 +118,17 @@ static cut(graph: mxGraph, cells?: Array<mxCell>): Array<mxCell>;
  * a cut operation.
  *
  * @param graph - {@link mxGraph} that contains the cells to be cut.
- * @param cells - Array of {@link mxCells} to be cut.
+ * @param cells - Array of {@link mxCell} to be cut.
  */
 static removeCells(graph: mxGraph, cells: Array<mxCell>): void;
 
 /**
- * Copies the given array of {@link mxCells} from the specified
+ * Copies the given array of {@link mxCell} from the specified
  * graph to {@link cells}. Returns the original array of cells that has
  * been cloned. Descendants of cells in the array are ignored.
  *
  * @param graph - {@link mxGraph} that contains the cells to be copied.
- * @param cells - Optional array of {@link mxCells} to be copied.
+ * @param cells - Optional array of {@link mxCell} to be copied.
  */
 static copy(graph: mxGraph, cells?: Array<mxCell>): Array<mxCell>;
 

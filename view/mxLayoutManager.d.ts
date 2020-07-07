@@ -118,7 +118,7 @@ declare class mxLayoutManager extends mxEventSource {
   /**
    * Called from {@link undoHandler}.
    *
-   * @param cell Array of {@link mxCells} that have been moved.
+   * @param cell Array of {@link mxCell} that have been moved.
    * @param evt Mouse event that represents the mousedown.
    *
    * TODO: what is undoableEdit type?
@@ -128,7 +128,7 @@ declare class mxLayoutManager extends mxEventSource {
   /**
    * Called from {@link moveHandler}.
    *
-   * @param cell Array of {@link mxCells} that have been moved.
+   * @param cell Array of {@link mxCell} that have been moved.
    * @param evt Mouse event that represents the mousedown.
    */
   cellsMoved(cells: Array<mxCell>, evt: MouseEvent): void;
@@ -136,7 +136,7 @@ declare class mxLayoutManager extends mxEventSource {
   /**
    * Called from {@link resizeHandler}.
    *
-   * @param cell Array of {@link mxCells} that have been resized.
+   * @param cell Array of {@link mxCell} that have been resized.
    * @param bounds {@link mxRectangle} taht represents the new bounds.
    */
   cellsResized(cells: Array<mxCell>, bounds: Array<mxRectangle>, prev: Array<any>): void;
