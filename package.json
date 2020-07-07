@@ -1,6 +1,6 @@
 {
   "name": "mxgraph-type-definitions",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "this project is typescript definitions for mxGraph",
   "main": "index.d.ts",
   "repository": {
