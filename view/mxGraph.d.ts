@@ -1547,7 +1547,7 @@ declare class mxGraph extends mxEventSource {
    * @param keepPosition Optional boolean indicating if the position of the cells should
    * be updated to reflect the lost parent cell. Default is false.
    */
-  cloneCells(cells: mxCell[], allowInvalidEdges?: boolean, mapping?: any): mxCell[];
+  cloneCells(cells: mxCell[], allowInvalidEdges?: boolean, mapping?: any, keepPosition?: boolean): mxCell[];
 
   /**
    * Returns the clones for the given cells. The clones are created recursively
@@ -2020,14 +2020,14 @@ declare class mxGraph extends mxEventSource {
    * @param evt Mouseevent that triggered the invocation.
    * @param mapping Optional mapping for existing clones.
    */
-  moveCells(cells: mxCell[], dx: number, dy: number, clone: boolean, target: mxCell, evt: Event, mapping: any): mxCell[];
+  moveCells(cells: mxCell[], dx: number, dy: number, clone: boolean, target?: mxCell, evt?: Event, mapping?: any): mxCell[];
 
   /**
    * Moves the specified cells by the given vector, disconnecting the cells
    * using disconnectGraph is disconnect is true. This method fires
    * {@link mxEvent.CELLS_MOVED} while the transaction is in progress.
    */
-  cellsMoved(cells: mxCell[], dx: number, dy: number, disconnect: boolean, constrain: boolean, extend: boolean): void;
+  cellsMoved(cells: mxCell[], dx: number, dy: number, disconnect?: boolean, constrain?: boolean, extend?: boolean): void;
 
   /**
    * Translates the geometry of the given cell and stores the new,

@@ -392,7 +392,7 @@ declare class mxGraphModel extends mxEventSource {
    * @param {mxCell} child  that specifies the child to be inserted.
    * @param index  Optional integer that specifies the index of the child.
    */
-  add(parent: mxCell, child: mxCell, index: number): mxCell;
+  add(parent: mxCell, child: mxCell, index?: number): mxCell;
 
   /**
    * Inner callback to update {@link cells} when a cell has been added. This
