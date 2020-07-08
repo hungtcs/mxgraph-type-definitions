@@ -496,7 +496,7 @@ declare class mxGraphModel extends mxEventSource {
   getChildAt(cell: mxCell, index: number): mxCell;
 
   /**
-   * Returns all children of the given {@link mxCell} as an array of {@link mxCells}. The
+   * Returns all children of the given {@link mxCell} as an array of {@link mxCell}. The
    * return value should be only be read.
    *
    * @param {mxCell} cell  the represents the parent.
@@ -625,7 +625,7 @@ declare class mxGraphModel extends mxEventSource {
 
   /**
    * Returns all distinct edges connected to this cell as a new array of
-   * {@link mxCells}. If at least one of incoming or outgoing is true, then loops
+   * {@link mxCell}. If at least one of incoming or outgoing is true, then loops
    * are ignored, otherwise if both are false, then all edges connected to
    * the given cell are returned including loops.
    *
@@ -656,9 +656,9 @@ declare class mxGraphModel extends mxEventSource {
   /**
    * Returns all opposite vertices wrt terminal for the given edges, only
    * returning sources and/or targets as specified. The result is returned
-   * as an array of {@link mxCells}.
+   * as an array of {@link mxCell}.
    *
-   * @param edges  Array of {@link mxCells} that contain the edges to be examined.
+   * @param edges  Array of {@link mxCell} that contain the edges to be examined.
    * @param {mxCell} terminal  that specifies the known end of the edges.
    * @param sources  Boolean that specifies if source terminals should be contained
    * in the result. Default is true.
@@ -672,7 +672,7 @@ declare class mxGraphModel extends mxEventSource {
    * descendants for each {@link mxCell} that it contains. Duplicates should be
    * removed in the cells array to improve performance.
    *
-   * @param cells  Array of {@link mxCells} whose topmost ancestors should be returned.
+   * @param cells  Array of {@link mxCell} whose topmost ancestors should be returned.
    */
   getTopmostCells(cells: Array<mxCell>): Array<mxCell>;
 
@@ -950,7 +950,7 @@ declare class mxGraphModel extends mxEventSource {
   cloneCell(cell: mxCell): mxCell;
 
   /**
-   * Returns an array of clones for the given array of {@link mxCells}`.
+   * Returns an array of clones for the given array of {@link mxCell}`.
    * Depending on the value of includeChildren, a deep clone is created for
    * each cell. Connections are restored based if the corresponding
    * cell is contained in the passed in array.

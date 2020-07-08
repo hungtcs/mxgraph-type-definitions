@@ -102,9 +102,9 @@ declare class mxGraphSelectionModel extends mxEventSource {
   setCell(cell: mxCell): void;
 
   /**
-   * Selects the given array of {@link mxCells} and fires a {@link change} event.
+   * Selects the given array of {@link mxCell} and fires a {@link change} event.
    *
-   * @param cells Array of {@link mxCells} to be selected.
+   * @param cells Array of {@link mxCell} to be selected.
    */
   setCells(cells: Array<mxCell>): void;
 
@@ -121,10 +121,10 @@ declare class mxGraphSelectionModel extends mxEventSource {
   addCell(cell: mxCell): void;
 
   /**
-   * Adds the given array of {@link mxCells} to the selection and fires a {@link select}
+   * Adds the given array of {@link mxCell} to the selection and fires a {@link select}
    * event.
    *
-   * @param cells Array of {@link mxCells} to add to the selection.
+   * @param cells Array of {@link mxCell} to add to the selection.
    */
   addCells(cells: Array<mxCell>): void;
 
