@@ -86,14 +86,14 @@ declare class mxConstraintHandler {
    * Returns true if the given <mxMouseEvent> should be ignored in <update>. This
    * implementation always returns false.
    */
-  isEventIgnored(me: mxMouseEvent, source: mxCell): boolean;
+  isEventIgnored(me: mxMouseEvent, source: boolean): boolean;
 
   /**
    * Function: isStateIgnored
    *
    * Returns true if the given state should be ignored. This always returns false.
    */
-  isStateIgnored(state: mxCellState, source: mxCell): boolean;
+  isStateIgnored(state: mxCellState, source: boolean): boolean;
 
   /**
    * Function: destroyIcons

@@ -18,6 +18,8 @@ declare class mxVertexHandler {
    */
   state: mxCellState;
 
+  bounds: mxRectangle;
+
   /**
    * Variable: singleSizer
    *

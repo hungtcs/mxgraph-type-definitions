@@ -504,7 +504,7 @@ declare class mxEdgeHandler {
    *
    * Updates the given preview state taking into account the state of the constraint handler.
    */
-  updatePreviewState(edge: mxCell, point: mxPoint, terminalState: mxCellState, me: mxMouseEvent, outline: boolean): void;
+  updatePreviewState(edge: mxCell, point: mxPoint, terminalState: mxCellState, me: mxMouseEvent, outline?: boolean): void;
 
   /**
    * Function: mouseMove
