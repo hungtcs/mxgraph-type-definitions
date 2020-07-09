@@ -72,23 +72,16 @@ declare class mxCellRenderer {
   forceControlClickHandler: boolean;
 
   /**
-   * Function: registerShape
-   *
-   * Registers the given constructor under the specified key in this instance
-   * of the renderer.
-   *
-   * Example:
-   *
-   * (code)
+   * Registers the given constructor under the specified key in this instance of the renderer.
+   * @example
+   * ```
    * mxCellRenderer.registerShape(mxConstants.SHAPE_RECTANGLE, mxRectangleShape);
-   * (end)
+   * ```
    *
-   * Parameters:
-   *
-   * key - String representing the shape name.
-   * shape - Constructor of the <mxShape> subclass.
+   * @param key the shape name.
+   * @param shape constructor of the {@link mxShape} subclass.
    */
-  static registerShape(key: string, shape: typeof mxShape): void;
+  static registerShape(key: string, shape: new(...args: any) => mxShape): void;
 
   /**
    * Function: initializeShape
