@@ -450,4 +450,6 @@ declare class mxCell {
    */
   cloneValue(): any;
 
+  [key: string]: any;
+
 }
