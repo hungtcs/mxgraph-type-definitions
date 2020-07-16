@@ -19,19 +19,6 @@ declare class mxRectangleShape extends mxShape {
   constructor(bounds: mxRectangle, fill: string, stroke: string, strokewidth?: number);
 
   /**
-   * @author 鸿则<hungtcs@163.com>
-   * These parameters cannot be found in the API,
-   * but it does exist and is necessary
-   */
-  bounds: mxRectangle;
-
-  fill: string;
-
-  stroke: string;
-
-  strokewidth: number;
-
-  /**
    * Returns true for non-rounded, non-rotated shapes with no glass gradient.
    */
   isHtmlAllowed(): boolean;
@@ -42,15 +29,11 @@ declare class mxRectangleShape extends mxShape {
   paintBackground(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number): void;
 
   /**
-   * Function: isRoundable
-   *
    * Adds roundable support.
    */
   isRoundable(c?: mxAbstractCanvas2D, x?: number, y?: number, w?: number, h?: number): boolean;
 
   /**
-   * Function: paintForeground
-   *
    * Generic background painting implementation.
    */
   paintForeground(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number): void;

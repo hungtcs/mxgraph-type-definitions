@@ -11,7 +11,7 @@
  * Which implementation to use is controlled by the dialect property which
  * is assigned from within the mxCellRenderer when the shape is created.
  * The dialect must be assigned for a shape, and it does normally depend on
- * the browser and the confiuration of the graph (see mxGraph rendering hint).
+ * the browser and the configuration of the graph (see mxGraph rendering hint).
  *
  * For each supported shape in SVG and VML, a corresponding shape exists in
  * mxGraph, namely for text, image, rectangle, rhombus, ellipse and polyline.
@@ -47,9 +47,6 @@
  * var style = graph.getStylesheet().getDefaultVertexStyle();
  * style[mxConstants.STYLE_SHAPE] = 'customShape';
  * ```
- *
- * @class mxShape
- * @extends {mxStencil}
  */
 declare class mxShape {
 
@@ -60,27 +57,130 @@ declare class mxShape {
   constructor(stencil: mxStencil);
 
   /**
-   * @author 鸿则<hungtcs@163.com>
-   * These parameters cannot be found in the API,
-   * but it does exist and is necessary
+   * Fill color.<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  fill: string;
+
+  /**
+   * Gradient color.<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  gradient: string;
+
+  /**
+   * Gradient direction.<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  gradientDirection: string;
+
+  /**
+   * Opacity. Possible range is `0-100`.<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  opacity: number;
+
+  /**
+   * Fill opacity. Possible range is `0-100`.<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  fillOpacity: number;
+
+  /**
+   * Stroke opacity. Possible range is `0-100`.<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  strokeOpacity: number;
+
+  /**
+   * Stroke color.<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  stroke: string;
+
+  /**
+   * Stroke width.<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
    */
   strokewidth: number;
 
+  /**
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  isShadow: boolean;
+
+  /**
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  isDashed: boolean;
+
+  /**
+   * The value represents the spacing, in pixels, added to each side of a label in a vertex (style applies to vertices only).<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  spacing: number;
+
+  /**
+   *  Size of the start marker or the size of the swimlane title region depending on the shape it is used for.<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  startSize: number;
+
+  /**
+   *  Size of the end marker in pixels.<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  endSize: number;
+
+  /**
+   * For edges this determines whether or not joins between edges segments are smoothed to a rounded finish.<br>
+   * For vertices that have the rectangle shape, this determines whether or not the rectangle is rounded.<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  isRounded: boolean;
+
+  /**
+   * Possible values are all constants with an ARROW-prefix.<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  startArrow: string;
+
+  /**
+   * Possible values are all constants with an ARROW-prefix.<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  endArrow: string;
+
+  /**
+   * Possible range is 0-360.<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
   rotation: number;
 
-  opacity: number;
+  /**
+   * Specify the direction of certain shapes (eg. {@link mxTriangle}). Possible values are {@link mxConstants.DIRECTION_EAST} (default),
+   * {@link mxConstants.DIRECTION_WEST}, {@link mxConstants.DIRECTION_NORTH}, and {@link mxConstants.DIRECTION_SOUTH}.<br>
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  direction: string;
 
-  fillOpacity: number;
+  /**
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply}).
+   */
+  glass: boolean;
 
-  strokeOpacity: number;
-
+  /**
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply} implementation).
+   */
   flipH: boolean;
 
+  /**
+   * <b>Note:</b> this property is not documented in the JavaScript API but it does exist and is necessary (see {@link apply} implementation).
+   */
   flipV: boolean;
 
+  // TODO where does this come from?? not found in the mxgraph@4.1.1 and mxgraph@4.2.0
   constraints: Array<mxConnectionConstraint>;
-
-  isShadow: boolean;
 
   /**
    * Variable: dialect
@@ -89,8 +189,6 @@ declare class mxShape {
    * This can be one of the DIALECT constants in <mxConstants>.
    */
   dialect: string;
-
-  isDashed: boolean;
 
   /**
    * Variable: scale
@@ -443,6 +541,11 @@ declare class mxShape {
   paint(c: mxAbstractCanvas2D): void;
 
   /**
+   * Sets the state of the canvas for drawing the shape.
+   */
+  configureCanvas(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number): void;
+
+  /**
    * Function: getGradientBounds
    *
    * Returns the bounding box for the gradient box for this shape.
@@ -471,8 +574,6 @@ declare class mxShape {
   paintBackground(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number): void;
 
   /**
-   * Function: paintForeground
-   *
    * Hook for subclassers. This implementation is empty.
    */
   paintForeground(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number): void;
@@ -565,8 +666,6 @@ declare class mxShape {
   getCursor(): string;
 
   /**
-   * Function: isRoundable
-   *
    * Hook for subclassers.
    */
   isRoundable(): boolean;
