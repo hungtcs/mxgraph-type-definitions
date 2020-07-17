@@ -41,6 +41,131 @@ declare class mxUtils {
   static setOpacity(node: HTMLElement, value: number): void;
 
   /**
+   * Creates and returns an image (IMG node) or VML image (v:image) in IE6 in
+   * quirks mode.
+   *
+   * @static
+   * @param {string} src          URL that points to the image to be displayed.
+   * @returns {HTMLImageElement}
+   */
+  public static createImage(src: string): HTMLImageElement;
+
+  /**
+   * Sorts the given cells according to the order in the cell hierarchy.
+   * Ascending is optional and defaults to true.
+   *
+   * @static
+   * @param {Array<mxCell>} cells
+   * @param {boolean} [ascending]
+   * @returns {Array<mxCell>}
+   */
+  public static sortCells(cells: Array<mxCell>, ascending?: boolean): Array<mxCell>;
+
+  /**
+   * Returns the stylename in a style of the form [(stylename|key=value);] or
+   * an empty string if the given style does not contain a stylename.
+   *
+   * @author 鸿则 <hungtcs@163.com>
+   * @date 2020-07-17
+   * @static
+   * @param {string} style    String of the form [(stylename|key=value);]
+   * @returns {string}
+   */
+  public static getStylename(style: string): string;
+
+  /**
+   * Returns the stylenames in a style of the form [(stylename|key=value);]
+   * or an empty array if the given style does not contain any stylenames.
+   *
+   * @author 鸿则 <hungtcs@163.com>
+   * @date 2020-07-17
+   * @static
+   * @param {string} style        String of the form [(stylename|key=value);]
+   * @returns {Array<string>}
+   */
+  public static getStylenames(style: string): Array<string>;
+
+  /**
+   * Returns the index of the given stylename in the given style. This
+   * returns -1 if the given stylename does not occur (as a stylename) in the
+   * given style, otherwise it returns the index of the first character.
+   *
+   * @author 鸿则 <hungtcs@163.com>
+   * @date 2020-07-17
+   * @static
+   * @param {string} style
+   * @param {string} stylename
+   * @returns {number}
+   */
+  public static indexOfStylename(style: string, stylename: string): number;
+
+  /**
+   * Adds the specified stylename to the given style if it does not already
+   * contain the stylename.
+   *
+   * @author 鸿则 <hungtcs@163.com>
+   * @date 2020-07-17
+   * @static
+   * @param {string} style
+   * @param {string} stylename
+   * @returns {string}
+   */
+  public static addStylename(style: string, stylename: string): string;
+
+  /**
+   * Removes all occurrences of the specified stylename in the given style
+   * and returns the updated style. Trailing semicolons are not preserved.
+   *
+   * @author 鸿则 <hungtcs@163.com>
+   * @date 2020-07-17
+   * @static
+   * @param {string} style
+   * @param {string} stylename
+   * @returns {string}
+   */
+  public static removeStylename(style: string, stylename: string): string;
+
+  /**
+   * Removes all stylenames from the given style and returns the updated style.
+   *
+   * @author 鸿则 <hungtcs@163.com>
+   * @date 2020-07-17
+   * @static
+   * @param {string} style
+   * @returns {string}
+   */
+  public static removeAllStylenames(style: string): string;
+
+  /**
+   * Assigns the value for the given key in the styles of the given cells, or
+   * removes the key from the styles if the value is null.
+   *
+   * @author 鸿则 <hungtcs@163.com>
+   * @date 2020-07-17
+   * @static
+   * @param {mxGraphModel} model                {@link mxGraphModel} to execute the transaction in.
+   * @param {Array<mxCell>} cells               Array of {@link mxCell } to be updated.
+   * @param {string} key                        Key of the style to be changed.
+   * @param {(string | number | null)} value    New value for the given key.
+   */
+  public static setCellStyles(model: mxGraphModel, cells: Array<mxCell>, key: string, value: string | number | null): void;
+
+  /**
+   * Adds or removes the given key, value pair to the style and returns the
+   * new style. If value is null or zero length then the key is removed from
+   * the style. This is for cell styles, not for CSS styles.
+   *
+   * @author 鸿则 <hungtcs@163.com>
+   * @date 2020-07-17
+   * @static
+   * @param {string} style                  String of the form [(stylename|key=value);].
+   * @param {string} key                    Key of the style to be changed.
+   * @param {(string|number|null)} value    New value for the given key.
+   * @returns {string}
+   */
+  public static setStyle(style: string, key: string, value: string|number|null): string;
+
+  /**
    * Loads the specified URL asynchronously and invokes the given functions depending on the request status.
    * Returns the mxXmlRequest in use.
    * Both functions take the mxXmlRequest as the only parameter.
