@@ -277,4 +277,39 @@ declare class mxUtils {
 
   static hasScrollbars(container: HTMLElement): boolean;
 
+  /**
+   * Recursively clones the specified object ignoring all field names in the given array of transient fields.
+   * {@link mxObjectIdentity.FIELD_NAME} is always ignored by this function.
+   *
+   *
+   * @param obj Object to be cloned.
+   * @param transients Optional array of strings representing the field name to be ignored.
+   * @param shallow Optional boolean argument to specify if a shallow clone should be created, that is, one where all
+   *                object references are not cloned or, in other words, one where only atomic (strings, numbers) values
+   *                are cloned. Default is false.
+   */
+  static clone(obj: any, transients?: Array<string>, shallow?: boolean): any;
+
+  /**
+   * Displays the given alert in a new dialog. This implementation uses the
+   * built-in alert function. This is used to display validation errors when
+   * connections cannot be changed or created.
+   *
+   * @param message The message to be displayed.
+   */
+  static alert(message: string): void;
+
+  /**
+   * Displays the given error message in a new <mxWindow> of the given width.
+   * If close is true then an additional close button is added to the window.
+   * The optional icon specifies the icon to be used for the window. Default
+   * is {@link mxUtils.errorImage}.
+   *
+   * @param message The message to be displayed.
+   * @param width   The width of the window.
+   * @param close   Optional boolean indicating whether to add a close button.
+   * @param icon    Optional icon for the window decoration (path to the icon).
+   */
+  static error(message: string, width: number, close?: boolean, icon?: string): void;
+
 }
