@@ -6,11 +6,29 @@ mxGraph Type Definitions
 
 This project is typescript definitions for [mxGraph].
 
+**This project provide global type definitions for mxgraph, if you are working with [official mxgraph npm package](https://www.npmjs.com/package/mxgraph), please see our new package [`typed-mxgraph`](https://github.com/typed-mxgraph/typed-mxgraph) which design for mxgraph npm package.**
+
 ### Usage
 
+~~install `mxgraph-type-definitions` dependencie and append `node_modules/mxgraph-type-definitions` to `typeRoots` in `tsconfig.json`~~
 ```shell
 npm install --save-dev mxgraph-type-definitions
 ```
+```json
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/mxgraph-type-definitions"
+    ]
+  }
+}
+```
+**As #29 said, `mxClient` will not working if install via npm, I recommend add this project as a submodule to you project, here is a [demo](https://github.com/hungtcs/angular-with-mxgraph), or if you are using [the npm package][mxGraph], [`typed-mxgraph`](https://github.com/typed-mxgraph/typed-mxgraph) may be more appropriate**
+
 
 ### Progress
 
