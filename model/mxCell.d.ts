@@ -293,10 +293,10 @@ declare class mxCell {
    * Parameters:
    *
    * @param terminal<mxCell> that represents the new source or target terminal.
-   * @param isSourceBoolean that specifies if the source or target terminal
+   * @param isSource Boolean that specifies if the source or target terminal
    * should be set.
    */
-  setTerminal(terminal: mxCell, isSource: mxCell): mxCell;
+  setTerminal(terminal: mxCell, isSource: boolean): mxCell;
 
   /**
    * Returns the number of child cells.
