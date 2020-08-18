@@ -27,7 +27,7 @@ npm install --save-dev mxgraph-type-definitions
   }
 }
 ```
-**As #29 said, `mxClient` will not working if install via npm, I recommend add this project as a submodule to you project, here is a [demo](https://github.com/hungtcs/angular-with-mxgraph), or if you are using [the npm package][mxGraph], [`typed-mxgraph`](https://github.com/typed-mxgraph/typed-mxgraph) may be more appropriate**
+**As [#29](https://github.com/hungtcs/mxgraph-type-definitions/issues/29) said, `mxClient` will not working if install via npm, I recommend add this project as a submodule to you project, here is a [demo](https://github.com/hungtcs/angular-with-mxgraph), or if you are using [the npm package][mxGraph], [`typed-mxgraph`](https://github.com/typed-mxgraph/typed-mxgraph) may be more appropriate**
 
 
 ### Progress
