@@ -177,7 +177,7 @@
  * editor.dblClickAction = 'showProperties';
  * ```
  *
- * Popupmenu and Toolbar:
+ * ### Popupmenu and Toolbar:
  *
  * The toolbar and popupmenu are typically configured using the respective
  * sections in the config file, that is, the popupmenu is defined as follows:
@@ -329,17 +329,15 @@
  * });
  * ```
  *
- * Event: mxEvent.ESCAPE
+ * ### Event: mxEvent.ESCAPE
  *
  * Fires when the escape key is pressed. The <code>event</code> property
  * contains the key event.
  *
- * Constructor: mxEditor
+ * ### Constructor: mxEditor
  *
- * Constructs a new editor. This function invokes the <onInit> callback
+ * Constructs a new editor. This function invokes the {@link onInit} callback
  * upon completion.
- *
- * Example:
  *
  * @example
  * ```javascript
@@ -352,27 +350,27 @@
  */
 declare class mxEditor extends mxEventSource {
   /**
-   * @param {Node} config Optional XML node that contains the configuration
+   * @param config Optional XML node that contains the configuration
    */
-  constructor(config?: Node);
+  constructor(config?: any);
 
   /**
    * Specifies the resource key for the zoom dialog. If the resource for this
-   * key does not exist then the value is used as the error message.
+   * key does not exist then the value is used as the error message. Default is 'askZoom'.
    * @default 'askZoom'
    */
   askZoomResource: 'askZoom' | '';
 
   /**
    * Specifies the resource key for the last saved info. If the resource for
-   * this key does not exist then the value is used as the error message.
+   * this key does not exist then the value is used as the error message. Default is 'lastSaved'.
    * @default 'lastSaved'.
    */
   lastSavedResource: 'lastSaved' | '';
 
   /**
    * Specifies the resource key for the current file info. If the resource for
-   * this key does not exist then the value is used as the error message.
+   * this key does not exist then the value is used as the error message. Default is 'currentFile'.
    * @default 'currentFile'
    */
   currentFileResource: 'currentFile' | '';
@@ -380,7 +378,7 @@ declare class mxEditor extends mxEventSource {
   /**
    * Specifies the resource key for the properties window title. If the
    * resource for this key does not exist then the value is used as the
-   * error message.
+   * error message. Default is 'properties'.
    * @default 'properties'
    */
   propertiesResource: 'properties' | '';
@@ -388,7 +386,7 @@ declare class mxEditor extends mxEventSource {
   /**
    * Specifies the resource key for the tasks window title. If the
    * resource for this key does not exist then the value is used as the
-   * error message.
+   * error message. Default is 'tasks'.
    * @default 'tasks'
    */
   tasksResource: 'tasks' | '';
@@ -396,7 +394,7 @@ declare class mxEditor extends mxEventSource {
   /**
    * Specifies the resource key for the help window title. If the
    * resource for this key does not exist then the value is used as the
-   * error message.
+   * error message. Default is 'help'.
    * @default 'help'
    */
   helpResource: 'help' | '';
@@ -404,7 +402,7 @@ declare class mxEditor extends mxEventSource {
   /**
    * Specifies the resource key for the outline window title. If the
    * resource for this key does not exist then the value is used as the
-   * error message.
+   * error message. Default is 'outline'.
    * @default 'outline'
    */
   outlineResource: 'outline' | '';
@@ -412,20 +410,18 @@ declare class mxEditor extends mxEventSource {
   /**
    * Reference to the {@link mxWindow} that contains the outline. The {@link mxOutline}
    * is stored in outline.outline.
-   * @default null
    */
-  outline: mxWindow;
+  outline: any;
 
   /**
    * Holds a {@link mxGraph} for displaying the diagram. The graph
    * is created in {@link setGraphContainer}.
-   * @default null
    */
   graph: mxGraph;
 
   /**
    * Holds the render hint used for creating the
-   * graph in {@link setGraphContainer}. See {@link mxGraph}.
+   * graph in {@link setGraphContainer}. See {@link mxGraph}. Default is null.
    * @default null
    */
   graphRenderHint: any;
@@ -433,26 +429,22 @@ declare class mxEditor extends mxEventSource {
   /**
    * Holds a {@link mxDefaultToolbar} for displaying the toolbar. The
    * toolbar is created in {@link setToolbarContainer}.
-   * @default null
    */
-  toolbar: mxDefaultToolbar;
+  toolbar: any;
 
   /**
    * DOM container that holds the statusbar. 
    * Use {@link setStatusContainer} to set this value.
-   * @default null
    */
-  status: Element;
+  status: any;
 
   /**
    * Holds a {@link mxDefaultPopupMenu} for displaying popupmenus.
-   * @default null
    */
   popupHandler: mxDefaultPopupMenu;
 
   /**
    * Holds an {@link mxUndoManager} for the command history.
-   * @default null
    */
   undoManager: mxUndoManager;
 
@@ -468,7 +460,6 @@ declare class mxEditor extends mxEventSource {
    * to add or replace an action and {@link execute} to execute an action
    * by name, passing the cell to be operated upon as the second
    * argument.
-   * @default null
    */
   actions: Function;
 
@@ -492,6 +483,7 @@ declare class mxEditor extends mxEventSource {
    *   }
    * });
    * ```
+   * @default 'edit'
    */
   dblClickAction: 'edit';
 
@@ -499,13 +491,14 @@ declare class mxEditor extends mxEventSource {
    * Specifies if new cells must be inserted
    * into an existing swimlane. Otherwise, cells
    * that are not swimlanes can be inserted as
-   * top-level cells.
+   * top-level cells. Default is false.
    * @default false
    */
   swimlaneRequired: boolean;
 
   /**
    * Specifies if the context menu should be disabled in the graph container.
+   * Default is true.
    * @default true
    */
   disableContextMenu: boolean;
@@ -521,66 +514,63 @@ declare class mxEditor extends mxEventSource {
    * Specifies if a new cell should be inserted on a single
    * click even using {@link insertFunction} if there is a cell
    * under the mousepointer, otherwise the cell under the
-   * mousepointer is selected.
+   * mousepointer is selected. Default is false.
    * @default false
    */
   forcedInserting: boolean;
-  
+
   /**
    * Maps from names to protoype cells to be used
    * in the toolbar for inserting new cells into
    * the diagram.
-   * @default null
    */
   templates: any;
 
   /**
    * Prototype edge cell that is used for creating new edges.
-   * @default null
    */
   defaultEdge: any;
 
   /**
-   * Specifies the edge style to be returned in {@link getEdgeStyle}.
+   * Specifies the edge style to be returned in {@link getEdgeStyle}. Default is null.
    * @default null
    */
   defaultEdgeStyle: any;
 
   /**
    * Prototype group cell that is used for creating new groups.
-   * @default null
    */
   defaultGroup: any;
 
   /**
    * Default size for the border of new groups. If null,
-   * then then <mxGraph.gridSize> is used.
+   * then then <mxGraph.gridSize> is used. Default is null.
    * @default null
    */
   groupBorderSize: any;
 
   /**
-   * Contains the URL of the last opened file as a string.
+   * Contains the URL of the last opened file as a string. Default is null.
    * @default null
    */
   filename: string;
 
   /**
-   * Character to be used for encoding linefeeds in {@link save}
+   * Character to be used for encoding linefeeds in {@link save}. Default is '&#xa;'.
    * @default '&#xa;'
    */
   linefeed: '&#xa;';
 
   /**
    * Specifies if the name of the post parameter that contains the diagram
-   * data in a post request to the server.
+   * data in a post request to the server. Default is 'xml'.
    * @default 'xml'
    */
   postParameterName: 'xml';
 
   /**
    * Specifies if the data in the post request for saving a diagram
-   * should be converted using encodeURIComponent.
+   * should be converted using encodeURIComponent. Default is true.
    * @default true
    */
   escapePostData: boolean;
@@ -600,11 +590,21 @@ declare class mxEditor extends mxEventSource {
   urlImage: string;
 
   /**
+   * Specifies the direction of the flow
+   * in the diagram. This is used in the
+   * layout algorithms. Default is false,
+   * ie. vertical flow.
+   * @default false
+   */
+  horizontalFlow: boolean;
+
+  /**
    * Specifies if the top-level elements in the
    * diagram should be layed out using a vertical
    * or horizontal stack depending on the setting
    * of {@link horizontalFlow}. The spacing between the
    * swimlanes is specified by {@link swimlaneSpacing}.
+   * Default is false.
    *
    * If the top-level elements are swimlanes, then
    * the intra-swimlane layout is activated by
@@ -612,4 +612,697 @@ declare class mxEditor extends mxEventSource {
    * @default false
    */
   layoutDiagram: boolean;
+
+  /**
+   * Specifies the spacing between swimlanes if
+   * automatic layout is turned on in
+   * {@link layoutDiagram}. Default is 0.
+   * @default 0
+   */
+  swimlaneSpacing: number;
+
+  /**
+   * Specifies if the swimlanes should be kept at the same
+   * width or height depending on the setting of
+   * {@link horizontalFlow}. Default is false.
+   *
+   * For horizontal flows, all swimlanes
+   * have the same height and for vertical flows, all swimlanes
+   * have the same width. Furthermore, the swimlanes are
+   * automatically "stacked" if {@link layoutDiagram} is true.
+   * @default false
+   */
+  maintainSwimlanes: boolean;
+
+  /**
+   * Specifies if the children of swimlanes should
+   * be layed out, either vertically or horizontally
+   * depending on {@link horizontalFlow}. Default is false.
+   * @default false
+   */
+  layoutSwimlanes: boolean;
+
+  /**
+   * Specifies the attribute values to be cycled when inserting new swimlanes.
+   * Default is an empty array.
+   * @default any[]
+   */
+  cycleAttributeValues: any[];
+
+  /**
+   * Index of the last consumed attribute index. If a new
+   * swimlane is inserted, then the {@link cycleAttributeValues}
+   * at this index will be used as the value for
+   * {@link cycleAttributeName}. Default is 0.
+   * @default 0
+   */
+  cycleAttributeIndex: number;
+
+  /**
+   * Name of the attribute to be assigned a {@link cycleAttributeValues}
+   * when inserting new swimlanes. Default is 'fillColor'.
+   * @default 'fillColor'
+   */
+  cycleAttributeName: 'fillColor';
+
+  /**
+   * Holds the [@link mxWindow} created in {@link showTasks}.
+   */
+  tasks: any;
+
+  /**
+   * Icon for the tasks window.
+   */
+  tasksWindowImage: any;
+
+  /**
+   * Specifies the top coordinate of the tasks window in pixels. Default is 20.
+   * @default 20
+   */
+  tasksTop: number;
+
+  /**
+   * Holds the {@link mxWindow} created in {@link showHelp}
+   */
+  help: any;
+
+  /**
+   * Icon for the help window.
+   */
+  helpWindowImage: any;
+
+  /**
+   * Specifies the URL to be used for the contents of the
+   * Online Help window. This is usually specified in the
+   * resources file under urlHelp for language-specific
+   * online help support.
+   */
+  urlHelp: string;
+
+  /**
+   * Specifies the width of the help window in pixels. Default is 300.
+   * @default 300
+   */
+  helpWidth: number;
+
+  /**
+   * Specifies the height of the help window in pixels. Default is 260.
+   * @default 260
+   */
+  helpHeight: number;
+
+  /**
+   * Specifies the width of the properties window in pixels. Default is 240.
+   * @default 240
+   */
+  propertiesWidth: number;
+
+  /**
+   * Specifies the height of the properties window in pixels.
+   * If no height is specified then the window will be automatically
+   * sized to fit its contents. Default is null.
+   * @default null
+   */
+  propertiesHeight: number;
+
+  /**
+   * Specifies if the properties dialog should be automatically
+   * moved near the cell it is displayed for, otherwise the
+   * dialog is not moved. This value is only taken into
+   * account if the dialog is already visible. Default is false.
+   * @default false
+   */
+  movePropertiesDialog: boolean;
+
+  /**
+   * Specifies if <{@link xGraph.validateGraph} should automatically be invoked after
+   * each change. Default is false.
+   * @default false
+   */
+  validating: boolean;
+
+  /**
+   * True if the graph has been modified since it was last saved.
+   */
+  modified: boolean;
+
+  /**
+   * Returns {@link modified}.
+   */
+  isModified(): boolean;
+
+  /**
+   * Sets {@link modified} to the specified boolean value.
+   * @param value 
+   */
+  setModified(value: boolean): void;
+
+  /**
+   * Adds the built-in actions to the editor instance.
+   * save - Saves the graph using <urlPost>.
+   * print - Shows the graph in a new print preview window.
+   * show - Shows the graph in a new window.
+   * exportImage - Shows the graph as a bitmap image using <getUrlImage>.
+   * refresh - Refreshes the graph's display.
+   * cut - Copies the current selection into the clipboard
+   * and removes it from the graph.
+   * copy - Copies the current selection into the clipboard.
+   * paste - Pastes the clipboard into the graph.
+   * delete - Removes the current selection from the graph.
+   * group - Puts the current selection into a new group.
+   * ungroup - Removes the selected groups and selects the children.
+   * undo - Undoes the last change on the graph model.
+   * redo - Redoes the last change on the graph model.
+   * zoom - Sets the zoom via a dialog.
+   * zoomIn - Zooms into the graph.
+   * zoomOut - Zooms out of the graph
+   * actualSize - Resets the scale and translation on the graph.
+   * fit - Changes the scale so that the graph fits into the window.
+   * showProperties - Shows the properties dialog.
+   * selectAll - Selects all cells.
+   * selectNone - Clears the selection.
+   * selectVertices - Selects all vertices.
+   * selectEdges = Selects all edges.
+   * edit - Starts editing the current selection cell.
+   * enterGroup - Drills down into the current selection cell.
+   * exitGroup - Moves up in the drilling hierachy
+   * home - Moves to the topmost parent in the drilling hierarchy
+   * selectPrevious - Selects the previous cell.
+   * selectNext - Selects the next cell.
+   * selectParent - Selects the parent of the selection cell.
+   * selectChild - Selects the first child of the selection cell.
+   * collapse - Collapses the currently selected cells.
+   * expand - Expands the currently selected cells.
+   * bold - Toggle bold text style.
+   * italic - Toggle italic text style.
+   * underline - Toggle underline text style.
+   * alignCellsLeft - Aligns the selection cells at the left.
+   * alignCellsCenter - Aligns the selection cells in the center.
+   * alignCellsRight - Aligns the selection cells at the right.
+   * alignCellsTop - Aligns the selection cells at the top.
+   * alignCellsMiddle - Aligns the selection cells in the middle.
+   * alignCellsBottom - Aligns the selection cells at the bottom.
+   * alignFontLeft - Sets the horizontal text alignment to left.
+   * alignFontCenter - Sets the horizontal text alignment to center.
+   * alignFontRight - Sets the horizontal text alignment to right.
+   * alignFontTop - Sets the vertical text alignment to top.
+   * alignFontMiddle - Sets the vertical text alignment to middle.
+   * alignFontBottom - Sets the vertical text alignment to bottom.
+   * toggleTasks - Shows or hides the tasks window.
+   * toggleHelp - Shows or hides the help window.
+   * toggleOutline - Shows or hides the outline window.
+   * toggleConsole - Shows or hides the console window.
+   */
+  addActions(): void;
+
+  /**
+   * Configures the editor using the specified node. To load the
+   * configuration from a given URL the following code can be used to obtain
+   * the XML node.
+   *
+   * @example
+   * ```javascript
+   * var node = mxUtils.load(url).getDocumentElement();
+   * ```
+   * @param node XML node that contains the configuration.
+   */
+  configure(node: any): void;
+
+  /**
+   * Resets the cookie that is used to remember if the editor has already been used.
+   */
+  resetFirstTime(): void;
+
+  /**
+   * Resets the command history, modified state and counters.
+   */
+  resetHistory(): void;
+
+  /**
+   * Binds the specified actionname to the specified function.
+   * 
+   * @example
+   * ```javascript
+   * editor.addAction('test', function(editor, cell)
+   * {
+   * 		mxUtils.alert("test "+cell);
+   * });
+   * ```
+   * @param actionname String that specifies the name of the action to be added.
+   * @param funct Function that implements the new action. The first argument
+   * of the function is the editor it is used with,
+   * the second argument is the cell it operates upon.
+   */
+  addAction(actionname: string, funct: Function): void;
+
+  /**
+   * Executes the function with the given name in {@link actions} passing the
+   * editor instance and given cell as the first and second argument. All
+   * additional arguments are passed to the action as well. This method
+   * contains a try-catch block and displays an error message if an action
+   * causes an exception. The exception is re-thrown after the error
+   * message was displayed.
+   *
+   * @example
+   * ```javascript
+   * editor.execute("showProperties", cell);
+   * ```
+   * @param actionname 
+   * @param cell 
+   * @param evt 
+   */
+  execute(actionname: string, cell?: any, evt?: Event): void;
+
+  /**
+   * Adds the specified template under the given name in {@link templates}.
+   * @param name 
+   * @param template 
+   */
+  addTemplate(name: any, template: any): void;
+
+  /**
+   * Returns the template for the given name.
+   * @param name 
+   */
+  getTemplate(name: string): any;
+
+  /**
+   * Creates the {@link graph} for the editor. The graph is created with no
+   * container and is initialized from {@link setGraphContainer}.
+   * @returns mxGraph instance
+   */
+  createGraph(): mxGraph;
+
+  /**
+   * Sets the graph's container using [@link mxGraph.init}.
+   * @param graph
+   * @returns mxSwimlaneManager instance
+   */
+  createSwimlaneManager(graph: any): mxSwimlaneManager;
+
+  /**
+   * Creates a layout manager for the swimlane and diagram layouts, that
+   * is, the locally defined inter and intraswimlane layouts.
+   * @param graph
+   * @returns mxLayoutManager instance
+   */
+  createLayoutManager(graph: any): mxLayoutManager;
+
+  /**
+   * Sets the graph's container using {@link mxGraph.init}.
+   * @param container 
+   */
+  setGraphContainer(container: any): void;
+
+  /**
+   * Overrides {@link mxGraph.dblClick} to invoke {@link dblClickAction}
+   * on a cell and reset the selection tool in the toolbar.
+   * @param graph 
+   */
+  installDblClickHandler(graph: any): void;
+
+  /**
+   * Adds the {@link undoManager} to the graph model and the view.
+   * @param graph 
+   */
+  installUndoHandler(graph: any): void;
+
+  /**
+   * Installs listeners for dispatching the {@link root} event.
+   * @param graph 
+   */
+  installDrillHandler(graph: any): void;
+
+  /**
+   * Installs the listeners required to automatically validate
+   * the graph. On each change of the root, this implementation
+   * fires a {@link root} event.
+   * @param graph 
+   */
+  installChangeHandler(graph: any): void;
+
+  /**
+   * Installs the handler for invoking {@link insertFunction} if one is defined.
+   * @param graph 
+   */
+  installInsertHandler(graph: any): void;
+
+  /**
+   * Creates the layout instance used to layout the
+   * swimlanes in the diagram.
+   * @returns mxStackLayout instance
+   */
+  createDiagramLayout(): mxStackLayout;
+
+  /**
+   * Creates the layout instance used to layout the
+   * children of each swimlane.
+   * @returns mxCompactTreeLayout instance
+   */
+  createSwimlaneLayout(): mxCompactTreeLayout;
+
+  /**
+   * Creates the {@link toolbar} with no container.
+   * @returns mxDefaultToolbar instance
+   */
+  createToolbar(): mxDefaultToolbar;
+
+  /**
+   * Initializes the toolbar for the given container.
+   * @param container 
+   */
+  setToolbarContainer(container: any): void;
+
+  /**
+   * Creates the {@link status} using the specified container.
+   * This implementation adds listeners in the editor to
+   * display the last saved time and the current filename
+   * in the status bar.
+   * @param container DOM node that will contain the statusbar.
+   */
+  setStatusContainer(container: any): void;
+
+  /**
+   * Display the specified message in the status bar.
+   * @param message String the specified the message to be displayed.
+   */
+  setStatus(message: string): void;
+
+  /**
+   * Creates a listener to update the inner HTML of the
+   * specified DOM node with the value of {@link getTitle}.
+   * @param container DOM node that will contain the title.
+   */
+  setTitleContainer(container: any): void;
+
+  /**
+   * Executes a vertical or horizontal compact tree layout
+   * using the specified cell as an argument. The cell may
+   * either be a group or the root of a tree.
+   * @param cell {@link mxCell} to use in the compact tree layout.
+   * @param horizontal Optional boolean to specify the tree's
+   * orientation. Default is true.
+   */
+  treeLayout(cell: mxCell, horizontal: boolean): void;
+
+  /**
+   * Returns the string value for the current root of the diagram.
+   */
+  getTitle(): string;
+
+  /**
+   * Returns the string value of the root cell in {@link mxGraph.model}.
+   */
+  getRootTitle(): string;
+
+  /**
+   * Undo the last change in {@link graph}.
+   */
+  undo(): void;
+
+  /**
+   * Redo the last change in {@link graph}.
+   */
+  redo(): void;
+
+  /**
+   * Invokes {@link createGroup} to create a new group cell and the invokes
+   * {@link mxGraph.groupCells}, using the grid size of the graph as the spacing
+   * in the group's content area.
+   */
+  groupCells(): any;
+
+  /**
+   * Creates and returns a clone of {@link defaultGroup} to be used
+   * as a new group cell in {@link group}.
+   * @returns mxCell
+   */
+  createGroup(): mxCell;
+
+  /**
+   * Opens the specified file synchronously and parses it using
+   * {@link readGraphModel}. It updates {@link filename} and fires an <open>-event after
+   * the file has been opened. Exceptions should be handled as follows:
+   * 
+   * @example
+   * ```javascript
+   * try
+   * {
+   *   editor.open(filename);
+   * }
+   * catch (e)
+   * {
+   *   mxUtils.error('Cannot open ' + filename +
+   *     ': ' + e.message, 280, true);
+   * }
+   * ```
+   * 
+   * @param filename URL of the file to be opened.
+   */
+  open(filename: string): void;
+
+  /**
+   * Reads the specified XML node into the existing graph model and resets
+   * the command history and modified state.
+   * @param node 
+   */
+  readGraphModel(node: any): void;
+
+  /**
+   * Posts the string returned by {@link writeGraphModel} to the given URL or the
+   * URL returned by {@link getUrlPost}. The actual posting is carried out by
+   * {@link postDiagram}. If the URL is null then the resulting XML will be
+   * displayed using {@link mxUtils.popup}. Exceptions should be handled as
+   * follows:
+   *
+   * @example
+   * ```javascript
+   * try
+   * {
+   *   editor.save();
+   * }
+   * catch (e)
+   * {
+   *   mxUtils.error('Cannot save : ' + e.message, 280, true);
+   * }
+   * ```
+   * 
+   * @param url 
+   * @param linefeed 
+   */
+  save(url: any, linefeed: any): void;
+
+  /**
+   * Hook for subclassers to override the posting of a diagram
+   * represented by the given node to the given URL. This fires
+   * an asynchronous {@link post} event if the diagram has been posted.
+   *
+   * ### Example:
+   *
+   * To replace the diagram with the diagram in the response, use the
+   * following code.
+   *
+   * @example
+   * ```javascript
+   * editor.addListener(mxEvent.POST, function(sender, evt)
+   * {
+   *   // Process response (replace diagram)
+   *   var req = evt.getProperty('request');
+   *   var root = req.getDocumentElement();
+   *   editor.graph.readGraphModel(root)
+   * });
+   * ```
+   * @param url 
+   * @param data 
+   */
+  postDiagram(url: any, data: any): void;
+
+  /**
+   * Hook to create the string representation of the diagram. The default
+   * implementation uses an {@link mxCodec} to encode the graph model as
+   * follows:
+   * 
+   * @example
+   * ```javascript
+   * var enc = new mxCodec();
+   * var node = enc.encode(this.graph.getModel());
+   * return mxUtils.getXml(node, this.linefeed);
+   * ```
+   * 
+   * @param linefeed Optional character to be used as the linefeed. Default is {@link linefeed}.
+   */
+  writeGraphModel(linefeed: string): string;
+
+  /**
+   * Returns the URL to post the diagram to. This is used
+   * in {@link save}. The default implementation returns {@link urlPost},
+   * adding <code>?draft=true</code>.
+   */
+  getUrlPost(): string;
+
+  /**
+   * Returns the URL to create the image with. This is typically
+   * the URL of a backend which accepts an XML representation
+   * of a graph view to create an image. The function is used
+   * in the image action to create an image. This implementation
+   * returns {@link urlImage}.
+   */
+  getUrlImage(): string;
+
+  /**
+   * Swaps the styles for the given names in the graph's
+   * stylesheet and refreshes the graph.
+   * @param first 
+   * @param second 
+   */
+  swapStyles(first: any, second: any): void;
+
+
+  /**
+   * Creates and shows the properties dialog for the given
+   * cell. The content area of the dialog is created using
+   * {@link createProperties}.
+   * @param cell 
+   */
+  showProperties(cell: mxCell): void;
+
+  /**
+   * Returns true if the properties dialog is currently visible.
+   */
+  isPropertiesVisible(): boolean;
+
+  /**
+   * Creates and returns the DOM node that represents the contents
+   * of the properties dialog for the given cell. This implementation
+   * works for user objects that are XML nodes and display all the
+   * node attributes in a form.
+   */
+  createProperties(cell: any): HTMLTableElement | null;
+
+  /**
+   * Hides the properties dialog.
+   */
+  hideProperties(): void;
+
+  /**
+   * Shows the tasks window. The tasks window is created using {@link createTasks}. The
+   * default width of the window is 200 pixels, the y-coordinate of the location
+   * can be specifies in {@link tasksTop} and the x-coordinate is right aligned with a
+   * 20 pixel offset from the right border. To change the location of the tasks
+   * window, the following code can be used:
+   *
+   * @example
+   * ```javascript
+   * var oldShowTasks = mxEditor.prototype.showTasks;
+   * mxEditor.prototype.showTasks = function()
+   * {
+   *   oldShowTasks.apply(this, arguments); // "supercall"
+   *
+   *   if (this.tasks != null)
+   *   {
+   *     this.tasks.setLocation(10, 10);
+   *   }
+   * };
+   * ```
+   */
+  showTasks(): void;
+
+  /**
+   * Updates the contents of the tasks window using {@link createTasks}.
+   * @param div 
+   */
+  refreshTasks(div: any): void;
+
+  /**
+   * Updates the contents of the given DOM node to
+   * display the tasks associated with the current
+   * editor state. This is invoked whenever there
+   * is a possible change of state in the editor.
+   * Default implementation is empty.
+   * @param div
+   */
+  createTasks(div: any): void;
+
+  /**
+   * Shows the help window. If the help window does not exist
+   * then it is created using an iframe pointing to the resource
+   * for the <code>urlHelp</code> key or {@link urlHelp} if the resource
+   * is undefined.
+   * @param tasks 
+   */
+  showHelp(tasks: any): void;
+
+  /**
+   * Shows the outline window. If the window does not exist, then it is
+   * created using an {@link mxOutline}.
+   */
+  showOutline(): void;
+
+  /**
+   * Puts the graph into the specified mode. The following modenames are
+   * supported:
+   *
+   * select - Selects using the left mouse button, new connections are disabled.
+   * connect - Selects using the left mouse button or creates new connections if mouse over cell hotspot. 
+   * See {@link mxConnectionHandler}.
+   * pan - Pans using the left mouse button, new connections are disabled.
+   * @param modename 
+   */
+  setMode(modename: any): void;
+
+  /**
+   * Uses {@link popupHandler} to create the menu in the graph's
+   * panning handler. The redirection is setup in {@link setToolbarContainer}.
+   * @param menu 
+   * @param cell 
+   * @param evt 
+   */
+  createPopupMenu(menu: any, cell: any, evt: any): void;
+
+  /**
+   * Uses {@link defaultEdge} as the prototype for creating new edges
+   * in the connection handler of the graph. The style of the
+   * edge will be overridden with the value returned by {@link getEdgeStyle}.
+   * @param source 
+   * @param target 
+   */
+  createEdge(source: any, target: any): void;
+
+  /**
+   * Returns a string identifying the style of new edges.
+   * The function is used in {@link createEdge} when new edges
+   * are created in the graph.
+   */
+  getEdgeStyle(): string;
+
+  /**
+   * Returns the next attribute in {@link cycleAttributeValues}
+   * or null, if not attribute should be used in the specified cell.
+   * @param cell 
+   */
+  consumeCycleAttribute(cell: any): any;
+
+  /**
+   * Uses the returned value from {@link consumeCycleAttribute}
+   * as the value for the {@link cycleAttributeName} key in the given cell's style.
+   * @param cell 
+   */
+  cycleAttribute(cell: any): void;
+
+  /**
+   * Adds the given vertex as a child of parent at the specified
+   * x and y coordinate and fires an {@link addVertex} event.
+   * @param parent 
+   * @param vertex 
+   * @param x 
+   * @param y 
+   */
+  addVertex(parent: any, vertex: any, x: any, y: any): any;
+
+  /**
+   * Removes the editor and all its associated resources. This does not
+   * normally need to be called, it is called automatically when the window
+   * unloads.
+   */
+  destroy(): void;
 }
