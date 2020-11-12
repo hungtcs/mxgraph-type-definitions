@@ -196,7 +196,6 @@ declare class mxUtils {
    * Loads the specified URL synchronously and returns the mxXmlRequest.
    * Throws an exception if the file cannot be loaded.
    * See mxUtils.get for an asynchronous implementation.
-   *
    * @param url URL to get the data from.
    */
   static load(url: string): mxXmlRequest;
@@ -209,7 +208,7 @@ declare class mxUtils {
 
   /**
    * Returns the XML content of the specified node.
-   * For Internet Explorer, all \r\n\t[\t* are removed from the XML string and the remaining \r\n are replaced by \n.
+   * For Internet Explorer, all \r\n\t[\t]* are removed from the XML string and the remaining \r\n are replaced by \n.
    * All \n are then replaced with linefeed, or &#xa; if no linefeed is defined.
    *
    * @author 鸿则 <hungtcs@163.com>
@@ -719,7 +718,7 @@ declare class mxUtils {
   static fit(node: Node): void;
 
   /**
-   * Posts the specified params to the given URL *asynchronousl* and invokes
+   * Posts the specified params to the given URL *asynchronously* and invokes
    * the given functions depending on the request status. Returns the
    * <mxXmlRequest> in use. Both functions take the <mxXmlRequest> as the
    * only parameter. Make sure to use encodeURIComponent for the parameter
@@ -760,7 +759,7 @@ declare class mxUtils {
   static submit(url: string, params: any, doc: Document, target: any): mxXmlRequest;
 
   /**
-   * Loads the specified URL *asynchronousl* into the specified document,
+   * Loads the specified URL *asynchronously* into the specified document,
    * invoking onload after the document has been loaded. This implementation
    * does not use {@link mxXmlRequest}, but the document.load method.
    *
