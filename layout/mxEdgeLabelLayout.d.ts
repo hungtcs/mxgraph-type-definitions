@@ -11,7 +11,6 @@
  * ```
  */
 declare class mxEdgeLabelLayout extends mxGraphLayout {
-
   /**
    * Constructs a new edge label layout.
    *
@@ -19,7 +18,6 @@ declare class mxEdgeLabelLayout extends mxGraphLayout {
    */
   // TODO radius is declared in mxgraph-js 4.1.1 but is not used
   constructor(graph: mxGraph, radius?: number);
-
 
   /**
    * Implements {@link mxGraphLayout.execute}
@@ -34,10 +32,8 @@ declare class mxEdgeLabelLayout extends mxGraphLayout {
    */
   placeLabels(v: Array<mxCell>, e: Array<mxCell>): void;
 
-
   /**
    * Places the labels of the given edges.
    */
   avoid(edge: mxCell, vertex: mxCell): void;
-
 }

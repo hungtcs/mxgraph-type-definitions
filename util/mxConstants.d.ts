@@ -1,9 +1,7 @@
-
 /**
  * @class mxConstants
  */
 declare class mxConstants {
-
   /**
    * Defines the portion of the cell which is to be used as a connectable
    * region. Default is 0.3. Possible values are 0 < x <= 1.
@@ -1826,8 +1824,7 @@ declare class mxConstants {
    * Name of the triangle perimeter. Can be used as a string value
    * for the STYLE_PERIMETER style.
    */
-  static PERIMETER_TRIANGLE: 'trianglePerimeter'
-
+  static PERIMETER_TRIANGLE: 'trianglePerimeter';
 }
 
 declare type mxDialectConstants = 'svg' | 'vml' | 'mixedHtml' | 'preferHtml' | 'strictHtml';

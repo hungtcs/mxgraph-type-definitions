@@ -1,6 +1,4 @@
-
 declare class mxPopupMenuHandler extends mxPopupMenu {
-
   constructor(graph: mxGraph, factoryMethod?: (handler: mxPopupMenuHandler, cell: mxCell, me: mxMouseEvent) => any);
 
   /**

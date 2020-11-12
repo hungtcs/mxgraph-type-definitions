@@ -1,4 +1,3 @@
-
 /**
  * @class mxStyleRegistry
  *
@@ -25,5 +24,4 @@ declare class mxStyleRegistry {
    * Returns the name for the given value.
    */
   getName(value: any): string;
-
 }

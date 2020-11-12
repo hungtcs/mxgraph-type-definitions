@@ -8,7 +8,6 @@
  * @class mxStencil
  */
 declare class mxStencil extends mxShape {
-
   constructor(desc: Element);
 
   /**
@@ -137,7 +136,18 @@ declare class mxStencil extends mxShape {
    *
    * Draws this stencil inside the given bounds.
    */
-  drawChildren(canvas: mxAbstractCanvas2D, shape: string, x: number, y: number, w: number, h: number, node: Element, aspect: string, disableShadow: boolean, paint: boolean): void;
+  drawChildren(
+    canvas: mxAbstractCanvas2D,
+    shape: string,
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    node: Element,
+    aspect: string,
+    disableShadow: boolean,
+    paint: boolean
+  ): void;
 
   /**
    * Function: computeAspect
@@ -159,5 +169,12 @@ declare class mxStencil extends mxShape {
    *
    * Draws this stencil inside the given bounds.
    */
-  drawNode(canvas: mxAbstractCanvas2D, shape: string, node: Element, aspect: mxRectangle, disableShadow: boolean, paint: boolean): void;
+  drawNode(
+    canvas: mxAbstractCanvas2D,
+    shape: string,
+    node: Element,
+    aspect: mxRectangle,
+    disableShadow: boolean,
+    paint: boolean
+  ): void;
 }

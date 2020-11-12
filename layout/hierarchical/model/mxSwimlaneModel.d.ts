@@ -22,7 +22,13 @@ declare class mxSwimlaneModel {
    * @param tightenToSource whether or not to tighten vertices towards the sources
    * @param scanRanksFromSinks Whether rank assignment is from the sinks or sources.
    */
-  constructor(layout: mxGraphLayout, vertices: Array<mxCell>, roots: Array<mxCell>, parent: mxCell, tightenToSource: boolean);
+  constructor(
+    layout: mxGraphLayout,
+    vertices: Array<mxCell>,
+    roots: Array<mxCell>,
+    parent: mxCell,
+    tightenToSource: boolean
+  );
 
   /**
    * Variable: maxRank
@@ -105,14 +111,18 @@ declare class mxSwimlaneModel {
    * @param internalVertices The array of <mxGraphHierarchyNodes> to have their
    * information filled in using the real vertices.
    */
-  createInternalCells(layout: mxHierarchicalLayout, vertices: Array<mxCell>, internalVertices: Array<mxGraphHierarchyNode>): void;
+  createInternalCells(
+    layout: mxHierarchicalLayout,
+    vertices: Array<mxCell>,
+    internalVertices: Array<mxGraphHierarchyNode>
+  ): void;
 
   /**
    *
    * Basic determination of minimum layer ranking by working from from sources
    * or sinks and working through each node in the relevant edge direction.
    * Starting at the sinks is basically a longest path layering algorithm.
-  */
+   */
   initialRank(): void;
 
   /**
@@ -176,6 +186,14 @@ declare class mxSwimlaneModel {
    * @param childHash the new hash code for this node
    * @param layer the layer on the dfs tree ( not the same as the model ranks )
    */
-  extendedDfs(parent: any, root: any, connectingEdge: any, visitor: any, seen: any, ancestors: any, childHash: any, layer: any): void;
-
+  extendedDfs(
+    parent: any,
+    root: any,
+    connectingEdge: any,
+    visitor: any,
+    seen: any,
+    ancestors: any,
+    childHash: any,
+    layer: any
+  ): void;
 }

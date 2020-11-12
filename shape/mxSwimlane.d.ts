@@ -17,7 +17,6 @@
  * @extends {mxShape}
  */
 declare class mxSwimlane extends mxShape {
-
   /**
    * Constructs a new swimlane shape.
    * @param {mxRectangle} bounds      {@link mxRectangle} that defines the bounds.  This is stored in mxShape.bounds.
@@ -82,12 +81,31 @@ declare class mxSwimlane extends mxShape {
   /**
    * Paints the swimlane vertex shape.
    */
-  paintSwimlane(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number, start: number, fill: string, swimlaneLine: boolean): void;
+  paintSwimlane(
+    c: mxAbstractCanvas2D,
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    start: number,
+    fill: string,
+    swimlaneLine: boolean
+  ): void;
 
   /**
    * Paints the swimlane vertex shape.
    */
-  paintRoundedSwimlane(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number, start: number, r: number, fill: string, swimlaneLine: boolean): void;
+  paintRoundedSwimlane(
+    c: mxAbstractCanvas2D,
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    start: number,
+    r: number,
+    fill: string,
+    swimlaneLine: boolean
+  ): void;
 
   /**
    * Paints the divider between swimlane title and content area.
@@ -103,5 +121,4 @@ declare class mxSwimlane extends mxShape {
    * Paints the swimlane vertex shape.
    */
   getImageBounds(x: number, y: number, w: number, h: number): mxRectangle;
-
 }

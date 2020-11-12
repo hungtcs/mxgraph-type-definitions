@@ -1,4 +1,3 @@
-
 declare type StyleMap = {
   [key: string]: any;
 };
@@ -53,7 +52,6 @@ declare type StyleMap = {
  * Constructs a new stylesheet and assigns default styles.
  */
 declare class mxStylesheet {
-
   constructor();
 
   /**
@@ -137,5 +135,4 @@ declare class mxStylesheet {
    * @param defaultStyle Default style to be returned if no style can be found.
    */
   getCellStyle(name: string, defaultStyle?: StyleMap): StyleMap;
-
 }

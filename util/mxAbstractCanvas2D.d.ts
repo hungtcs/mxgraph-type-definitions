@@ -216,7 +216,17 @@ declare abstract class mxAbstractCanvas2D {
   /**
    * Sets the current gradient.
    */
-  setGradient(color1: string, color2: string, x: number, y: number, w: number, h: number, direction: string, alpha1: number, alpha2: number): void;
+  setGradient(
+    color1: string,
+    color2: string,
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    direction: string,
+    alpha1: number,
+    alpha2: number
+  ): void;
 
   /**
    * Sets the current stroke color.
@@ -379,5 +389,4 @@ declare abstract class mxAbstractCanvas2D {
   ellipse(x: number, y: number, w: number, h: number): void;
 
   image(x: number, y: number, w: number, h: number, src: string, aspect: boolean, flipH: boolean, flipV: boolean): void;
-
 }

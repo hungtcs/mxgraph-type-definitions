@@ -1,7 +1,5 @@
-
-
 declare class mxGuide {
-  constructor(graph: mxGraph, states: Array<mxCellState|mxPoint>);
+  constructor(graph: mxGraph, states: Array<mxCellState | mxPoint>);
 
   /**
    * Variable: graph
@@ -120,5 +118,4 @@ declare class mxGuide {
    * @param state
    */
   isStateIgnored(state: mxCellState): boolean;
-
 }

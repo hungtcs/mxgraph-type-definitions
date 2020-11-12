@@ -1,5 +1,3 @@
-
-
 declare class mxCellRenderer {
   constructor();
 
@@ -81,7 +79,7 @@ declare class mxCellRenderer {
    * @param key the shape name.
    * @param shape constructor of the {@link mxShape} subclass.
    */
-  static registerShape(key: string, shape: new(...args: any) => mxShape): void;
+  static registerShape(key: string, shape: new (...args: any) => mxShape): void;
 
   /**
    * Function: initializeShape

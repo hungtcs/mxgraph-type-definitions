@@ -1,4 +1,3 @@
-
 declare class mxPopupMenu extends mxEventSource {
   constructor(factoryMethod: (handler: mxPopupMenuHandler, cell: mxCell, me: mxMouseEvent) => any);
 
@@ -124,7 +123,15 @@ declare class mxPopupMenu extends mxEventSource {
    * active - Optional boolean indicating if the menu should implement any event handling.
    * Default is true.
    */
-  addItem(title: string, image?: string, funct?: (me: mxMouseEvent) => void, parent?: mxPopupMenu, iconCls?: string, enabled?: boolean, active?: boolean): Element;
+  addItem(
+    title: string,
+    image?: string,
+    funct?: (me: mxMouseEvent) => void,
+    parent?: mxPopupMenu,
+    iconCls?: string,
+    enabled?: boolean,
+    active?: boolean
+  ): Element;
 
   /**
    * Adds a checkmark to the given menuitem.
@@ -218,5 +225,4 @@ declare class mxPopupMenu extends mxEventSource {
    * Destroys the handler and all its resources and DOM nodes.
    */
   destroy(): void;
-
 }

@@ -19,5 +19,4 @@ declare class mxSwimlaneOrdering extends mxHierarchicalLayoutStage {
    * use.
    */
   execute(parent: mxCell): any;
-
 }

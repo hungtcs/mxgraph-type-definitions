@@ -1,5 +1,4 @@
 declare class mxRectangle extends mxPoint {
-
   constructor(x: number, y: number, width: number, height: number);
 
   /**
@@ -91,5 +90,4 @@ declare class mxRectangle extends mxPoint {
   clone(): mxRectangle;
 
   static fromRectangle(rect: mxRectangle): mxRectangle;
-
 }

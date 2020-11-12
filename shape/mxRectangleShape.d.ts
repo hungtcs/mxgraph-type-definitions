@@ -9,7 +9,6 @@
  * @extends {mxShape}
  */
 declare class mxRectangleShape extends mxShape {
-
   /**
    * @param {mxRectangle} bounds
    * @param {string} fill
@@ -37,5 +36,4 @@ declare class mxRectangleShape extends mxShape {
    * Generic background painting implementation.
    */
   paintForeground(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number): void;
-
 }

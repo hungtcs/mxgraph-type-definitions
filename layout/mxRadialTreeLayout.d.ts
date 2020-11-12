@@ -10,7 +10,6 @@
  * ```
  */
 declare class mxRadialTreeLayout extends mxGraphLayout {
-
   /**
    * Constructs a new radial tree layout for the specified graph
    */
@@ -122,5 +121,4 @@ declare class mxRadialTreeLayout extends mxGraphLayout {
    * @param rowNum   Integer indicating which row is being processed.
    */
   calcRowDims(row: Array<number>, rowNum: number): void;
-
 }

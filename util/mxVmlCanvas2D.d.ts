@@ -186,12 +186,39 @@ declare class mxVmlCanvas2D extends mxAbstractCanvas2D {
    * text and html for HTML markup. Clipping, text background and border are not
    * supported for plain text in VML.
    */
-  text(x: number, y: number, w: number, h: number, str: string, align: string, valign: string, wrap: string, format: string, overflow: string, clip: string, rotation: number, dir: string): void;
+  text(
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    str: string,
+    align: string,
+    valign: string,
+    wrap: string,
+    format: string,
+    overflow: string,
+    clip: string,
+    rotation: number,
+    dir: string
+  ): void;
 
   /**
    * Paints the outline of the current path.
    */
-  plainText(x: number, y: number, w: number, h: number, str: string, align: string, valign: string, wrap: string, overflow: string, clip: string, rotation: number, dir: string): void;
+  plainText(
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    str: string,
+    align: string,
+    valign: string,
+    wrap: string,
+    overflow: string,
+    clip: string,
+    rotation: number,
+    dir: string
+  ): void;
 
   /**
    * Paints the outline of the current path.

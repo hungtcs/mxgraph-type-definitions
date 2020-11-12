@@ -344,7 +344,7 @@
  * var config = mxUtils.load('config/diagrameditor.xml').getDocumentElement();
  * var editor = new mxEditor(config);
  * ```
- * 
+ *
  * @class mxEditor
  * @extends mxEventSource
  */
@@ -433,7 +433,7 @@ declare class mxEditor extends mxEventSource {
   toolbar: any;
 
   /**
-   * DOM container that holds the statusbar. 
+   * DOM container that holds the statusbar.
    * Use {@link setStatusContainer} to set this value.
    */
   status: any;
@@ -585,7 +585,7 @@ declare class mxEditor extends mxEventSource {
   /**
    * Specifies the URL to be used for creating a bitmap of
    * the graph in the image action.
-   * @default null 
+   * @default null
    */
   urlImage: string;
 
@@ -753,7 +753,7 @@ declare class mxEditor extends mxEventSource {
 
   /**
    * Sets {@link modified} to the specified boolean value.
-   * @param value 
+   * @param value
    */
   setModified(value: boolean): void;
 
@@ -840,7 +840,7 @@ declare class mxEditor extends mxEventSource {
 
   /**
    * Binds the specified actionname to the specified function.
-   * 
+   *
    * @example
    * ```javascript
    * editor.addAction('test', function(editor, cell)
@@ -867,22 +867,22 @@ declare class mxEditor extends mxEventSource {
    * ```javascript
    * editor.execute("showProperties", cell);
    * ```
-   * @param actionname 
-   * @param cell 
-   * @param evt 
+   * @param actionname
+   * @param cell
+   * @param evt
    */
   execute(actionname: string, cell?: any, evt?: Event): void;
 
   /**
    * Adds the specified template under the given name in {@link templates}.
-   * @param name 
-   * @param template 
+   * @param name
+   * @param template
    */
   addTemplate(name: any, template: any): void;
 
   /**
    * Returns the template for the given name.
-   * @param name 
+   * @param name
    */
   getTemplate(name: string): any;
 
@@ -910,26 +910,26 @@ declare class mxEditor extends mxEventSource {
 
   /**
    * Sets the graph's container using {@link mxGraph.init}.
-   * @param container 
+   * @param container
    */
   setGraphContainer(container: any): void;
 
   /**
    * Overrides {@link mxGraph.dblClick} to invoke {@link dblClickAction}
    * on a cell and reset the selection tool in the toolbar.
-   * @param graph 
+   * @param graph
    */
   installDblClickHandler(graph: any): void;
 
   /**
    * Adds the {@link undoManager} to the graph model and the view.
-   * @param graph 
+   * @param graph
    */
   installUndoHandler(graph: any): void;
 
   /**
    * Installs listeners for dispatching the {@link root} event.
-   * @param graph 
+   * @param graph
    */
   installDrillHandler(graph: any): void;
 
@@ -937,13 +937,13 @@ declare class mxEditor extends mxEventSource {
    * Installs the listeners required to automatically validate
    * the graph. On each change of the root, this implementation
    * fires a {@link root} event.
-   * @param graph 
+   * @param graph
    */
   installChangeHandler(graph: any): void;
 
   /**
    * Installs the handler for invoking {@link insertFunction} if one is defined.
-   * @param graph 
+   * @param graph
    */
   installInsertHandler(graph: any): void;
 
@@ -969,7 +969,7 @@ declare class mxEditor extends mxEventSource {
 
   /**
    * Initializes the toolbar for the given container.
-   * @param container 
+   * @param container
    */
   setToolbarContainer(container: any): void;
 
@@ -1043,7 +1043,7 @@ declare class mxEditor extends mxEventSource {
    * Opens the specified file synchronously and parses it using
    * {@link readGraphModel}. It updates {@link filename} and fires an <open>-event after
    * the file has been opened. Exceptions should be handled as follows:
-   * 
+   *
    * @example
    * ```javascript
    * try
@@ -1056,7 +1056,7 @@ declare class mxEditor extends mxEventSource {
    *     ': ' + e.message, 280, true);
    * }
    * ```
-   * 
+   *
    * @param filename URL of the file to be opened.
    */
   open(filename: string): void;
@@ -1064,7 +1064,7 @@ declare class mxEditor extends mxEventSource {
   /**
    * Reads the specified XML node into the existing graph model and resets
    * the command history and modified state.
-   * @param node 
+   * @param node
    */
   readGraphModel(node: any): void;
 
@@ -1086,9 +1086,9 @@ declare class mxEditor extends mxEventSource {
    *   mxUtils.error('Cannot save : ' + e.message, 280, true);
    * }
    * ```
-   * 
-   * @param url 
-   * @param linefeed 
+   *
+   * @param url
+   * @param linefeed
    */
   save(url: any, linefeed: any): void;
 
@@ -1112,8 +1112,8 @@ declare class mxEditor extends mxEventSource {
    *   editor.graph.readGraphModel(root)
    * });
    * ```
-   * @param url 
-   * @param data 
+   * @param url
+   * @param data
    */
   postDiagram(url: any, data: any): void;
 
@@ -1121,14 +1121,14 @@ declare class mxEditor extends mxEventSource {
    * Hook to create the string representation of the diagram. The default
    * implementation uses an {@link mxCodec} to encode the graph model as
    * follows:
-   * 
+   *
    * @example
    * ```javascript
    * var enc = new mxCodec();
    * var node = enc.encode(this.graph.getModel());
    * return mxUtils.getXml(node, this.linefeed);
    * ```
-   * 
+   *
    * @param linefeed Optional character to be used as the linefeed. Default is {@link linefeed}.
    */
   writeGraphModel(linefeed: string): string;
@@ -1152,17 +1152,16 @@ declare class mxEditor extends mxEventSource {
   /**
    * Swaps the styles for the given names in the graph's
    * stylesheet and refreshes the graph.
-   * @param first 
-   * @param second 
+   * @param first
+   * @param second
    */
   swapStyles(first: any, second: any): void;
-
 
   /**
    * Creates and shows the properties dialog for the given
    * cell. The content area of the dialog is created using
    * {@link createProperties}.
-   * @param cell 
+   * @param cell
    */
   showProperties(cell: mxCell): void;
 
@@ -1209,7 +1208,7 @@ declare class mxEditor extends mxEventSource {
 
   /**
    * Updates the contents of the tasks window using {@link createTasks}.
-   * @param div 
+   * @param div
    */
   refreshTasks(div: any): void;
 
@@ -1228,7 +1227,7 @@ declare class mxEditor extends mxEventSource {
    * then it is created using an iframe pointing to the resource
    * for the <code>urlHelp</code> key or {@link urlHelp} if the resource
    * is undefined.
-   * @param tasks 
+   * @param tasks
    */
   showHelp(tasks: any): void;
 
@@ -1243,19 +1242,19 @@ declare class mxEditor extends mxEventSource {
    * supported:
    *
    * select - Selects using the left mouse button, new connections are disabled.
-   * connect - Selects using the left mouse button or creates new connections if mouse over cell hotspot. 
+   * connect - Selects using the left mouse button or creates new connections if mouse over cell hotspot.
    * See {@link mxConnectionHandler}.
    * pan - Pans using the left mouse button, new connections are disabled.
-   * @param modename 
+   * @param modename
    */
   setMode(modename: any): void;
 
   /**
    * Uses {@link popupHandler} to create the menu in the graph's
    * panning handler. The redirection is setup in {@link setToolbarContainer}.
-   * @param menu 
-   * @param cell 
-   * @param evt 
+   * @param menu
+   * @param cell
+   * @param evt
    */
   createPopupMenu(menu: any, cell: any, evt: any): void;
 
@@ -1263,8 +1262,8 @@ declare class mxEditor extends mxEventSource {
    * Uses {@link defaultEdge} as the prototype for creating new edges
    * in the connection handler of the graph. The style of the
    * edge will be overridden with the value returned by {@link getEdgeStyle}.
-   * @param source 
-   * @param target 
+   * @param source
+   * @param target
    */
   createEdge(source: any, target: any): void;
 
@@ -1278,24 +1277,24 @@ declare class mxEditor extends mxEventSource {
   /**
    * Returns the next attribute in {@link cycleAttributeValues}
    * or null, if not attribute should be used in the specified cell.
-   * @param cell 
+   * @param cell
    */
   consumeCycleAttribute(cell: any): any;
 
   /**
    * Uses the returned value from {@link consumeCycleAttribute}
    * as the value for the {@link cycleAttributeName} key in the given cell's style.
-   * @param cell 
+   * @param cell
    */
   cycleAttribute(cell: any): void;
 
   /**
    * Adds the given vertex as a child of parent at the specified
    * x and y coordinate and fires an {@link addVertex} event.
-   * @param parent 
-   * @param vertex 
-   * @param x 
-   * @param y 
+   * @param parent
+   * @param vertex
+   * @param x
+   * @param y
    */
   addVertex(parent: any, vertex: any, x: any, y: any): any;
 

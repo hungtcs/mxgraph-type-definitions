@@ -1,4 +1,3 @@
-
 /**
  * An abstraction of a hierarchical edge for the hierarchy layout
  *
@@ -6,7 +5,6 @@
  * @extends mxGraphAbstractHierarchyCell
  */
 declare class mxGraphHierarchyEdge extends mxGraphAbstractHierarchyCell {
-
   /**
    * Constructs a hierarchy edge
    * @param {Array<mxCell>} edges   a list of real graph edges this abstraction represents
@@ -74,5 +72,4 @@ declare class mxGraphHierarchyEdge extends mxGraphAbstractHierarchyCell {
    * Gets the first core edge associated with this wrapper
    */
   getCoreCell(): mxCell;
-
 }

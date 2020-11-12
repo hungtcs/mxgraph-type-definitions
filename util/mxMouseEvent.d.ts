@@ -1,6 +1,4 @@
-
 declare class mxMouseEvent {
-
   constructor(evt: Event, state?: mxCellState);
 
   /**
@@ -53,7 +51,7 @@ declare class mxMouseEvent {
    *
    * Returns <evt>.
    */
-  getEvent(): MouseEvent
+  getEvent(): MouseEvent;
 
   /**
    * Function: getSource

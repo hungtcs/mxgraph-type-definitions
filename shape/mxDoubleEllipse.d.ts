@@ -31,7 +31,6 @@
  * ```
  */
 declare class mxDoubleEllipse extends mxShape {
-
   /**
    * Constructs a new ellipse shape.
    *
@@ -62,5 +61,4 @@ declare class mxDoubleEllipse extends mxShape {
    * @returns the bounds for the label.
    */
   getLabelBounds(rect: mxRectangle): mxRectangle;
-
 }

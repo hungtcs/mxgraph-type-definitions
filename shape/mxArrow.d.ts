@@ -9,7 +9,6 @@
  * This shape is registered under {@link mxConstants.SHAPE_ARROW} in {@link mxCellRenderer}.
  */
 declare class mxArrow extends mxShape {
-
   /**
    * Constructs a new arrow shape.
    *
@@ -21,7 +20,15 @@ declare class mxArrow extends mxShape {
    * @param spacing        Optional integer that defines the spacing between the arrow shape and its endpoints. Default is {@link mxConstants.ARROW_SPACING}. This is stored in {@link mxShape.spacing}.
    * @param endSize        Optional integer that defines the size of the arrowhead. Default is {@link mxConstants.ARROW_SIZE}. This is stored in {@link mxShape.endSize}.
    */
-  constructor(points: mxPoint[], fill: string, stroke: string, strokewidth?: number, arrowWidth?: number, spacing?: number, endSize?: number);
+  constructor(
+    points: mxPoint[],
+    fill: string,
+    stroke: string,
+    strokewidth?: number,
+    arrowWidth?: number,
+    spacing?: number,
+    endSize?: number
+  );
 
   /**
    * Augments the bounding box with the edge width and markers.

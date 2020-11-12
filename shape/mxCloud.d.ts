@@ -6,7 +6,6 @@
  * This shape is registered under {@link mxConstants.SHAPE_CLOUD} in {@link mxCellRenderer}.
  */
 declare class mxCloud extends mxActor {
-
   /**
    * Constructs a new actor shape.
    *

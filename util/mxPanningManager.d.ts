@@ -1,4 +1,3 @@
-
 declare class mxPanningManager {
   constructor(graph: mxGraph);
   private thread: (handler: TimerHandler, timeout?: number, ...arguments: any[]) => number;

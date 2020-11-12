@@ -86,7 +86,6 @@ declare class mxXmlCanvas2D extends mxAbstractCanvas2D {
    */
   setFillAlpha(value: number): void;
 
-
   /**
    * Sets the current stroke alpha.
    *
@@ -101,7 +100,6 @@ declare class mxXmlCanvas2D extends mxAbstractCanvas2D {
    * @param value Hexadecimal representation of the color or 'none'.
    */
   setFillColor(value: string): void;
-
 
   /**
    * Sets the gradient. Note that the coordinates may be ignored by some implementations.
@@ -121,7 +119,17 @@ declare class mxXmlCanvas2D extends mxAbstractCanvas2D {
    * @default 1 Possible values
    * are between 1 (opaque) and 0 (transparent).
    */
-  setGradient(color1: string, color2: string, x: number, y: number, w: number, h: number, direction: string, alpha1: number, alpha2: number): void;
+  setGradient(
+    color1: string,
+    color2: string,
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    direction: string,
+    alpha1: number,
+    alpha2: number
+  ): void;
 
   /**
    * Sets the current stroke color.
@@ -129,7 +137,6 @@ declare class mxXmlCanvas2D extends mxAbstractCanvas2D {
    * @param value Hexadecimal representation of the color or 'none'.
    */
   setStrokeColor(value: string): void;
-
 
   /**
    * Sets the current stroke width.
@@ -377,7 +384,21 @@ declare class mxXmlCanvas2D extends mxAbstractCanvas2D {
    * @param rotation Number that specifies the angle of the rotation around the anchor point of the text.
    * @param dir Optional string that specifies the text direction. Possible values are rtl and lrt.
    */
-  text(x: number, y: number, w: number, h: number, str: string, align: string, valign: string, wrap: string, format: string, overflow: string, clip: string, rotation: number, dir: string): void;
+  text(
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    str: string,
+    align: string,
+    valign: string,
+    wrap: string,
+    format: string,
+    overflow: string,
+    clip: string,
+    rotation: number,
+    dir: string
+  ): void;
 
   /**
    * Paints the outline of the current drawing buffer.
@@ -393,5 +414,4 @@ declare class mxXmlCanvas2D extends mxAbstractCanvas2D {
    * Fills the current drawing buffer and its outline.
    */
   fillAndStroke(): void;
-
 }

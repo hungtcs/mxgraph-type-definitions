@@ -1,4 +1,3 @@
-
 /**
  * @class
  *
@@ -9,7 +8,6 @@
  * The identity for an object does not change during its lifecycle.
  */
 declare class mxObjectIdentity {
-
   /**
    * Name of the field to be used to store the object ID. Default is
    * <code>mxObjectId</code>.
@@ -31,5 +29,4 @@ declare class mxObjectIdentity {
    * Deletes the ID from the given object or function.
    */
   static clear(obj: any): void;
-
 }

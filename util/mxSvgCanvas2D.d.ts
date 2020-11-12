@@ -189,12 +189,40 @@ declare class mxSvgCanvas2D extends mxAbstractCanvas2D {
    * Returns the alternate text string for the given foreignObject.
    * @since mxgraph 4.1.0
    */
-  getAlternateText(fo: Element, x: number, y: number, w: number, h: number, str: string, align: string, valign: string, wrap: string, format: string, overflow: string, clip: string, rotation: number): string;
+  getAlternateText(
+    fo: Element,
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    str: string,
+    align: string,
+    valign: string,
+    wrap: string,
+    format: string,
+    overflow: string,
+    clip: string,
+    rotation: number
+  ): string;
 
   /**
    * Returns the alternate content for the given foreignObject.
    */
-  createAlternateContent(fo: Element, x: number, y: number, w: number, h: number, str: string, align: string, valign: string, wrap: string, format: string, overflow: string, clip: string, rotation: number): Element;
+  createAlternateContent(
+    fo: Element,
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    str: string,
+    align: string,
+    valign: string,
+    wrap: string,
+    format: string,
+    overflow: string,
+    clip: string,
+    rotation: number
+  ): Element;
 
   /**
    * Private helper function to create SVG elements
@@ -300,24 +328,77 @@ declare class mxSvgCanvas2D extends mxAbstractCanvas2D {
   /**
    * Updates existing DOM nodes for text rendering. LATER: Merge common parts with text function below.
    */
-  updateText(x: number, y: number, w: number, h: number, align: string, valign: string, wrap: string, overflow: string, clip: string, rotation: number, node: Element): void;
+  updateText(
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    align: string,
+    valign: string,
+    wrap: string,
+    overflow: string,
+    clip: string,
+    rotation: number,
+    node: Element
+  ): void;
 
   /**
    * Creates a foreignObject for the given string and adds it to the given root.
    * @since mxgraph 4.1.0
    */
-  addForeignObject(x: number, y: number, w: number, h: number, align: string, valign: string, wrap: string, format: string, overflow: string, clip: string, rotation: number, dir: any, div: Element, root: Element): void;
+  addForeignObject(
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    align: string,
+    valign: string,
+    wrap: string,
+    format: string,
+    overflow: string,
+    clip: string,
+    rotation: number,
+    dir: any,
+    div: Element,
+    root: Element
+  ): void;
 
   /**
    * Updates existing DOM nodes for text rendering.
    */
-  updateTextNodes(x: number, y: number, w: number, h: number, align: string, valign: string, wrap: string, overflow: string, clip: string, rotation: number, g: Element): void;
+  updateTextNodes(
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    align: string,
+    valign: string,
+    wrap: string,
+    overflow: string,
+    clip: string,
+    rotation: number,
+    g: Element
+  ): void;
 
   /**
    * Updates existing DOM nodes for text rendering.
    * @since mxgraph 4.1.0
    */
-  createCss(w: number, h: number, align: string, valign: string, wrap: string, overflow: string, clip: string, bg: string, border: string | number, flex: string, block: any, s: any, callback: Function): void;
+  createCss(
+    w: number,
+    h: number,
+    align: string,
+    valign: string,
+    wrap: string,
+    overflow: string,
+    clip: string,
+    bg: string,
+    border: string | number,
+    flex: string,
+    block: any,
+    s: any,
+    callback: Function
+  ): void;
 
   /**
    * Private helper function to create SVG elements
@@ -330,7 +411,21 @@ declare class mxSvgCanvas2D extends mxAbstractCanvas2D {
    * foreignObject is supported and <foEnabled> is true. (This means IE9 and later
    * does currently not support HTML text as part of shapes.)
    */
-  text(x: number, y: number, w: number, h: number, str: string, align: string, valign: string, wrap: string, format: string, overflow: string, clip: string, rotation: number, dir: string): void;
+  text(
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    str: string,
+    align: string,
+    valign: string,
+    wrap: string,
+    format: string,
+    overflow: string,
+    clip: string,
+    rotation: number,
+    dir: string
+  ): void;
 
   /**
    * Creates a clip for the given coordinates.
@@ -341,7 +436,20 @@ declare class mxSvgCanvas2D extends mxAbstractCanvas2D {
    * Paints the given text. Possible values for format are empty string for
    * plain text and html for HTML markup.
    */
-  plainText(x: number, y: number, w: number, h: number, str: string, align: string, valign: string, wrap: string, overflow: string, clip: string, rotation: number, dir: string): void;
+  plainText(
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    str: string,
+    align: string,
+    valign: string,
+    wrap: string,
+    overflow: string,
+    clip: string,
+    rotation: number,
+    dir: string
+  ): void;
 
   /**
    * Updates the text properties for the given node. (NOTE: For this to work in
@@ -352,7 +460,17 @@ declare class mxSvgCanvas2D extends mxAbstractCanvas2D {
   /**
    * Background color and border
    */
-  addTextBackground(node: Element, str: string, x: number, y: number, w: number, h: number, align: string, valign: string, overflow: string): void;
+  addTextBackground(
+    node: Element,
+    str: string,
+    x: number,
+    y: number,
+    w: number,
+    h: number,
+    align: string,
+    valign: string,
+    overflow: string
+  ): void;
 
   /**
    * Paints the outline of the current path.

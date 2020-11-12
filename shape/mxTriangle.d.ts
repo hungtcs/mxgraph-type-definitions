@@ -7,7 +7,6 @@
  * @extends {mxActor}
  */
 declare class mxTriangle extends mxActor {
-
   constructor();
 
   /**
@@ -25,5 +24,4 @@ declare class mxTriangle extends mxActor {
    * @param {number} h
    */
   redrawPath(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number): void;
-
 }

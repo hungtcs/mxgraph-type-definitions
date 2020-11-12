@@ -63,7 +63,6 @@
  * property contains the {@link mxUndoableEdit} that was added.
  */
 declare class mxUndoManager extends mxEventSource {
-
   /**
    * Constructs a new undo manager with the given history size. If no history
    * size is given, then a default size of 100 steps is used.
@@ -128,5 +127,4 @@ declare class mxUndoManager extends mxEventSource {
    * invoking die on each edit. This is called from <undoableEditHappened>.
    */
   trim(): void;
-
 }

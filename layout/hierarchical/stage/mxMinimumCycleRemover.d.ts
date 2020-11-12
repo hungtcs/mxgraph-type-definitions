@@ -21,5 +21,4 @@ declare class mxMinimumCycleRemover extends mxHierarchicalLayoutStage {
    * use.
    */
   execute(parent: mxCell): void;
-
 }

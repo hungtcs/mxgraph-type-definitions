@@ -1,4 +1,3 @@
-
 /**
  * Extends {@link mxEventSource} to implement a graph component for
  * the browser. This is the main class of the package. To activate
@@ -17,7 +16,6 @@
  * @extends {mxEventSource}
  */
 declare class mxGraph extends mxEventSource {
-
   /**
    * @constructor
    *
@@ -192,7 +190,6 @@ declare class mxGraph extends mxEventSource {
    * Holds the x-coordinate of the last touch event for double tap detection.
    */
   lastTouchY: number;
-
 
   /**
    * Holds the time of the last touch event for double click detection.
@@ -897,7 +894,10 @@ declare class mxGraph extends mxEventSource {
    * change should be ignored.
    *
    */
-  getSelectionCellsForChanges(changes: mxSelectionChange[], ignoreFn?: (change: mxSelectionChange) => boolean): mxCell[];
+  getSelectionCellsForChanges(
+    changes: mxSelectionChange[],
+    ignoreFn?: (change: mxSelectionChange) => boolean
+  ): mxCell[];
 
   /**
    * Called when the graph model changes. Invokes {@link processChange} on each
@@ -1168,7 +1168,6 @@ declare class mxGraph extends mxEventSource {
    */
   scrollPointToVisible(x: number, y: number, extend?: boolean, border?: number): void;
 
-
   /**
    * Creates and returns an {@link mxPanningManager}.
    */
@@ -1228,8 +1227,15 @@ declare class mxGraph extends mxEventSource {
    * ignored. Default is false.
    * @param maxHeight Optional maximum height.
    */
-  fit(border: number, keepOrigin?: boolean, margin?: number, enabled?: boolean,
-    ignoreWidth?: boolean, ignoreHeight?: boolean, maxHeight?: number): number;
+  fit(
+    border: number,
+    keepOrigin?: boolean,
+    margin?: number,
+    enabled?: boolean,
+    ignoreWidth?: boolean,
+    ignoreHeight?: boolean,
+    maxHeight?: number
+  ): number;
 
   /**
    * Called when the size of the graph has changed. This implementation fires
@@ -1495,7 +1501,6 @@ declare class mxGraph extends mxEventSource {
    */
   ungroupCells(cells: mxCell[]): mxCell[];
 
-
   /**
    * Hook to remove the groups after {@link ungroupCells}.
    *
@@ -1527,7 +1532,15 @@ declare class mxGraph extends mxEventSource {
    * @param bottomBorder Optional top border to be added in the group. Default is 0.
    * @param leftBorder Optional top border to be added in the group. Default is 0.
    */
-  updateGroupBounds(cells: mxCell[], border?: number, moveGroup?: boolean, topBorder?: number, rightBorder?: number, bottomBorder?: number, leftBorder?: number): mxCell[];
+  updateGroupBounds(
+    cells: mxCell[],
+    border?: number,
+    moveGroup?: boolean,
+    topBorder?: number,
+    rightBorder?: number,
+    bottomBorder?: number,
+    leftBorder?: number
+  ): mxCell[];
 
   /**
    * Returns the bounding box for the given array of {@link mxCell}. The bounding box for
@@ -1601,12 +1614,32 @@ declare class mxGraph extends mxEventSource {
    * @param relative Optional boolean that specifies if the geometry is relative.
    * Default is false.
    */
-  insertVertex(parent: mxCell, id: string, value: any, x: number, y: number, width: number, height: number, style?: string, relative?: boolean): mxCell;
+  insertVertex(
+    parent: mxCell,
+    id: string,
+    value: any,
+    x: number,
+    y: number,
+    width: number,
+    height: number,
+    style?: string,
+    relative?: boolean
+  ): mxCell;
 
   /**
    * Hook method that creates the new vertex for {@link insertVertex}.
    */
-  createVertex(parent: mxCell, id: string, value: any, x: number, y: number, width: number, height: number, style?: string, relative?: boolean): mxCell;
+  createVertex(
+    parent: mxCell,
+    id: string,
+    value: any,
+    x: number,
+    y: number,
+    width: number,
+    height: number,
+    style?: string,
+    relative?: boolean
+  ): mxCell;
 
   /**
    * Adds a new edge into the given parent {@link mxCell} using value as the user
@@ -1680,7 +1713,16 @@ declare class mxGraph extends mxEventSource {
    * Adds the specified cells to the given parent. This method fires
    * {@link mxEvent.CELLS_ADDED} while the transaction is in progress.
    */
-  cellsAdded(cells: mxCell[], parent: mxCell, index: number, source?: mxCell, target?: mxCell, absolute?: boolean, constrain?: boolean, extend?: boolean): void;
+  cellsAdded(
+    cells: mxCell[],
+    parent: mxCell,
+    index: number,
+    source?: mxCell,
+    target?: mxCell,
+    absolute?: boolean,
+    constrain?: boolean,
+    extend?: boolean
+  ): void;
 
   /**
    * Resizes the specified cell to just fit around the its label and/or children
@@ -1728,7 +1770,16 @@ declare class mxGraph extends mxEventSource {
    * @param parent Optional parent to insert the cell. If null the parent of
    * the edge is used.
    */
-  splitEdge(edge: mxCell, cells: mxCell[], newEdge: mxCell, dx?: number, dy?: number, x?: number, y?: number, parent?: mxCell): void;
+  splitEdge(
+    edge: mxCell,
+    cells: mxCell[],
+    newEdge: mxCell,
+    dx?: number,
+    dy?: number,
+    x?: number,
+    y?: number,
+    parent?: mxCell
+  ): void;
 
   /**
    * Group: Cell visibility
@@ -2020,14 +2071,29 @@ declare class mxGraph extends mxEventSource {
    * @param evt Mouseevent that triggered the invocation.
    * @param mapping Optional mapping for existing clones.
    */
-  moveCells(cells: mxCell[], dx: number, dy: number, clone: boolean, target?: mxCell, evt?: Event, mapping?: any): mxCell[];
+  moveCells(
+    cells: mxCell[],
+    dx: number,
+    dy: number,
+    clone: boolean,
+    target?: mxCell,
+    evt?: Event,
+    mapping?: any
+  ): mxCell[];
 
   /**
    * Moves the specified cells by the given vector, disconnecting the cells
    * using disconnectGraph is disconnect is true. This method fires
    * {@link mxEvent.CELLS_MOVED} while the transaction is in progress.
    */
-  cellsMoved(cells: mxCell[], dx: number, dy: number, disconnect?: boolean, constrain?: boolean, extend?: boolean): void;
+  cellsMoved(
+    cells: mxCell[],
+    dx: number,
+    dy: number,
+    disconnect?: boolean,
+    constrain?: boolean,
+    extend?: boolean
+  ): void;
 
   /**
    * Translates the geometry of the given cell and stores the new,
@@ -2350,7 +2416,13 @@ declare class mxGraph extends mxEventSource {
   /**
    * Snaps the given delta with the given scaled bounds.
    */
-  snapDelta(delta: mxRectangle, bounds?: mxRectangle, ignoreGrid?: boolean, ignoreHorizontal?: boolean, ignoreVertical?: boolean): mxRectangle;
+  snapDelta(
+    delta: mxRectangle,
+    bounds?: mxRectangle,
+    ignoreGrid?: boolean,
+    ignoreHorizontal?: boolean,
+    ignoreVertical?: boolean
+  ): mxRectangle;
 
   /**
    * Shifts the graph display by the given amount. This is used to preview
@@ -3047,7 +3119,7 @@ declare class mxGraph extends mxEventSource {
    *
    * @param cell {@link mxCell} whose locked state should be returned.
    */
-  isCellLocked(cell: mxCell): boolean
+  isCellLocked(cell: mxCell): boolean;
 
   /**
    * Returns true if the given cell may not be moved, sized, bended,
@@ -3111,7 +3183,7 @@ declare class mxGraph extends mxEventSource {
   /**
    * Returns the cells which may be imported in the given array of cells.
    */
-  getImportableCells(cells: mxCell[]): mxCell[]
+  getImportableCells(cells: mxCell[]): mxCell[];
 
   /**
    * Returns true if the given cell may be imported from the clipboard.
@@ -3947,7 +4019,14 @@ declare class mxGraph extends mxEventSource {
    * need be an ancestral parent, true, or the direct parent, false.
    * Default is false
    */
-  getEdges(cell: mxCell, parent?: mxCell, incoming?: boolean, outgoing?: boolean, includeLoops?: boolean, recurse?: boolean): mxCell[];
+  getEdges(
+    cell: mxCell,
+    parent?: mxCell,
+    incoming?: boolean,
+    outgoing?: boolean,
+    includeLoops?: boolean,
+    recurse?: boolean
+  ): mxCell[];
 
   /**
    * Returns whether or not the specified parent is a valid
@@ -4072,7 +4151,14 @@ declare class mxGraph extends mxEventSource {
    * @param inverse Optional boolean to traverse in inverse direction. Default is false.
    * This is ignored if directed is false.
    */
-  traverse(vertex: mxCell, directed: boolean, func: Function, edge?: mxCell, visited?: mxDictionary<boolean>, inverse?: boolean): void;
+  traverse(
+    vertex: mxCell,
+    directed: boolean,
+    func: Function,
+    edge?: mxCell,
+    visited?: mxDictionary<boolean>,
+    inverse?: boolean
+  ): void;
 
   /**
    * Group: Selection
@@ -4297,7 +4383,7 @@ declare class mxGraph extends mxEventSource {
    *
    * @param listener Listener to be added to the graph event listeners.
    */
-  addMouseListener(listener: { [key: string]: (sender: mxEventSource, me: mxMouseEvent) => void }): void
+  addMouseListener(listener: { [key: string]: (sender: mxEventSource, me: mxMouseEvent) => void }): void;
 
   /**
    * Removes the specified graph listener.
@@ -4359,7 +4445,7 @@ declare class mxGraph extends mxEventSource {
    * @param me {@link mxMouseEvent} to be fired.
    * @param sender Optional sender argument. Default is this.
    */
-  fireMouseEvent(evtName: string, me: mxMouseEvent, sender?: mxEventSource): void
+  fireMouseEvent(evtName: string, me: mxMouseEvent, sender?: mxEventSource): void;
 
   /**
    * Consumes the given {@link mxMouseEvent} if it's a touchStart event.
@@ -4403,5 +4489,4 @@ declare class mxGraph extends mxEventSource {
    * Destroys the graph and all its resources.
    */
   destroy(): void;
-
 }

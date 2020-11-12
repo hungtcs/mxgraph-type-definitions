@@ -66,7 +66,6 @@
  * The parameters are explained in {@link RectanglePerimeter}.
  */
 declare class mxPerimeter {
-
   /**
    * Describes a rectangular perimeter for the given bounds.
    *
@@ -105,5 +104,4 @@ declare class mxPerimeter {
    * for a description of the parameters.
    */
   static HexagonPerimeter(bounds: mxRectangle, vertex: mxCellState, next: mxPoint, orthogonal?: boolean): mxPoint;
-
 }

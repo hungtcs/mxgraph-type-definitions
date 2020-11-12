@@ -1,4 +1,1 @@
-
-declare class mxParallelEdgeLayout extends mxGraphLayout {
-
-}
+declare class mxParallelEdgeLayout extends mxGraphLayout {}

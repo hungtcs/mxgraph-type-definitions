@@ -31,7 +31,6 @@
  * The names are inverted due to historic reasons. This cannot be changed.
  */
 declare class mxGraphSelectionModel extends mxEventSource {
-
   /**
    * @constructor
    * Constructs a new graph selection model for the given {@link mxGraph}.
@@ -164,16 +163,13 @@ declare class mxGraphSelectionModel extends mxEventSource {
    * @param cell {@link mxCell} to remove from the selection.
    */
   cellRemoved(cell: mxCell): void;
-
 }
-
 
 /**
  * @class mxSelectionChange
  * Action to change the current root in a view.
  */
 declare class mxSelectionChange {
-
   /**
    * Creates an instance of mxSelectionChange.
    *
@@ -187,5 +183,4 @@ declare class mxSelectionChange {
    * Changes the current root of the view.
    */
   execute(): void;
-
 }

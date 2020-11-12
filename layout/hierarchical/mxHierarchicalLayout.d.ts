@@ -1,9 +1,8 @@
-
 declare const mxHierarchicalEdgeStyle: {
-  ORTHOGONAL: 1,
-  POLYLINE: 2,
-  STRAIGHT: 3,
-  CURVE: 4
+  ORTHOGONAL: 1;
+  POLYLINE: 2;
+  STRAIGHT: 3;
+  CURVE: 4;
 };
 
 /**
@@ -14,7 +13,6 @@ declare const mxHierarchicalEdgeStyle: {
  * @extends {mxGraphLayout}
  */
 declare class mxHierarchicalLayout extends mxGraphLayout {
-
   /**
    * @constructor
    *
@@ -229,7 +227,15 @@ declare class mxHierarchicalLayout extends mxGraphLayout {
    * @param allVertices -Array of cell paths for the visited cells.
    */
   traverse(vertex: mxCell, directed?: boolean, func?: Function, edge?: mxCell, visited?: mxDictionary): void;
-  traverse(vertex: mxCell, directed?: boolean, edge?: mxCell, allVertices?: mxCell[], currentComp?: any, hierarchyVertices?: Array<any>, filledVertexSet?: any): any;
+  traverse(
+    vertex: mxCell,
+    directed?: boolean,
+    edge?: mxCell,
+    allVertices?: mxCell[],
+    currentComp?: any,
+    hierarchyVertices?: Array<any>,
+    filledVertexSet?: any
+  ): any;
 
   /**
    * Executes the cycle stage using mxMinimumCycleRemover.
@@ -250,5 +256,4 @@ declare class mxHierarchicalLayout extends mxGraphLayout {
    * Executes the placement stage using mxCoordinateAssignment.
    */
   placementStage(initialX: number, parent: mxCell): number;
-
 }

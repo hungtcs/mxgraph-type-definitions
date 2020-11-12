@@ -1,4 +1,3 @@
-
 /**
  * @class mxGraphView
  * @extends {mxEventSource}
@@ -43,7 +42,6 @@
  * respectively.
  */
 declare class mxGraphView extends mxEventSource {
-
   constructor(graph: mxGraph);
 
   canvas: SVGSVGElement;
@@ -309,7 +307,7 @@ declare class mxGraphView extends mxEventSource {
    * the following.
    *
    * @example
- * ```javascript
+   * ```javascript
    * redrawBackground(backgroundImage, bg)
    * {
    *   backgroundImage.bounds.x = this.translate.x;
@@ -408,7 +406,12 @@ declare class mxGraphView extends mxEventSource {
    * @param source Boolean that specifies if the terminal is the source.
    * @param constraint {@link mxConnectionConstraint} that specifies the connection.
    */
-  updateFixedTerminalPoint(edge: mxCellState, terminal: mxCellState, source: boolean, constraint: mxConnectionConstraint): void;
+  updateFixedTerminalPoint(
+    edge: mxCellState,
+    terminal: mxCellState,
+    source: boolean,
+    constraint: mxConnectionConstraint
+  ): void;
 
   /**
    * Returns the fixed source or target terminal point for the given edge.
@@ -418,7 +421,12 @@ declare class mxGraphView extends mxEventSource {
    * @param source Boolean that specifies if the terminal is the source.
    * @param constraint {@link mxConnectionConstraint} that specifies the connection.
    */
-  getFixedTerminalPoint(edge: mxCellState, terminal: mxCellState, source: boolean, constraint: mxConnectionConstraint): void;
+  getFixedTerminalPoint(
+    edge: mxCellState,
+    terminal: mxCellState,
+    source: boolean,
+    constraint: mxConnectionConstraint
+  ): void;
 
   /**
    * Updates the bounds of the given cell state to reflect the bounds of the stencil
@@ -516,12 +524,12 @@ declare class mxGraphView extends mxEventSource {
   /**
    * Returns the x-coordinate of the center point for automatic routing.
    */
-  getRoutingCenterX(state: mxCellState): number
+  getRoutingCenterX(state: mxCellState): number;
 
   /**
    * Returns the y-coordinate of the center point for automatic routing.
    */
-  getRoutingCenterY(state: mxCellState): number
+  getRoutingCenterY(state: mxCellState): number;
 
   /**
    * Returns the perimeter bounds for the given terminal, edge pair as an
@@ -532,7 +540,7 @@ declare class mxGraphView extends mxEventSource {
    * this method can be replaced as follows:
    *
    * @example
- * ```javascript
+   * ```javascript
    * var oldGetPerimeterBounds = getPerimeterBounds;
    * getPerimeterBounds(terminal, edge, isSource)
    * {
@@ -652,7 +660,7 @@ declare class mxGraphView extends mxEventSource {
   /**
    * Sets {@link rendering}.
    */
-  setRendering(value: boolean): void
+  setRendering(value: boolean): void;
 
   /**
    * Returns {@link allowEval}.
@@ -764,7 +772,7 @@ declare class mxGraphView extends mxEventSource {
   /**
    * Creates the DOM nodes for the VML display.
    */
-  createVml(): Element
+  createVml(): Element;
 
   /**
    * Creates a drawing pane in VML (group).
@@ -785,7 +793,6 @@ declare class mxGraphView extends mxEventSource {
    * Destroys the view and all its resources.
    */
   destroy(): void;
-
 }
 
 /**
@@ -794,7 +801,6 @@ declare class mxGraphView extends mxEventSource {
  * Action to change the current root in a view.
  */
 declare class mxCurrentRootChange {
-
   /**
    * @constructor mxCurrentRootChange
    *
@@ -806,5 +812,4 @@ declare class mxCurrentRootChange {
    * Changes the current root of the view.
    */
   execute(): void;
-
 }

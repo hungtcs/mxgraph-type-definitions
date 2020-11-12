@@ -12,7 +12,6 @@
  * @extends {mxShape}
  */
 declare class mxText extends mxShape {
-
   /**
    * @param value             String that represents the text to be displayed.  This is stored in <value>.
    * @param bounds            mxRectangle that defines the bounds.  This is stored in mxShape.bounds.
@@ -55,7 +54,7 @@ declare class mxText extends mxShape {
     clipped?: boolean,
     overflow?: string,
     labelPadding?: string,
-    textDirection?: string,
+    textDirection?: string
   );
 
   /**
@@ -322,5 +321,4 @@ declare class mxText extends mxShape {
    * Returns the spacing as an <mxPoint>.
    */
   getSpacing(): mxPoint;
-
 }

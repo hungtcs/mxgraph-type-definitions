@@ -13,5 +13,4 @@ declare class mxMorphing extends mxEventSource {
   stopRecursion(state: any, delta: any): boolean;
   getDelta(state: any): any;
   getOriginForCell(cell: mxCell): any;
-
 }

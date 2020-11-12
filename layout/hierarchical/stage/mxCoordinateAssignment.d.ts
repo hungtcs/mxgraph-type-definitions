@@ -4,7 +4,6 @@
  * far as possible.
  */
 declare class mxCoordinateAssignment extends mxHierarchicalLayoutStage {
-
   /**
    * Creates a coordinate assignment.
    *
@@ -21,9 +20,8 @@ declare class mxCoordinateAssignment extends mxHierarchicalLayoutStage {
     interRankCellSpacing: number,
     orientation: string,
     initialX: number,
-    parallelEdgeSpacing: number,
+    parallelEdgeSpacing: number
   );
-
 
   /**
    * Reference to the enclosing {@link mxHierarchicalLayout}.
@@ -306,5 +304,4 @@ declare class mxCoordinateAssignment extends mxHierarchicalLayoutStage {
    * Hook to add additional processing
    */
   processReversedEdge(graph: mxGraph, model: mxGraphModel): void;
-
 }

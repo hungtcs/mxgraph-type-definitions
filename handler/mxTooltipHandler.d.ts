@@ -1,7 +1,4 @@
-
-
 declare class mxTooltipHandler {
-
   constructor(graph: mxGraph, delay?: number);
 
   /**
@@ -122,7 +119,6 @@ declare class mxTooltipHandler {
    */
   mouseUp(sender: any, me: mxMouseEvent): void;
 
-
   /**
    * Function: resetTimer
    *
@@ -165,5 +161,4 @@ declare class mxTooltipHandler {
    * Destroys the handler and all its resources and DOM nodes.
    */
   destroy(): void;
-
 }

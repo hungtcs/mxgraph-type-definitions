@@ -4,7 +4,6 @@
  * far as possible.
  */
 declare class mxMedianHybridCrossingReduction extends mxHierarchicalLayoutStage {
-
   constructor(layout: mxHierarchicalLayout);
 
   /**
@@ -109,9 +108,8 @@ declare class mxMedianHybridCrossingReduction extends mxHierarchicalLayoutStage 
    * @param connectedCells  the cells on the specified rank connected to the specified cell
    * @param rankValue       the rank that the connected cell lie upon
    */
-// TODO rankValue type
+  // TODO rankValue type
   medianValue(connectedCells: Array<mxGraphAbstractHierarchyCell>, rankValue: number | string): number;
-
 }
 
 /**
@@ -119,7 +117,6 @@ declare class mxMedianHybridCrossingReduction extends mxHierarchicalLayoutStage 
  * values. Does not violate (x.compareTo(y)==0) == (x.equals(y))
  */
 declare class MedianCellSorter {
-
   /**
    * The weighted value of the cell stored.
    * @default 0
@@ -138,5 +135,4 @@ declare class MedianCellSorter {
    * Compares two MedianCellSorters.
    */
   compare(a: MedianCellSorter, b: MedianCellSorter): number;
-
 }

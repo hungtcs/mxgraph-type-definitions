@@ -6,7 +6,6 @@
  * @class mxMarker
  */
 declare class mxMarker {
-
   /**
    * Maps from markers names to functions to paint the markers.
    *
@@ -34,7 +33,6 @@ declare class mxMarker {
     size: number,
     source: any,
     sw: number,
-    filled: boolean,
+    filled: boolean
   ): () => void;
-
 }

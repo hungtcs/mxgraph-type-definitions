@@ -1,4 +1,3 @@
-
 declare class mxSelectionCellsHandler extends mxEventSource {
   constructor(graph: mxGraph);
 

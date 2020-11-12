@@ -8,7 +8,6 @@
  * {@link bubbling} is true.
  */
 declare class mxSwimlaneManager extends mxEventSource {
-
   /**
    * Constructs a new swimlane manager for the given graph.
    *
@@ -160,5 +159,4 @@ declare class mxSwimlaneManager extends mxEventSource {
    * Removes all handlers from the {@link graph} and deletes the reference to it.
    */
   destroy(): void;
-
 }

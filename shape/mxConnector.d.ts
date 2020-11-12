@@ -13,7 +13,6 @@
  * @extends {mxPolyline}
  */
 declare class mxConnector extends mxPolyline {
-
   /**
    * Constructs a new connector shape.
    *
@@ -43,5 +42,4 @@ declare class mxConnector extends mxPolyline {
    * Augments the bounding box with the strokewidth and shadow offsets.
    */
   augmentBoundingBox(bbox: mxRectangle): void;
-
 }

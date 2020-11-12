@@ -1,7 +1,4 @@
-
-
 declare class mxCellState extends mxRectangle {
-
   constructor(view: mxGraphView, cell: mxCell, style: { [key: string]: any });
 
   control: mxShape;
@@ -230,5 +227,4 @@ declare class mxCellState extends mxRectangle {
    * Destroys the state and all associated resources.
    */
   destroy(): void;
-
 }

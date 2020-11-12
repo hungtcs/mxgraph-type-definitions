@@ -9,7 +9,6 @@
  * @extends {mxShape}
  */
 declare class mxLine extends mxShape {
-
   /**
    * Constructs a new line shape.
    * @param {mxRectangle} bounds    {@link mxRectangle} that defines the bounds.  This is stored in {@link mxShape.bounds}.
@@ -27,5 +26,4 @@ declare class mxLine extends mxShape {
    * @param {number} h
    */
   paintVertexShape(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number): void;
-
 }

@@ -1,7 +1,12 @@
-
 declare class mxCellOverlay extends mxEventSource {
-
-  constructor(image: mxImage, tooltip: string, align?: string, verticalAlign?: string, offset?: mxPoint, cursor?: string);
+  constructor(
+    image: mxImage,
+    tooltip: string,
+    align?: string,
+    verticalAlign?: string,
+    offset?: mxPoint,
+    cursor?: string
+  );
 
   /**
    * Variable: image

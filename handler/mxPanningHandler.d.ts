@@ -1,4 +1,3 @@
-
 declare class mxPanningHandler extends mxEventSource {
   constructor(graph: mxGraph);
 

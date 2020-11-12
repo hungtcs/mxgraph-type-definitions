@@ -1,5 +1,4 @@
 declare class mxCellEditor {
-
   /**
    * Variable: graph
    *
@@ -114,7 +113,6 @@ declare class mxCellEditor {
    * Holds the initial editing value to check if the current value was modified.
    */
   initialValue: string;
-
 
   constructor(graph: mxGraph);
 

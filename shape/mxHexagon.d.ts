@@ -6,7 +6,6 @@
  * @extends {mxActor}
  */
 declare class mxHexagon extends mxActor {
-
   /**
    * Constructs a new hexagon shape.
    */
@@ -21,5 +20,4 @@ declare class mxHexagon extends mxActor {
    * @param {number} h
    */
   redrawPath(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number): void;
-
 }

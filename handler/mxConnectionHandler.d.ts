@@ -1,5 +1,3 @@
-
-
 declare class mxConnectionHandler extends mxEventSource {
   sourceConstraint: mxConnectionConstraint;
 
@@ -539,7 +537,6 @@ declare class mxConnectionHandler extends mxEventSource {
    */
   getSourcePerimeterPoint(state: mxCellState, next: mxPoint, me: mxMouseEvent): mxPoint;
 
-
   /**
    * Function: updateIcons
    *
@@ -711,5 +708,4 @@ declare class mxConnectionHandler extends mxEventSource {
    * instance created for each <mxGraph>.
    */
   destroy(): void;
-
 }

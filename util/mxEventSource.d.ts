@@ -1,5 +1,4 @@
 declare class mxEventSource {
-
   constructor(eventSource?: any);
 
   /**
@@ -51,7 +50,7 @@ declare class mxEventSource {
    *
    * Sets <eventSource>.
    */
-  setEventSource(value: any): void
+  setEventSource(value: any): void;
 
   /**
    * Function: addListener
@@ -90,5 +89,4 @@ declare class mxEventSource {
    * the return value of <getEventSource>.
    */
   fireEvent(evt: mxEventObject, sender: any): void;
-
 }

@@ -171,7 +171,6 @@
  * @class mxObjectCodec
  */
 declare class mxObjectCodec {
-
   /**
    * Constructs a new codec for the specified template object.
    * The variables in the optional exclude array are ignored by
@@ -594,5 +593,4 @@ declare class mxObjectCodec {
    * @param obj Object that represents the default decoding.
    */
   afterDecode(dec: mxCodec, node: Node, obj?: any): any;
-
 }

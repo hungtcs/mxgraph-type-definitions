@@ -1,7 +1,4 @@
-
-
 declare class mxVertexHandler {
-
   constructor(state: mxCellState);
 
   /**
@@ -428,7 +425,15 @@ declare class mxVertexHandler {
    * Uses the given vector to change the bounds of the given cell
    * in the graph using <mxGraph.resizeCell>.
    */
-  resizeCell(cell: mxCell, dx: number, dy: number, index: number, gridEnabled: boolean, constrained: boolean, recurse: boolean): void;
+  resizeCell(
+    cell: mxCell,
+    dx: number,
+    dy: number,
+    index: number,
+    gridEnabled: boolean,
+    constrained: boolean,
+    recurse: boolean
+  ): void;
 
   /**
    * Function: moveChildren
@@ -489,7 +494,17 @@ declare class mxVertexHandler {
    * };
    * (end)
    */
-  union(bounds: mxRectangle, dx: number, dy: number, index: number, gridEnabled: boolean, scale: number, tr: Element, constrained: boolean, centered: boolean): void;
+  union(
+    bounds: mxRectangle,
+    dx: number,
+    dy: number,
+    index: number,
+    gridEnabled: boolean,
+    scale: number,
+    tr: Element,
+    constrained: boolean,
+    centered: boolean
+  ): void;
 
   /**
    * Function: redraw

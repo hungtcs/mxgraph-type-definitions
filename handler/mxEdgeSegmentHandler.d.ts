@@ -1,5 +1,3 @@
-
-
 declare class mxEdgeSegmentHandler extends mxEdgeHandler {
   constructor(state: mxCellState);
 

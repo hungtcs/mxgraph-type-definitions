@@ -1,8 +1,8 @@
 /**
-   * Implements a single custom handle for vertices.
-   *
-   * @class mxHandle
-   */
+ * Implements a single custom handle for vertices.
+ *
+ * @class mxHandle
+ */
 declare class mxHandle {
   /**
    * Constructs a new handle for the given state.

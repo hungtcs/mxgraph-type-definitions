@@ -1,4 +1,3 @@
-
 /**
  * @class mxLayoutManager
  * @extends {mxEventSource}
@@ -25,7 +24,6 @@
  * been passed to {@link layoutCells}.
  */
 declare class mxLayoutManager extends mxEventSource {
-
   /**
    * Constructor: mxLayoutManager
    *
@@ -192,5 +190,4 @@ declare class mxLayoutManager extends mxEventSource {
    * Removes all handlers from the {@link graph} and deletes the reference to it.
    */
   destroy(): void;
-
 }

@@ -26,7 +26,6 @@
  * ```
  */
 declare class mxActor extends mxShape {
-
   /**
    * Constructs a new actor shape.
    *

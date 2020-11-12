@@ -1,10 +1,8 @@
-
 /**
  * Implements a mechanism for temporary cell Ids.
  * @class mxCellPath
  */
 declare class mxCellPath {
-
   /**
    * Defines the separator between the path components. Default is ".".
    */
@@ -47,5 +45,4 @@ declare class mxCellPath {
    * p1 is equal and 1 if p1 is greater than p2.
    */
   static compare(p1: string, p2: string): number;
-
 }

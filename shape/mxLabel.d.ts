@@ -3,7 +3,6 @@
 /// <reference path="../util/mxAbstractCanvas2D.d.ts" />
 
 declare class mxLabel extends mxRectangleShape {
-
   /**
    * Constructs a new label shape.
    *
@@ -58,7 +57,6 @@ declare class mxLabel extends mxRectangleShape {
    */
   isHtmlAllowed(): boolean;
 
-
   /**
    * Generic background painting implementation.
    * @param {mxAbstractCanvas2D} c
@@ -112,5 +110,4 @@ declare class mxLabel extends mxRectangleShape {
    * Generic background painting implementation.
    */
   redrawHtmlShape(): void;
-
 }

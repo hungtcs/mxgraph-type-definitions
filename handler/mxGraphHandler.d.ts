@@ -1,5 +1,3 @@
-
-
 declare class mxGraphHandler {
   cell: mxCell;
   cells: Array<mxCell>;
@@ -302,7 +300,7 @@ declare class mxGraphHandler {
    *
    * Creates an array of cell states which should be used as guides.
    */
-  getGuideStates(): Array<mxCellState|mxPoint>;
+  getGuideStates(): Array<mxCellState | mxPoint>;
 
   /**
    * Function: getCells
@@ -362,7 +360,6 @@ declare class mxGraphHandler {
    * This implementation returns <mxGuide.isEnabledForEvent>.
    */
   useGuidesForEvent(me: mxMouseEvent): boolean;
-
 
   /**
    * Function: snap

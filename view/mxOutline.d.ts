@@ -45,7 +45,6 @@
  * ```
  */
 declare class mxOutline {
-
   /**
    * @constructor mxOutline
    *
@@ -254,5 +253,4 @@ declare class mxOutline {
    * Destroy this outline and removes all listeners from {@link source}.
    */
   destroy(): void;
-
 }

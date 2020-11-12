@@ -12,7 +12,6 @@
  * {@link mxStackLayout}
  */
 declare class mxGraphLayout {
-
   /**
    * Constructs a new layout using the given layouts.
    * @param {mxGraph} graph   Enclosing
@@ -183,10 +182,15 @@ declare class mxGraphLayout {
   /**
    * Shortcut to {@link mxGraph.updateGroupBounds} with moveGroup set to true.
    */
-  arrangeGroups(cells: Array<mxCell>, border?: number, topBorder?: number, rightBorder?: number, bottomBorder?: number, leftBorder?: number): Array<mxCell>;
-
+  arrangeGroups(
+    cells: Array<mxCell>,
+    border?: number,
+    topBorder?: number,
+    rightBorder?: number,
+    bottomBorder?: number,
+    leftBorder?: number
+  ): Array<mxCell>;
 }
-
 
 /**
  * @class WeightedCellSorter
@@ -197,7 +201,6 @@ declare class mxGraphLayout {
  *
  */
 declare class WeightedCellSorter {
-
   /**
    * Constructs a new weighted cell sorted for the given cell and weight.
    * @constructor
@@ -235,5 +238,4 @@ declare class WeightedCellSorter {
    * Compares two WeightedCellSorters.
    */
   compare(a: WeightedCellSorter, b: WeightedCellSorter): number;
-
 }

@@ -71,78 +71,76 @@
  * ```
  */
 declare class mxClipboard {
+  /**
+   * Defines the step size to offset the cells after each paste operation.
+   * Default is 10.
+   */
+  static STEPSIZE: number;
 
-/**
- * Defines the step size to offset the cells after each paste operation.
- * Default is 10.
- */
-static STEPSIZE: number;
+  /**
+   * Counts the number of times the clipboard data has been inserted.
+   */
+  static insertCount: number;
 
-/**
- * Counts the number of times the clipboard data has been inserted.
- */
-static insertCount: number;
+  /**
+   * Holds the array of {@link mxCell} currently in the clipboard.
+   */
+  static cells: Array<mxCell>;
 
-/**
- * Holds the array of {@link mxCell} currently in the clipboard.
- */
-static cells: Array<mxCell>;
+  /**
+   * Sets the cells in the clipboard. Fires a {@link mxEvent.CHANGE} event.
+   */
+  static setCells(cells: Array<mxCell>): void;
 
-/**
- * Sets the cells in the clipboard. Fires a {@link mxEvent.CHANGE} event.
- */
-static setCells(cells: Array<mxCell>): void;
+  /**
+   * Returns  the cells in the clipboard.
+   */
+  static getCells(): Array<mxCell>;
 
-/**
- * Returns  the cells in the clipboard.
- */
-static getCells(): Array<mxCell>;
+  /**
+   * Returns true if the clipboard currently has not data stored.
+   */
+  static isEmpty(): boolean;
 
-/**
- * Returns true if the clipboard currently has not data stored.
- */
-static isEmpty(): boolean;
+  /**
+   * Cuts the given array of {@link mxCell} from the specified graph.
+   * If cells is null then the selection cells of the graph will
+   * be used. Returns the cells that have been cut from the graph.
+   *
+   * @param graph - {@link mxGraph} that contains the cells to be cut.
+   * @param cells - Optional array of {@link mxCell} to be cut.
+   */
+  static cut(graph: mxGraph, cells?: Array<mxCell>): Array<mxCell>;
 
-/**
- * Cuts the given array of {@link mxCell} from the specified graph.
- * If cells is null then the selection cells of the graph will
- * be used. Returns the cells that have been cut from the graph.
- *
- * @param graph - {@link mxGraph} that contains the cells to be cut.
- * @param cells - Optional array of {@link mxCell} to be cut.
- */
-static cut(graph: mxGraph, cells?: Array<mxCell>): Array<mxCell>;
+  /**
+   * Hook to remove the given cells from the given graph after
+   * a cut operation.
+   *
+   * @param graph - {@link mxGraph} that contains the cells to be cut.
+   * @param cells - Array of {@link mxCell} to be cut.
+   */
+  static removeCells(graph: mxGraph, cells: Array<mxCell>): void;
 
-/**
- * Hook to remove the given cells from the given graph after
- * a cut operation.
- *
- * @param graph - {@link mxGraph} that contains the cells to be cut.
- * @param cells - Array of {@link mxCell} to be cut.
- */
-static removeCells(graph: mxGraph, cells: Array<mxCell>): void;
+  /**
+   * Copies the given array of {@link mxCell} from the specified
+   * graph to {@link cells}. Returns the original array of cells that has
+   * been cloned. Descendants of cells in the array are ignored.
+   *
+   * @param graph - {@link mxGraph} that contains the cells to be copied.
+   * @param cells - Optional array of {@link mxCell} to be copied.
+   */
+  static copy(graph: mxGraph, cells?: Array<mxCell>): Array<mxCell>;
 
-/**
- * Copies the given array of {@link mxCell} from the specified
- * graph to {@link cells}. Returns the original array of cells that has
- * been cloned. Descendants of cells in the array are ignored.
- *
- * @param graph - {@link mxGraph} that contains the cells to be copied.
- * @param cells - Optional array of {@link mxCell} to be copied.
- */
-static copy(graph: mxGraph, cells?: Array<mxCell>): Array<mxCell>;
-
-/**
- * Pastes the {@link cells} into the specified graph restoring
- * the relation to {@link parents}, if possible. If the parents
- * are no longer in the graph or invisible then the
- * cells are added to the graph's default or into the
- * swimlane under the cell's new location if one exists.
- * The cells are added to the graph using {@link mxGraph.importCells}
- * and returned.
- *
- * @param graph - {@link mxGraph} to paste the {@link cells} into.
- */
-static paste(graph: mxGraph): Array<mxCell>;
-
+  /**
+   * Pastes the {@link cells} into the specified graph restoring
+   * the relation to {@link parents}, if possible. If the parents
+   * are no longer in the graph or invisible then the
+   * cells are added to the graph's default or into the
+   * swimlane under the cell's new location if one exists.
+   * The cells are added to the graph using {@link mxGraph.importCells}
+   * and returned.
+   *
+   * @param graph - {@link mxGraph} to paste the {@link cells} into.
+   */
+  static paste(graph: mxGraph): Array<mxCell>;
 }

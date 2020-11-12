@@ -180,7 +180,6 @@
  * @class mxGraphModel
  */
 declare class mxGraphModel extends mxEventSource {
-
   constructor(root: mxCell);
 
   /**
@@ -697,7 +696,7 @@ declare class mxGraphModel extends mxEventSource {
    *
    * @param {mxCell} cell  whose connectable state should be returned.
    */
-  isConnectable(cell: mxCell): boolean
+  isConnectable(cell: mxCell): boolean;
 
   /**
    * Returns the user object of the given {@link mxCell} using <mxCell.getValue>.
@@ -978,7 +977,6 @@ declare class mxGraphModel extends mxEventSource {
    * a network of cloned cells.
    */
   restoreClone(clone: mxCell, cell: mxCell, mapping?: any): void;
-
 }
 
 /**
@@ -992,7 +990,6 @@ declare class mxGraphModel extends mxEventSource {
  * @class mxRootChange
  */
 declare class mxRootChange {
-
   constructor(model: mxGraphModel, root: mxCell);
 
   /**
@@ -1000,9 +997,7 @@ declare class mxRootChange {
    * <mxGraphModel.rootChanged>.
    */
   execute(): void;
-
 }
-
 
 /**
  * Action to add or remove a child in a model.
@@ -1015,7 +1010,6 @@ declare class mxRootChange {
  * @class mxChildChange
  */
 declare class mxChildChange {
-
   constructor(model: mxGraphModel, parent: mxCell, child: mxCell, index: number);
 
   child: mxCell;
@@ -1046,7 +1040,6 @@ declare class mxChildChange {
    * @warning doc from mxGraph source code is incorrect
    */
   connect(cell: mxCell, isConnect: boolean): void;
-
 }
 
 /**
@@ -1058,7 +1051,6 @@ declare class mxChildChange {
  * specified model.
  */
 declare class mxTerminalChange {
-
   constructor(model: mxGraphModel, cell: mxCell, terminal: mxCell, source: boolean);
 
   /**
@@ -1066,9 +1058,7 @@ declare class mxTerminalChange {
    * <mxGraphModel.terminalForCellChanged>.
    */
   execute(): void;
-
 }
-
 
 /**
  * Action to change a user object in a model.
@@ -1079,7 +1069,6 @@ declare class mxTerminalChange {
  * @class mxValueChange
  */
 declare class mxValueChange {
-
   constructor(model: mxGraphModel, cell: mxCell, value: any);
 
   /**
@@ -1087,9 +1076,7 @@ declare class mxValueChange {
    * <mxGraphModel.valueForCellChanged>.
    */
   execute(): void;
-
 }
-
 
 /**
  * Action to change a cell's style in a model.
@@ -1097,7 +1084,6 @@ declare class mxValueChange {
  * @class mxStyleChange
  */
 declare class mxStyleChange {
-
   constructor(model: mxGraphModel, cell: mxCell, style?: string);
   /**
    * Function: execute
@@ -1106,7 +1092,6 @@ declare class mxStyleChange {
    * <mxGraphModel.styleForCellChanged>.
    */
   execute(): void;
-
 }
 
 /**
@@ -1120,7 +1105,6 @@ declare class mxStyleChange {
  * specified model.
  */
 declare class mxGeometryChange {
-
   constructor(model: mxGraphModel, cell: mxCell, geometry: mxGeometry);
 
   model: mxGraphModel;
@@ -1138,9 +1122,7 @@ declare class mxGeometryChange {
    * <mxGraphModel.geometryForCellChanged>.
    */
   execute(): void;
-
 }
-
 
 /**
  * Class: mxCollapseChange
@@ -1153,7 +1135,6 @@ declare class mxGeometryChange {
  * specified model.
  */
 declare class mxCollapseChange {
-
   constructor(model: mxGraphModel, cell: mxCell, collapsed: boolean);
 
   model: mxGraphModel;
@@ -1171,9 +1152,7 @@ declare class mxCollapseChange {
    * <mxGraphModel.collapsedStateForCellChanged>.
    */
   execute(): void;
-
 }
-
 
 /**
  * Class: mxVisibleChange
@@ -1186,7 +1165,6 @@ declare class mxCollapseChange {
  * specified model.
  */
 declare class mxVisibleChange {
-
   constructor(model: mxGraphModel, cell: mxCell, visible: boolean);
 
   /**
@@ -1196,9 +1174,7 @@ declare class mxVisibleChange {
    * <mxGraphModel.visibleStateForCellChanged>.
    */
   execute(): void;
-
 }
-
 
 /**
  * Class: mxCellAttributeChange
@@ -1233,7 +1209,6 @@ declare class mxVisibleChange {
  * stored as the value of the given {@link mxCell}`.
  */
 declare class mxCellAttributeChange {
-
   constructor(cell: mxCell, attribute: string, value: any);
 
   /**
@@ -1243,5 +1218,4 @@ declare class mxCellAttributeChange {
    * using <mxCell.setAttribute>.
    */
   execute(): void;
-
 }

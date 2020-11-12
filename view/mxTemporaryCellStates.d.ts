@@ -1,12 +1,16 @@
-
 /**
  * @class mxTemporaryCellStates
  *
  * Creates a temporary set of cell states.
  */
 declare class mxTemporaryCellStates {
-
-  constructor(view: mxGraphView, scale: number, cells: Array<mxCell>, isCellVisibleFn: boolean, getLinkForCellState: Function);
+  constructor(
+    view: mxGraphView,
+    scale: number,
+    cells: Array<mxCell>,
+    isCellVisibleFn: boolean,
+    getLinkForCellState: Function
+  );
 
   /**
    * Holds the width of the rectangle.
@@ -33,5 +37,4 @@ declare class mxTemporaryCellStates {
   oldScale: number;
 
   destroy(): void;
-
 }

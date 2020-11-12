@@ -1,4 +1,3 @@
-
 declare class mxLog {
   /**
    * Specifies the name of the console window.
@@ -80,5 +79,4 @@ declare class mxLog {
    * Adds the specified strings to the console, appending a linefeed at the end of each string.
    */
   static writeln(): void;
-
 }

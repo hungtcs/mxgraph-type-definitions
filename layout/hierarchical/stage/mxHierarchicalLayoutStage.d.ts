@@ -15,5 +15,4 @@ declare class mxHierarchicalLayoutStage {
    * use.
    */
   execute(parent: mxCell): void;
-
 }

@@ -2,7 +2,6 @@
  * A hierarchical layout algorithm.
  */
 declare class mxSwimlaneLayout extends mxGraphLayout {
-
   /**
    * Constructs a new hierarchical layout algorithm.
    *
@@ -237,8 +236,16 @@ declare class mxSwimlaneLayout extends mxGraphLayout {
    * @param swimlaneIndex   the laid out order index of the swimlane vertex is contained in
    */
   traverse(vertex: mxCell, directed?: boolean, func?: Function, edge?: mxCell, visited?: mxDictionary): void;
-  traverse(vertex: mxCell, directed?: boolean, edge?: mxCell, allVertices?: Array<mxCell>, currentComp?: Array<mxCell>,
-      hierarchyVertices?: Array<mxCell>, filledVertexSet?: Array<mxCell>, swimlaneIndex?: number): void;
+  traverse(
+    vertex: mxCell,
+    directed?: boolean,
+    edge?: mxCell,
+    allVertices?: Array<mxCell>,
+    currentComp?: Array<mxCell>,
+    hierarchyVertices?: Array<mxCell>,
+    filledVertexSet?: Array<mxCell>,
+    swimlaneIndex?: number
+  ): void;
 
   /**
    * Executes the cycle stage using mxMinimumCycleRemover.
@@ -259,5 +266,4 @@ declare class mxSwimlaneLayout extends mxGraphLayout {
    * Executes the placement stage using {@link mxCoordinateAssignment}.
    */
   placementStage(initialX: number, parent: mxCell): number;
-
 }

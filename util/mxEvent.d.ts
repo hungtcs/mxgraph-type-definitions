@@ -13,7 +13,6 @@
  * referenced DOM node is removed from the DOM.
  */
 declare class mxEvent {
-
   /**
    * Binds the function to the specified event on the given element. Use
    * {@link mxUtils.bind} in order to bind the "this" keyword inside the function
@@ -38,13 +37,23 @@ declare class mxEvent {
    * is false and {@link mxClient.IS_TOUCH} is true then the respective touch events
    * will be registered as well as the mouse events.
    */
-  static addGestureListeners(node: Node | Window, startListener: Function, moveListener?: Function, endListener?: Function): void;
+  static addGestureListeners(
+    node: Node | Window,
+    startListener: Function,
+    moveListener?: Function,
+    endListener?: Function
+  ): void;
 
   /**
    * Removes the given listeners from mousedown, mousemove, mouseup and the
    * respective touch events if {@link mxClient.IS_TOUCH} is true.
    */
-  static removeGestureListeners(node: Node | Window, startListener: Function, moveListener?: Function, endListener?: Function): void;
+  static removeGestureListeners(
+    node: Node | Window,
+    startListener: Function,
+    moveListener?: Function,
+    endListener?: Function
+  ): void;
 
   /**
    * Redirects the mouse events from the given DOM node to the graph dispatch
@@ -54,9 +63,15 @@ declare class mxEvent {
    * functions that take the trigger event as arguments and replace the
    * default behaviour.
    */
-  static redirectMouseEvents(node: Node | Window, graph: mxGraph,
+  static redirectMouseEvents(
+    node: Node | Window,
+    graph: mxGraph,
     state: ((event: Event) => mxCellState) | mxCellState,
-    down?: Function, move?: Function, up?: Function, dblClick?: Function): void;
+    down?: Function,
+    move?: Function,
+    up?: Function,
+    dblClick?: Function
+  ): void;
 
   /**
    * Removes the known listeners from the given DOM node and its descendants.
@@ -184,7 +199,7 @@ declare class mxEvent {
   /**
    * Returns true if the meta key is pressed for the given event.
    */
-  static getClientX(e: TouchEvent | MouseEvent): number
+  static getClientX(e: TouchEvent | MouseEvent): number;
 
   /**
    * Returns true if the meta key is pressed for the given event.
@@ -718,5 +733,4 @@ declare class mxEvent {
    * Specifies the event name for reset.
    */
   static RESET: 'reset';
-
 }

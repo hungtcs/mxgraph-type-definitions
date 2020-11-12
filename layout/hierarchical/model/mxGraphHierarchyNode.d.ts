@@ -1,11 +1,9 @@
-
 /**
  * An abstraction of a hierarchical edge for the hierarchy layout
  *
  * @class mxGraphHierarchyNode
  */
 declare class mxGraphHierarchyNode extends mxGraphAbstractHierarchyCell {
-
   /**
    * Constructs an internal node to represent the specified real graph cell
    *
@@ -76,5 +74,4 @@ declare class mxGraphHierarchyNode extends mxGraphAbstractHierarchyCell {
    * Gets the core vertex associated with this wrapper
    */
   getCoreCell(): mxCell;
-
 }

@@ -103,7 +103,6 @@
  * @class mxCodec
  */
 declare class mxCodec {
-
   /**
    * @constructor
    *
@@ -296,5 +295,4 @@ declare class mxCodec {
    * @param value New value of the attribute.
    */
   setAttribute(node: Node, attribute: string, value: any): void;
-
 }

@@ -8,7 +8,6 @@
  * @class mxGraphHierarchyModel
  */
 declare class mxGraphHierarchyModel {
-
   /**
    * @constructor
    *
@@ -22,7 +21,13 @@ declare class mxGraphHierarchyModel {
    * @param tightenToSource - whether or not to tighten vertices towards the sources
    * @param scanRanksFromSinks - Whether rank assignment is from the sinks or sources.
    */
-  constructor(layout: mxGraphLayout, vertices: Array<mxCell>, roots: Array<mxCell>, parent: mxCell, tightenToSource?: boolean);
+  constructor(
+    layout: mxGraphLayout,
+    vertices: Array<mxCell>,
+    roots: Array<mxCell>,
+    parent: mxCell,
+    tightenToSource?: boolean
+  );
 
   /**
    * Stores the largest rank number allocated
@@ -86,7 +91,7 @@ declare class mxGraphHierarchyModel {
    * Basic determination of minimum layer ranking by working from from sources
    * or sinks and working through each node in the relevant edge direction.
    * Starting at the sinks is basically a longest path layering algorithm.
-  */
+   */
   initialRank(): void;
 
   /**
@@ -132,7 +137,14 @@ declare class mxGraphHierarchyModel {
    * @param childHashthe new hash code for this node
    * @param layerthe layer on the dfs tree ( not the same as the model ranks )
    */
-  extendedDfs(parent: mxCell, root: mxCell, connectingEdge: boolean, visitor: any, seen: any, ancestors: any, childHash: string, layer: number): void;
-
-
+  extendedDfs(
+    parent: mxCell,
+    root: mxCell,
+    connectingEdge: boolean,
+    visitor: any,
+    seen: any,
+    ancestors: any,
+    childHash: string,
+    layer: number
+  ): void;
 }

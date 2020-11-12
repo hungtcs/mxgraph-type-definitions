@@ -8,7 +8,6 @@
  * ```
  */
 declare class mxCellHighlight {
-
   /**
    * Constructs a cell highlight.
    *
@@ -42,7 +41,6 @@ declare class mxCellHighlight {
    * @default 2
    */
   spacing: number;
-
 
   /**
    * Holds the handler that automatically invokes reset if the highlight should be hidden.
@@ -78,7 +76,6 @@ declare class mxCellHighlight {
    */
   repaint(): void;
 
-
   /**
    * Resets the state of the cell marker.
    */
@@ -94,11 +91,8 @@ declare class mxCellHighlight {
    */
   isHighlightAt(x: number, y: number): boolean;
 
-
   /**
    * Destroys the handler and all its resources and DOM nodes.
    */
   destroy(): void;
-
 }
-

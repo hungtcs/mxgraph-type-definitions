@@ -46,7 +46,6 @@
  * @class mxCell
  */
 declare class mxCell {
-
   /**
    * @param {*} value               Optional object that represents the cell value.
    * @param {mxGeometry} geometry   Optional <mxGeometry> that specifies the geometry.
@@ -451,5 +450,4 @@ declare class mxCell {
   cloneValue(): any;
 
   [key: string]: any;
-
 }

@@ -1,4 +1,4 @@
-declare class mxDictionary<T=any> {
+declare class mxDictionary<T = any> {
   constructor();
 
   /**
@@ -64,5 +64,4 @@ declare class mxDictionary<T=any> {
    * visitor - A function that takes the key and value as arguments.
    */
   visit(visitor: (key: string, value: T) => void): void;
-
 }

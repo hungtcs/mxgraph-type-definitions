@@ -63,7 +63,6 @@
  */
 
 declare class mxGeometry extends mxRectangle {
-
   constructor(x?: number, y?: number, width?: number, height?: number);
 
   /**
@@ -197,5 +196,4 @@ declare class mxGeometry extends mxRectangle {
   equals(obj: mxGeometry): boolean;
 
   clone(): mxGeometry;
-
 }

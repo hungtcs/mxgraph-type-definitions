@@ -49,7 +49,6 @@
  * ```
  */
 declare class mxShape {
-
   /**
    * Constructs a new shape.
    * @param {mxStencil} stencil
@@ -601,7 +600,15 @@ declare class mxShape {
   /**
    * Paints the given points with rounded corners.
    */
-  addPoints(c: mxAbstractCanvas2D, pts: mxPoint[], rounded: boolean, arcSize: number, close: boolean, exclude: mxPoint[], initialMove: boolean): void;
+  addPoints(
+    c: mxAbstractCanvas2D,
+    pts: mxPoint[],
+    rounded: boolean,
+    arcSize: number,
+    close: boolean,
+    exclude: mxPoint[],
+    initialMove: boolean
+  ): void;
 
   /**
    * Function: resetStyles
@@ -749,5 +756,4 @@ declare class mxShape {
    * node associated with the shape using <mxEvent.release>.
    */
   destroy(): void;
-
 }

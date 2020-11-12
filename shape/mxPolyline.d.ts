@@ -3,7 +3,6 @@
 /// <reference path="../util/mxAbstractCanvas2D.d.ts" />
 
 declare class mxPolyline extends mxShape {
-
   /**
    * Constructs a new polyline shape.
    * @param {Array<mxPoint>} points   Array of mxPoints that define the points.  This is stored in mxShape.points.
@@ -41,5 +40,4 @@ declare class mxPolyline extends mxShape {
    * Paints the line shape.
    */
   paintCurvedLine(c: mxAbstractCanvas2D, pts: Array<mxPoint>): void;
-
 }

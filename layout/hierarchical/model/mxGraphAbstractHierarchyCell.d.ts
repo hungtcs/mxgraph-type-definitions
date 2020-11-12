@@ -99,5 +99,4 @@ declare class mxGraphAbstractHierarchyCell {
    * Set the value of y for the specified layer
    */
   setY(layer: number, value: number): void;
-
 }

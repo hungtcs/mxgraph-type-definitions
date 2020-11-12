@@ -1,4 +1,3 @@
-
 /**
  * @class mxDragSource
  *
@@ -10,7 +9,6 @@
  *
  */
 declare class mxDragSource {
-
   /**
    * Constructs a new drag source for the given element.
    *
@@ -263,5 +261,4 @@ declare class mxDragSource {
    * implementation uses {@link mxGraph.getCellAt}.
    */
   drop(graph: mxGraph, evt: Event, dropTarget: mxCell, x: number, y: number): void;
-
 }

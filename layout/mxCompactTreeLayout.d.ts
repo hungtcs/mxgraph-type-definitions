@@ -1,4 +1,3 @@
-
 declare interface _mxCompactTreeLayoutNode {
   cell?: mxCell;
   x?: number;
@@ -8,11 +7,11 @@ declare interface _mxCompactTreeLayoutNode {
   offsetX?: number;
   offsetY?: number;
   contour?: {
-    upperTail: _mxCompactTreeLayoutLine,
-    upperHead: _mxCompactTreeLayoutLine,
-    lowerTail: _mxCompactTreeLayoutLine,
-    lowerHead: _mxCompactTreeLayoutLine,
-    [key: string]: any,
+    upperTail: _mxCompactTreeLayoutLine;
+    upperHead: _mxCompactTreeLayoutLine;
+    lowerTail: _mxCompactTreeLayoutLine;
+    lowerHead: _mxCompactTreeLayoutLine;
+    [key: string]: any;
   };
   child?: _mxCompactTreeLayoutNode;
 }
@@ -40,7 +39,6 @@ declare interface _mxCompactTreeLayoutLine {
  * ```
  */
 declare class mxCompactTreeLayout extends mxGraphLayout {
-
   /**
    * Constructs a new compact tree layout for the specified graph
    * and orientation.
@@ -232,7 +230,6 @@ declare class mxCompactTreeLayout extends mxGraphLayout {
    */
   moveNode(node: any, dx: number, dy: number): void;
 
-
   /**
    * Called if {@link sortEdges} is true to sort the array of outgoing edges in place.
    */
@@ -263,29 +260,28 @@ declare class mxCompactTreeLayout extends mxGraphLayout {
    */
   layout(node: any): void;
 
-
   horizontalLayout(node: any, x0: number, y0: number, bounds: mxRectangle): mxRectangle;
-
 
   verticalLayout(node: any, parent: mxCell, x0: number, y0: number, bounds: mxRectangle): mxRectangle;
 
-
   attachParent(node: any, height: number): void;
-
 
   layoutLeaf(node: any): void;
 
-
   join(node: any): number;
-
 
   merge(p1: any, p2: any): number;
 
-
   offset(p1: number, p2: number, a1: number, a2: number, b1: number, b2: number): number;
 
-
-  bridge(line1: _mxCompactTreeLayoutLine, x1: number, y1: number, line2: _mxCompactTreeLayoutLine, x2: number, y2: number): _mxCompactTreeLayoutLine;
+  bridge(
+    line1: _mxCompactTreeLayoutLine,
+    x1: number,
+    y1: number,
+    line2: _mxCompactTreeLayoutLine,
+    x2: number,
+    y2: number
+  ): _mxCompactTreeLayoutLine;
 
   createNode(cell: mxCell): _mxCompactTreeLayoutNode;
 
@@ -309,5 +305,4 @@ declare class mxCompactTreeLayout extends mxGraphLayout {
    * Separates the x position of edges as they connect to vertices
    */
   processNodeOutgoing(node: _mxCompactTreeLayoutNode): void;
-
 }

@@ -6,7 +6,7 @@ declare class mxImageBundle {
    *
    * Maps from keys to images.
    */
-  images: { [key: string]: { value: string, fallback: Function } };
+  images: { [key: string]: { value: string; fallback: Function } };
 
   /**
    * Variable: alt

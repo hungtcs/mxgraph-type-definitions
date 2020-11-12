@@ -1,4 +1,3 @@
-
 /**
  * Handles constraints on connection targets. This class is in charge of
  * showing fixed points when the mouse is over a vertex and handles constraints
@@ -7,7 +6,6 @@
  * @class mxConstraintHandler
  */
 declare class mxConstraintHandler {
-
   /**
    * Constructs an new constraint handler.
    *
@@ -67,7 +65,7 @@ declare class mxConstraintHandler {
   /**
    * Reference to the enclosing {@link mxGraph}.
    */
-  graph: mxGraph
+  graph: mxGraph;
 
   /**
    * Specifies if events are handled. Default is true.
@@ -183,5 +181,4 @@ declare class mxConstraintHandler {
    * Destroy this handler.
    */
   destroy(): void;
-
 }

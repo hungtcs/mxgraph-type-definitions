@@ -1,4 +1,3 @@
-
 /**
  * Optional global config variable to toggle loading of the two resource files in mxGraph and mxEditor.
  * Default is true.
@@ -42,7 +41,7 @@ declare let mxForceIncludes: boolean;
  * <script type="text/javascript" src="/path/to/core/directory/js/mxClient.js"></script>
  * ```
  */
-declare let mxResourceExtension: string|boolean;
+declare let mxResourceExtension: string | boolean;
 
 /**
  * Optional global config variable to toggle loading of the CSS files when the library is initialized.
@@ -139,7 +138,6 @@ declare let mxDefaultLanguage: string;
  * This is used to avoid unnecessary requests to language files, ie. if a 404 will be returned.
  */
 declare let mxLanguages: Array<string>;
-
 
 /**
  * Bootstrapping mechanism for the mxGraph thin client.
@@ -270,8 +268,6 @@ declare class mxClient {
    */
   static defaultBundles: string;
 
-
-
   /**
    * Returns true if the current browser is supported, that is,
    * if <mxClient.IS_VML> or <mxClient.IS_SVG> is true.
@@ -309,5 +305,4 @@ declare class mxClient {
    * but not in production systems.
    */
   static include(src: string): void;
-
 }

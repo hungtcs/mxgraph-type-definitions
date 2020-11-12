@@ -9,7 +9,6 @@
  * @extends {mxShape}
  */
 declare class mxRhombus extends mxShape {
-
   /**
    * @param {mxRectangle} bounds
    * @param {string} fill
@@ -32,5 +31,4 @@ declare class mxRhombus extends mxShape {
    * @param {number} h
    */
   paintVertexShape(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number): void;
-
 }

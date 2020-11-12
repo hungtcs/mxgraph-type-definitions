@@ -19,7 +19,6 @@
  * circles and no other types of targets are allowed.
  */
 declare class mxMultiplicity {
-
   /**
    * @constructor
    *
@@ -54,7 +53,7 @@ declare class mxMultiplicity {
     validNeighbors: Array<string>,
     countError: string,
     typeError: string,
-    validNeighborsAllowed: boolean,
+    validNeighborsAllowed: boolean
   );
 
   /**
@@ -133,8 +132,7 @@ declare class mxMultiplicity {
    * @param sourceOut Number of outgoing edges from the source terminal.
    * @param targetIn Number of incoming edges for the target terminal.
    */
-  check(graph: mxGraph, edge: mxCell, source: mxCell, target: mxCell,
-    sourceOut: number, targetIn: number): string;
+  check(graph: mxGraph, edge: mxCell, source: mxCell, target: mxCell, sourceOut: number, targetIn: number): string;
 
   /**
    * Checks if there are any valid neighbours in {@link validNeighbors}. This is only
@@ -153,5 +151,4 @@ declare class mxMultiplicity {
    * Checks the type of the given value.
    */
   checkType(graph: mxCell, value: string, type: string, attr: string, attrValue: any): boolean;
-
 }

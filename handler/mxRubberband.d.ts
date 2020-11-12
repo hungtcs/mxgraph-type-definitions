@@ -1,11 +1,9 @@
-
 /**
  * Event handler that selects rectangular regions.
  * This is not built-into [mxGraph].
  * To enable rubberband selection in a graph, use the following code.
  */
 declare class mxRubberband {
-
   graph: mxGraph;
 
   /**
@@ -31,6 +29,4 @@ declare class mxRubberband {
   isEnabled(): boolean;
 
   start(x: number, y: number): void;
-
-
 }

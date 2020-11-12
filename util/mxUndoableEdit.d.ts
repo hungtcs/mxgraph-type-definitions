@@ -15,7 +15,17 @@ declare class mxUndoableEdit {
    * expected to either have an undo and redo function, or an execute
    * function. Default is an empty array.
    */
-  changes: Array<mxGeometryChange|mxChildChange|mxStyleChange|mxVisibleChange|mxCollapseChange|mxValueChange|mxTerminalChange|mxCurrentRootChange|any>
+  changes: Array<
+    | mxGeometryChange
+    | mxChildChange
+    | mxStyleChange
+    | mxVisibleChange
+    | mxCollapseChange
+    | mxValueChange
+    | mxTerminalChange
+    | mxCurrentRootChange
+    | any
+  >;
 
   /**
    * Variable: significant
@@ -90,7 +100,6 @@ declare class mxUndoableEdit {
    * Redoes all changes in this edit.
    */
   redo(): void;
-
 }
 
 declare interface mxUndoableChange {

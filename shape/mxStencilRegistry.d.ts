@@ -7,7 +7,6 @@
  * @class mxStencilRegistry
  */
 declare class mxStencilRegistry {
-
   static stencils: { [key: string]: mxStencil };
 
   /**
@@ -25,5 +24,4 @@ declare class mxStencilRegistry {
    * @returns {mxStencil}
    */
   static getStencil(name: string): mxStencil;
-
 }

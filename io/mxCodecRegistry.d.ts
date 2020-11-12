@@ -31,7 +31,6 @@
  * @class mxCodecRegistry
  */
 declare class mxCodecRegistry {
-
   /**
    * Maps from constructor names to codecs.
    * @static
@@ -69,5 +68,4 @@ declare class mxCodecRegistry {
    * @param ctor - JavaScript constructor function.
    */
   static getCodec(ctor: any): mxObjectCodec;
-
 }

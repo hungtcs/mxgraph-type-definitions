@@ -1,5 +1,3 @@
-
-
 /**
  * Graph event handler that reconnects edges and modifies control points and the edge
  * label location.
@@ -15,7 +13,6 @@
  * @class mxEdgeHandler
  */
 declare class mxEdgeHandler {
-
   labelHandleImage: mxImage;
 
   constructor(state: mxCellState);
@@ -504,7 +501,13 @@ declare class mxEdgeHandler {
    *
    * Updates the given preview state taking into account the state of the constraint handler.
    */
-  updatePreviewState(edge: mxCell, point: mxPoint, terminalState: mxCellState, me: mxMouseEvent, outline?: boolean): void;
+  updatePreviewState(
+    edge: mxCell,
+    point: mxPoint,
+    terminalState: mxCellState,
+    me: mxMouseEvent,
+    outline?: boolean
+  ): void;
 
   /**
    * Function: mouseMove
@@ -534,7 +537,6 @@ declare class mxEdgeHandler {
    * Sets the color of the preview to the given value.
    */
   setPreviewColor(color: string): void;
-
 
   /**
    * Function: convertPoint

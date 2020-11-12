@@ -153,7 +153,6 @@
  * ```
  */
 declare class mxPrintPreview {
-
   /**
    * @constructor mxPrintPreview
    *
@@ -186,7 +185,7 @@ declare class mxPrintPreview {
     y0?: number,
     borderColor?: string,
     title?: string,
-    pageSelector?: boolean,
+    pageSelector?: boolean
   );
 
   /**
@@ -324,8 +323,7 @@ declare class mxPrintPreview {
    * @param targetWindow Optional window that should be used for rendering. If
    * this is specified then no HEAD tag, CSS and BODY tag will be written.
    */
-  appendGraph(graph: mxGraph, scale: number, x0: number, y0: number,
-    forcePageBreaks: boolean, keepOpen: boolean): void;
+  appendGraph(graph: mxGraph, scale: number, x0: number, y0: number, forcePageBreaks: boolean, keepOpen: boolean): void;
 
   /**
    * Shows the print preview window. The window is created here if it does
@@ -393,8 +391,14 @@ declare class mxPrintPreview {
    * @param div Div that contains the output.
    * @param clip Contains the clipping rectangle as an {@link mxRectangle}.
    */
-  addGraphFragment(dx: number, dy: number, scale: number, pageNumber: number,
-    div: HTMLDivElement, clip: mxRectangle): void;
+  addGraphFragment(
+    dx: number,
+    dy: number,
+    scale: number,
+    pageNumber: number,
+    div: HTMLDivElement,
+    clip: mxRectangle
+  ): void;
 
   /**
    * Returns the link for the given cell state. This returns null.
@@ -429,5 +433,4 @@ declare class mxPrintPreview {
    * Closes the print preview window.
    */
   close(): void;
-
 }

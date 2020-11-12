@@ -54,7 +54,6 @@
  * ```
  */
 declare class mxCellTracker extends mxCellMarker {
-
   /**
    * Constructs an event handler that highlights cells.
    *
@@ -80,8 +79,8 @@ declare class mxCellTracker extends mxCellMarker {
   /**
    * Handles the event by resetting the highlight.
    */
-// TODO types
-  mouseUp(sender: any, me: mxMouseEvent): void
+  // TODO types
+  mouseUp(sender: any, me: mxMouseEvent): void;
 
   /**
    * Function: destroy
@@ -91,5 +90,4 @@ declare class mxCellTracker extends mxCellMarker {
    * unloads.
    */
   destroy(): void;
-
 }

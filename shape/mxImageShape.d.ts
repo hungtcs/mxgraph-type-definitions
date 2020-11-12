@@ -11,7 +11,6 @@
  * @extends {mxRectangleShape}
  */
 declare class mxImageShape extends mxRectangleShape {
-
   /**
    * Constructs a new image shape.
    * @param {mxRectangle} bounds     {@link mxRectangle} that defines the bounds.  This is stored in {@link mxShape.bounds}.
@@ -75,5 +74,4 @@ declare class mxImageShape extends mxRectangleShape {
    * Overrides <mxShape.redraw> to preserve the aspect ratio of images.
    */
   redrawHtmlShape(): void;
-
 }

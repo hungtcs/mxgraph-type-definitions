@@ -1,7 +1,4 @@
-
 declare class mxKeyHandler {
-
-
   /**
    * Constructs an event handler that executes functions bound to specific keystrokes.
    * @author 鸿则 <hungtcs@163.com>
@@ -33,7 +30,6 @@ declare class mxKeyHandler {
    */
   public shiftKeys: [(event: KeyboardEvent) => void];
 
-
   /**
    * Maps from keycodes to functions for pressed control keys.
    */
@@ -52,7 +48,7 @@ declare class mxKeyHandler {
   /**
    * Returns true if events are handled.  This implementation returns enabled.
    */
-  public isEnabled(): boolean
+  public isEnabled(): boolean;
 
   /**
    * Enables or disables event handling by updating enabled.
@@ -77,8 +73,7 @@ declare class mxKeyHandler {
   /**
    * Binds the specified keycode to the given function.  This binding is used if the control and shift key are pressed.
    */
-  public bindControlShiftKey(code: number, funct: (event: KeyboardEvent) => void): number
-
+  public bindControlShiftKey(code: number, funct: (event: KeyboardEvent) => void): number;
 
   /**
    * Returns true if the control key is pressed.  This uses mxEvent.isControlDown.
@@ -88,7 +83,7 @@ declare class mxKeyHandler {
   /**
    * Returns the function associated with the given key event or null if no function is associated with the given event.
    */
-  public getFunction(evt: KeyboardEvent): ((event: KeyboardEvent) => void);
+  public getFunction(evt: KeyboardEvent): (event: KeyboardEvent) => void;
 
   /**
    * Returns true if the event should be processed by this handler, that is, if the event source is either the target, one of its direct children, a descendant of the <mxGraph.container>, or the mxGraph.cellEditor of the graph.
@@ -103,7 +98,7 @@ declare class mxKeyHandler {
   /**
    * Returns true if the given event should be handled.  isEventIgnored is called later if the event is not an escape key stroke, in which case escape is called.  This implementation returns true if isEnabled returns true for both, this handler and graph, if the event is not consumed and if isGraphEvent returns true.
    */
-  public isEnabledForEvent(evt: KeyboardEvent): boolean
+  public isEnabledForEvent(evt: KeyboardEvent): boolean;
 
   /**
    * Returns true if the given keystroke should be ignored.  This returns graph.isEditing().
@@ -119,5 +114,4 @@ declare class mxKeyHandler {
    * Destroys the handler and all its references into the DOM.  This does normally not need to be called, it is called automatically when the window unloads (in IE).
    */
   public destroy(): void;
-
 }

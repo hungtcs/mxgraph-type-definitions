@@ -1,6 +1,4 @@
-
 declare class mxElbowEdgeHandler extends mxEdgeHandler {
-
   constructor(state: mxCellState);
 
   /**
