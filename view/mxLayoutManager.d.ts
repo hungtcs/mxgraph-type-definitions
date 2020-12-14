@@ -111,7 +111,7 @@ declare class mxLayoutManager extends mxEventSource {
    * {@link mxEvent.BEGIN_UPDATE} and {@link mxEvent.END_UPDATE} for the capture
    * and bubble phase of the layout after any changes of the model.
    */
-  getLayout(cell: mxCell, eventName?: string): mxGraphLayout;
+  getLayout(cell: mxCell, eventName?: string): mxGraphLayout | null;
 
   /**
    * Called from {@link undoHandler}.

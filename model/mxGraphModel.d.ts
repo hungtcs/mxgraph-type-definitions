@@ -762,7 +762,7 @@ declare class mxGraphModel extends mxEventSource {
    *
    * @param {mxCell} cell  whose style should be returned.
    */
-  getStyle(cell: mxCell): string;
+  getStyle(cell: mxCell): string | null;
 
   /**
    * Sets the style of the given {@link mxCell} using {@link mxStyleChange} and

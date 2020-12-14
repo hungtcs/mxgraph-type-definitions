@@ -127,7 +127,7 @@ declare class mxPopupMenu extends mxEventSource {
     title: string,
     image?: string,
     funct?: (me: mxMouseEvent) => void,
-    parent?: mxPopupMenu,
+    parent?: Element,
     iconCls?: string,
     enabled?: boolean,
     active?: boolean
