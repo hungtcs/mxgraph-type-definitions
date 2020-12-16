@@ -30,6 +30,7 @@ declare class mxRectangleShape extends mxShape {
   /**
    * Adds roundable support.
    */
+  isRoundable(): boolean;
   isRoundable(c?: mxAbstractCanvas2D, x?: number, y?: number, w?: number, h?: number): boolean;
 
   /**

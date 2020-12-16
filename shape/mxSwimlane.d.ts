@@ -44,6 +44,7 @@ declare class mxSwimlane extends mxShape {
    * @param {number} h
    * @returns {boolean}
    */
+  isRoundable(): boolean;
   isRoundable(c?: mxAbstractCanvas2D, x?: number, y?: number, w?: number, h?: number): boolean;
 
   /**

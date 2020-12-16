@@ -63,6 +63,7 @@ declare class mxImageShape extends mxRectangleShape {
   /**
    * Disables inherited roundable support.
    */
+  isRoundable(): boolean;
   isRoundable(c: mxAbstractCanvas2D, x: number, y: number, w: number, h: number): boolean;
 
   /**
