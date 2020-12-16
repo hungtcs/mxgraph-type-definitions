@@ -1,3 +1,5 @@
+**NOTE 2020-12-16: Now we decide to migrate to [typed-mxgraph](https://github.com/typed-mxgraph/typed-mxgraph), which is a more complete repository that matches the npm package. v1.0.6 is the final version.**
+
 mxGraph Type Definitions
 ====
 
